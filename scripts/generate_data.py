@@ -43,29 +43,70 @@ def parse_tkt(v):
         n=int(s); return n if 1<=n<=9 else None
     return s if re.fullmatch(r"\d+\s*-\s*\d+",s) else None
 
+def parse_tkt(v):
+    if pd.isna(v): return None
+    import datetime
+    if isinstance(v,(pd.Timestamp,datetime.datetime,datetime.date)): return v.day
+    s=str(v).strip()
+    if not s: return None
+    if re.fullmatch(r"\d+",s):
+        n=int(s)
+        return n if 1<=n<=9 else None
+    return None
+
 def read_xlsx(path):
-    df=pd.read_excel(path,sheet_name="Verifikasi Manual",dtype=object)
-    df.columns=[str(c).strip() for c in df.columns]
-    req=["Judul atau nama KI","Nomor kekayaan intelektual (KI)","Jenis kekayaan intelektual (KI)",
-         "Nomor KBLI 2025","Judul KBLI 2025 (Resmi BPS)","Justifikasi","Sektor Utama"]
-    miss=[x for x in req if x not in df.columns]
-    if miss:raise ValueError(f"{path.name}: missing {miss}")
-    tkt_cols=[c for c in ["TKT Terverifikasi","TKT Terverifikasi.1","TKT Terverifikasi [TRL Verified]"] if c in df.columns]
-    if not tkt_cols: raise ValueError(f"{path.name}: missing verified TKT column")
+    sheets=pd.ExcelFile(path).sheet_names
     default=next((x for x in ALLOWED if x in path.stem.upper()),None)
+
+    # Response workbooks keep KI identity in "Form Responses 1" while
+    # verified TKT + KBLI are stored in "Verifikasi Manual". The rows are
+    # aligned, so join by row index. This is the critical source mapping.
+    if "Form Responses 1" in sheets and "Verifikasi Manual" in sheets:
+        form=pd.read_excel(path,sheet_name="Form Responses 1",dtype=object)
+        ver=pd.read_excel(path,sheet_name="Verifikasi Manual",dtype=object)
+        if "Judul atau nama KI" not in form.columns or "Nomor kekayaan intelektual (KI)" not in form.columns:
+            raise ValueError(f"{path.name}: identity columns missing from Form Responses 1")
+        tkt_col=next((c for c in ver.columns if str(c).strip()=="TKT Terverifikasi"),None)
+        if tkt_col is None:
+            raise ValueError(f"{path.name}: missing 'TKT Terverifikasi' in Verifikasi Manual")
+        out=[]
+        n=min(len(form),len(ver))
+        for i in range(n):
+            fr=form.iloc[i]; vr=ver.iloc[i]
+            title=clean(fr["Judul atau nama KI"]); ki=clean(fr["Nomor kekayaan intelektual (KI)"])
+            if not title and not ki: continue
+            orv=(clean(vr["OR"]) if "OR" in ver.columns else None) or default
+            if orv not in ALLOWED: raise ValueError(f"{path.name}: invalid/missing OR={orv!r}")
+            tkt=parse_tkt(vr[tkt_col])
+            cs,ts=codes(vr.get("Nomor KBLI 2025")),numbered(vr.get("Judul KBLI 2025 (Resmi BPS)"))
+            kb=[{"rank":j+1,"kode":c,"judul":ts[j] if j<len(ts) else None} for j,c in enumerate(cs)]
+            out.append({"or":orv,"nomor_ki":ki,"judul_ki":title,
+                        "jenis_ki":clean(fr.get("Jenis kekayaan intelektual (KI)")),
+                        "trl":tkt,"sektor_utama":clean(vr.get("Sektor Utama")),
+                        "justifikasi":clean(vr.get("Justifikasi")),"kbli":filter_kbli(orv,kb)})
+        return out
+
+    # Legacy/ORPP-ORHL workbooks: use identity columns directly if present.
+    df=pd.read_excel(path,sheet_name="Copy-of-Sort ORHL" if "Copy-of-Sort ORHL" in sheets else sheets[0],dtype=object)
+    df.columns=[str(c).strip() for c in df.columns]
+    required=["Judul atau nama KI","Nomor kekayaan intelektual (KI)","Jenis kekayaan intelektual (KI)",
+              "Nomor KBLI 2025","Judul KBLI 2025 (Resmi BPS)","Justifikasi","Sektor Utama"]
+    missing=[x for x in required if x not in df.columns]
+    if missing: raise ValueError(f"{path.name}: missing {missing}")
+    tkt_col=next((c for c in ["TKT Terverifikasi","TKT Terverifikasi.1","TKT Terverifikasi [TRL Verified]"] if c in df.columns),None)
     out=[]
     for _,r in df.iterrows():
-        title,ki=clean(r["Judul atau nama KI"]),clean(r["Nomor kekayaan intelektual (KI)"])
-        if not title and not ki:continue
+        title=clean(r["Judul atau nama KI"]); ki=clean(r["Nomor kekayaan intelektual (KI)"])
+        if not title and not ki: continue
         orv=(clean(r["OR"]) if "OR" in df.columns else None) or default
-        if orv not in ALLOWED:raise ValueError(f"{path.name}: invalid/missing OR={orv!r}")
-        tkt=None
-        for c in tkt_cols:
-            v=parse_tkt(r[c])
-            if v is not None:tkt=v
+        if orv not in ALLOWED: raise ValueError(f"{path.name}: invalid/missing OR={orv!r}")
+        tkt=parse_tkt(r[tkt_col]) if tkt_col else None
         cs,ts=codes(r["Nomor KBLI 2025"]),numbered(r["Judul KBLI 2025 (Resmi BPS)"])
-        kb=[{"rank":i+1,"kode":c,"judul":ts[i] if i<len(ts) else None} for i,c in enumerate(cs)]
-        out.append({"or":orv,"nomor_ki":ki,"judul_ki":title,"jenis_ki":clean(r["Jenis kekayaan intelektual (KI)"]),"trl":tkt,"sektor_utama":clean(r["Sektor Utama"]),"justifikasi":clean(r["Justifikasi"]),"kbli":filter_kbli(orv,kb)})
+        kb=[{"rank":j+1,"kode":c,"judul":ts[j] if j<len(ts) else None} for j,c in enumerate(cs)]
+        out.append({"or":orv,"nomor_ki":ki,"judul_ki":title,
+                    "jenis_ki":clean(r["Jenis kekayaan intelektual (KI)"]),
+                    "trl":tkt,"sektor_utama":clean(r["Sektor Utama"]),
+                    "justifikasi":clean(r["Justifikasi"]),"kbli":filter_kbli(orv,kb)})
     return out
 
 def main():
@@ -73,7 +114,10 @@ def main():
     for p in sorted(INPUT.glob("*.xlsx")): rows.extend(read_xlsx(p))
     dedup={}
     for x in rows:
-        dedup[(x.get("or"),x.get("nomor_ki") or (x.get("judul_ki") or "").casefold())]=x
+        # Keep distinct KI titles even when an organization reuses the same
+        # registration/record number across separate KI entries.
+        key=(x.get("or"), (x.get("nomor_ki") or "").strip(), (x.get("judul_ki") or "").strip().casefold())
+        dedup[key]=x
     rows=list(dedup.values())
     for x in rows:x["kbli"]=filter_kbli(x.get("or"),x.get("kbli") or [])
     for x in rows:

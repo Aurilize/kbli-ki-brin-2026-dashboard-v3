@@ -26,14 +26,14 @@
     },
     "trl_source": "TKT Terverifikasi; duplicate Excel export headers use populated TKT Terverifikasi.1 as the second verified-TKT column; legacy ORHL/ORPP TKT Terverifikasi [TRL Verified] supported.",
     "trl_6_plus_definition": "TKT Terverifikasi >= 6",
+    "trl_6_plus_total": 54,
     "trl_6_plus_by_or": {
       "ORPP": 5,
       "ORHL": 16,
-      "OREM": 12,
-      "OREI": 17,
+      "OREM": 13,
+      "OREI": 15,
       "ORNM": 5
-    },
-    "trl_6_plus_total": 55
+    }
   },
   "records": [
     {
@@ -176,7 +176,7 @@
       "nomor_ki": "EC002022107172",
       "judul_ki": "Aplikasi Mobile SONIKApp berbasis Android untuk Pencarian Lokasi SPKLU",
       "jenis_ki": "Hak Cipta",
-      "trl": 7,
+      "trl": 4,
       "sektor_utama": "Pendidikan",
       "justifikasi": "[1] Satuan Pendidikan Muadalah Wustha dan Ulya Berkesinambungan relevan karena objek/aktivitas pada KI \"AViRSinami\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Taman Konservasi Di Luar Habitat Alami (Ex-Situ) relevan karena objek/aktivitas pada KI \"AViRSinami\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Bumi Perkemahan, Persinggahan Karavan dan Taman Karavan relevan karena objek/aktivitas pada KI \"AViRSinami\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
       "kbli": [
@@ -196,7 +196,7 @@
           "judul": "Bumi Perkemahan, Persinggahan Karavan dan Taman Karavan"
         }
       ],
-      "trl_6_plus": true
+      "trl_6_plus": false
     },
     {
       "or": "OREI",
@@ -230,7 +230,7 @@
       "nomor_ki": "EC002022107186",
       "judul_ki": "Bangkit-TS (Pembangkit Teks Berbasis Sinonim untuk Pembelajaran CNN dan LSTM)",
       "jenis_ki": "Hak Cipta",
-      "trl": 4,
+      "trl": 3,
       "sektor_utama": "Aktivitas Penyewaan dan Sewa Guna Usaha Tanpa Hak Opsi; Ketenagakerjaan; Agen Perjalanan",
       "justifikasi": "[1] Aktivitas Pengepakan Bahan dan Produk Farmasi relevan karena objek/aktivitas pada KI \"METODE DETEKSI TUBERKULOSIS DAN TINGKAT KERUSAKAN PARU BERDASARKAN CXR (CHEST X-RAY) MENGGUNAKAN INTELLIIGENT COMPUTER VISION\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Perdagangan Besar Sediaan Farmasi untuk Manusia relevan karena objek/aktivitas pada KI \"METODE DETEKSI TUBERKULOSIS DAN TINGKAT KERUSAKAN PARU BERDASARKAN CXR (CHEST X-RAY) MENGGUNAKAN INTELLIIGENT COMPUTER VISION\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Penelitian dan Pengembangan Bioteknologi relevan karena objek/aktivitas pada KI \"METODE DETEKSI TUBERKULOSIS DAN TINGKAT KERUSAKAN PARU BERDASARKAN CXR (CHEST X-RAY) MENGGUNAKAN INTELLIIGENT COMPUTER VISION\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
       "kbli": [
@@ -284,11 +284,11 @@
       "nomor_ki": "EC002022107203",
       "judul_ki": "SecureHi",
       "jenis_ki": "Hak Cipta",
-      "trl": 8,
+      "trl": 4,
       "sektor_utama": null,
       "justifikasi": null,
       "kbli": [],
-      "trl_6_plus": true
+      "trl_6_plus": false
     },
     {
       "or": "OREI",
@@ -349,7 +349,7 @@
       "nomor_ki": "EC002023129183",
       "judul_ki": "Sistem Database Mask Image Untuk Dataset Segmentasi Citra Mikroorganisme Kapang",
       "jenis_ki": "Hak Cipta",
-      "trl": 5,
+      "trl": 4,
       "sektor_utama": "Konstruksi",
       "justifikasi": "[1] Konstruksi Bangunan Sipil Fasilitas Olah Raga relevan karena objek/aktivitas pada KI \"RAGLab v1.0\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Aktivitas Kelab Malam atau Diskotek yang Utamanya Menyediakan Minuman relevan karena objek/aktivitas pada KI \"RAGLab v1.0\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Klub Olahraga Lainnya relevan karena objek/aktivitas pada KI \"RAGLab v1.0\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
       "kbli": [
@@ -511,7 +511,7 @@
       "nomor_ki": "EC002024196 831",
       "judul_ki": "AViRSinami",
       "jenis_ki": "Hak Cipta",
-      "trl": 4,
+      "trl": 7,
       "sektor_utama": "Informasi dan Komunikasi",
       "justifikasi": "[1] Aktivitas Pemrograman Berbasis Kecerdasan Artifisial relevan karena objek/aktivitas pada KI \"AUDITIN: Aplikasi Penilaian Keamanan Informasi Berdasarkan ISO 27001\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Aktivitas Pemrograman Komputer Lainnya relevan karena objek/aktivitas pada KI \"AUDITIN: Aplikasi Penilaian Keamanan Informasi Berdasarkan ISO 27001\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Aktivitas Teknologi Informasi Dan Jasa Komputer Lainnya relevan karena objek/aktivitas pada KI \"AUDITIN: Aplikasi Penilaian Keamanan Informasi Berdasarkan ISO 27001\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
       "kbli": [
@@ -531,7 +531,7 @@
           "judul": "Aktivitas Teknologi Informasi Dan Jasa Komputer Lainnya"
         }
       ],
-      "trl_6_plus": false
+      "trl_6_plus": true
     },
     {
       "or": "OREI",
@@ -646,7 +646,7 @@
       "nomor_ki": "EC00202455899",
       "judul_ki": "DCPC: Drug Candidates for the Prevention Of COVID-19",
       "jenis_ki": "Hak Cipta",
-      "trl": 3,
+      "trl": 4,
       "sektor_utama": "Informasi dan Komunikasi",
       "justifikasi": "[1] Aktivitas Pemrograman Berbasis Kecerdasan Artifisial relevan karena objek/aktivitas pada KI \"CASING PORTABEL UNTUK ALAT PEMINDAI DAUN\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Aktivitas Pemrograman Komputer Lainnya relevan karena objek/aktivitas pada KI \"CASING PORTABEL UNTUK ALAT PEMINDAI DAUN\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Aktivitas Teknologi Informasi Dan Jasa Komputer Lainnya relevan karena objek/aktivitas pada KI \"CASING PORTABEL UNTUK ALAT PEMINDAI DAUN\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
       "kbli": [
@@ -781,7 +781,7 @@
       "nomor_ki": "EC002025187795",
       "judul_ki": "Aplikasi untuk Analisis Pengaruh Iklim terhadap Sebaran Tuberkulosis",
       "jenis_ki": "Hak Cipta",
-      "trl": 3,
+      "trl": 4,
       "sektor_utama": "Informasi dan Komunikasi",
       "justifikasi": "[1] Aktivitas Produksi Film, Video, dan Program Televisi oleh Pemerintah relevan karena objek/aktivitas pada KI \"Program Segmentasi Citra Kapang Aspergillus, Trichoderma dan Cladosporium dengan Adaptive Thresholding, Otsu Thresholding dan K-Means Clustering\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Aktivitas Pascaproduksi Film, Video, dan Program Televisi oleh Pemerintah relevan karena objek/aktivitas pada KI \"Program Segmentasi Citra Kapang Aspergillus, Trichoderma dan Cladosporium dengan Adaptive Thresholding, Otsu Thresholding dan K-Means Clustering\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Aktivitas Distribusi Film, Video, dan Program Televisi oleh Pemerintah relevan karena objek/aktivitas pada KI \"Program Segmentasi Citra Kapang Aspergillus, Trichoderma dan Cladosporium dengan Adaptive Thresholding, Otsu Thresholding dan K-Means Clustering\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
       "kbli": [
@@ -970,7 +970,7 @@
       "nomor_ki": "EC002025220303",
       "judul_ki": "CIPALI DATASET",
       "jenis_ki": "Hak Cipta",
-      "trl": 4,
+      "trl": 3,
       "sektor_utama": "Industri Pengolahan",
       "justifikasi": "[1] Industri Alat Ukur dan Alat Uji Elektronik relevan karena objek/aktivitas pada KI \"METODE UNTUK MENGUKUR INDEKS KUALITAS AIR SECARA OTOMATIS\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Jasa Pengujian Teknis relevan karena objek/aktivitas pada KI \"METODE UNTUK MENGUKUR INDEKS KUALITAS AIR SECARA OTOMATIS\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Perdagangan Besar Suku Cadang Elektronik relevan karena objek/aktivitas pada KI \"METODE UNTUK MENGUKUR INDEKS KUALITAS AIR SECARA OTOMATIS\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
       "kbli": [
@@ -1024,7 +1024,7 @@
       "nomor_ki": "EC002026066609",
       "judul_ki": "RAGLab v1.0",
       "jenis_ki": "Hak Cipta",
-      "trl": 4,
+      "trl": 5,
       "sektor_utama": "Informasi dan Komunikasi",
       "justifikasi": "[1] Aktivitas Pemrograman Komputer Lainnya relevan karena objek/aktivitas pada KI \"Aplikasi Mobile SONIKApp berbasis Android untuk Pencarian Lokasi SPKLU\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Aktivitas Pemrograman Berbasis Kecerdasan Artifisial relevan karena objek/aktivitas pada KI \"Aplikasi Mobile SONIKApp berbasis Android untuk Pencarian Lokasi SPKLU\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Aktivitas Pengolahan Data relevan karena objek/aktivitas pada KI \"Aplikasi Mobile SONIKApp berbasis Android untuk Pencarian Lokasi SPKLU\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
       "kbli": [
@@ -1240,7 +1240,7 @@
       "nomor_ki": "P00202311518",
       "judul_ki": "METODE UNTUK MENGUKUR INDEKS KUALITAS AIR SECARA OTOMATIS",
       "jenis_ki": "Paten",
-      "trl": 7,
+      "trl": 4,
       "sektor_utama": "Aktivitas Keuangan dan Asuransi",
       "justifikasi": "[1] Lembaga Pembiayaan Ekspor Indonesia relevan karena objek/aktivitas pada KI \"Aset Game 2D/3D Indonesia Timur\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Aktivitas Pengembangan Video game relevan karena objek/aktivitas pada KI \"Aset Game 2D/3D Indonesia Timur\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Perdagangan Eceran Peralatan Video Game Dan Sejenisnya relevan karena objek/aktivitas pada KI \"Aset Game 2D/3D Indonesia Timur\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
       "kbli": [
@@ -1260,7 +1260,7 @@
           "judul": "Perdagangan Eceran Peralatan Video Game Dan Sejenisnya"
         }
       ],
-      "trl_6_plus": true
+      "trl_6_plus": false
     },
     {
       "or": "OREI",
@@ -1429,7 +1429,7 @@
       "nomor_ki": "S00202513917",
       "judul_ki": "CASING PORTABEL UNTUK ALAT PEMINDAI DAUN",
       "jenis_ki": "Paten",
-      "trl": 4,
+      "trl": 3,
       "sektor_utama": "Perdagangan Besar dan Eceran; Reparasi dan Perawatan Mobil dan Sepeda Motor",
       "justifikasi": "[1] Perdagangan Eceran Peralatan Audio dan Video relevan karena objek/aktivitas pada KI \"LabFonStudio versi 1.0\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Industri Peralatan Audio dan Video Elektronik Lainnya relevan karena objek/aktivitas pada KI \"LabFonStudio versi 1.0\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Perdagangan Eceran Khusus Peralatan Audio dan Video di Toko relevan karena objek/aktivitas pada KI \"LabFonStudio versi 1.0\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
       "kbli": [
@@ -2104,7 +2104,7 @@
       "nomor_ki": "P00202215110",
       "judul_ki": "Alat dan Metode Pengontrol Motor Listrik Tipe DC untuk Kemudi Berdaya Elektro-Hidrolik",
       "jenis_ki": "Paten",
-      "trl": 4,
+      "trl": 6,
       "sektor_utama": "Aktivitas Profesional, Ilmiah dan Teknis",
       "justifikasi": "[1] Pengujian dan Analisis Teknis Lainnya relevan karena objek/aktivitas pada KI \"Alat dan Metode Pengontrol Motor Listrik Tipe DC untuk Kemudi Berdaya Elektro-Hidrolik\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Jasa Pengujian Teknis relevan karena objek/aktivitas pada KI \"Alat dan Metode Pengontrol Motor Listrik Tipe DC untuk Kemudi Berdaya Elektro-Hidrolik\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Industri Motor Listrik relevan karena objek/aktivitas pada KI \"Alat dan Metode Pengontrol Motor Listrik Tipe DC untuk Kemudi Berdaya Elektro-Hidrolik\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
       "kbli": [
@@ -2124,7 +2124,7 @@
           "judul": "Industri Motor Listrik"
         }
       ],
-      "trl_6_plus": false
+      "trl_6_plus": true
     },
     {
       "or": "OREM",
@@ -5371,7 +5371,7 @@
       "nomor_ki": "P00202513850",
       "judul_ki": "Metoda Proses Pemisahan dan Pemekatan Sediaan L-Theanin (L-The) Dalam Ekstrak Teh Hijau (Camellia sinensis} Lokal Melalui Sistem Diafiltrasi-Nanofiltrasi (DF-NF)F",
       "jenis_ki": "Paten",
-      "trl": null,
+      "trl": 2,
       "sektor_utama": "Industri Pengolahan",
       "justifikasi": "[1] Industri Kosmetik untuk Manusia, Cairan Lensa Kontak relevan karena objek/aktivitas pada KI \"Metoda Proses Pemisahan dan Pemekatan Sediaan L-Theanin (L-The) Dalam Ekstrak Teh Hijau (Camellia sinensis} Lokal Melalui Sistem Diafiltrasi-Nanofiltrasi (DF-NF)F\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Perdagangan Besar Sediaan Farmasi untuk Manusia relevan karena objek/aktivitas pada KI \"Metoda Proses Pemisahan dan Pemekatan Sediaan L-Theanin (L-The) Dalam Ekstrak Teh Hijau (Camellia sinensis} Lokal Melalui Sistem Diafiltrasi-Nanofiltrasi (DF-NF)F\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Industri Alat Uji Dalam Proses Industri relevan karena objek/aktivitas pada KI \"Metoda Proses Pemisahan dan Pemekatan Sediaan L-Theanin (L-The) Dalam Ekstrak Teh Hijau (Camellia sinensis} Lokal Melalui Sistem Diafiltrasi-Nanofiltrasi (DF-NF)F\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
       "kbli": [
@@ -5533,7 +5533,7 @@
       "nomor_ki": "P00202514204",
       "judul_ki": "METODA PEMBUATAN NANOSELULOSA TERMODIFIKASI DARI LIMBAH PELEPAH NIPAH (NYPA FRUTICANS WURMB/PALMAE) SERTA PRODUK YANG DIHASILKANNYA",
       "jenis_ki": "Paten",
-      "trl": null,
+      "trl": 3,
       "sektor_utama": "Industri Pengolahan",
       "justifikasi": "[1] Industri Barang Kimia Lainnya YTDL relevan karena objek/aktivitas pada KI \"METODA PEMBUATAN NANOSELULOSA TERMODIFIKASI DARI LIMBAH PELEPAH NIPAH (NYPA FRUTICANS WURMB/PALMAE) SERTA PRODUK YANG DIHASILKANNYA\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Industri Produk dari Bahan Limbah Minyak Pelumas relevan karena objek/aktivitas pada KI \"METODA PEMBUATAN NANOSELULOSA TERMODIFIKASI DARI LIMBAH PELEPAH NIPAH (NYPA FRUTICANS WURMB/PALMAE) SERTA PRODUK YANG DIHASILKANNYA\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Industri Mesin Penyiapan Dan Pembuatan Produk Kulit relevan karena objek/aktivitas pada KI \"METODA PEMBUATAN NANOSELULOSA TERMODIFIKASI DARI LIMBAH PELEPAH NIPAH (NYPA FRUTICANS WURMB/PALMAE) SERTA PRODUK YANG DIHASILKANNYA\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
       "kbli": [
