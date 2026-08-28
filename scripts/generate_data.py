@@ -1,130 +1,143 @@
 #!/usr/bin/env python3
+"""
+Generate dashboard data from the Excel master.
+Single source for current dashboard:
+  - Dashboard Data sheet in the master workbook
+  - TKT/TRL = TKT Terverifikasi
+  - Sektor Utama = first sector ([1]) when multiple sectors are stored
+  - ORPP/ORHL: exclude wholesale KBLI 46xxx
+"""
 from pathlib import Path
-import json,re,pandas as pd
+import json, re, sys
+import pandas as pd
 
-ROOT=Path(__file__).resolve().parents[1]
-INPUT=ROOT/"data"/"input"
-LEGACY=ROOT/"data"/"legacy.json"
-OUT=ROOT/"data.json"
-ALLOWED={"ORPP","ORHL","OREM","OREI","ORNM"}
+ROOT = Path(__file__).resolve().parents[1]
+INPUT = ROOT / "data" / "input"
+OUT = ROOT / "data.json"
+
+MASTER_CANDIDATES = [
+    INPUT / "KBLI_2025_Dashboard_Master_5OR_QA_Corrected.xlsx",
+    INPUT / "KBLI_2025_Dashboard_Master_5OR_FINAL_sector-clean.xlsx",
+    INPUT / "KBLI_2025_Dashboard_Master_5OR_REVIEW_REANALYZED_FINAL.xlsx",
+    INPUT / "master.xlsx",
+]
 
 def clean(v):
-    if pd.isna(v): return None
-    s=str(v).strip()
+    if pd.isna(v):
+        return None
+    s = str(v).strip()
     return s or None
 
-def numbered(v):
-    s=clean(v)
-    if not s:return []
-    m=re.findall(r"\[\s*(\d+)\s*\]\s*(.*?)(?=\n\s*\[\s*\d+\s*\]\s*|$)",s,flags=re.S)
-    if m:return [x[1].strip() for x in sorted(m,key=lambda z:int(z[0])) if x[1].strip()]
-    return [x.strip() for x in re.split(r";|\n",s) if x.strip()]
+def numbered(s):
+    s = clean(s) or ""
+    pairs = re.findall(r"\[\s*(\d+)\s*\]\s*(.*?)(?=\n\s*\[\s*\d+\s*\]\s*|$)", s, flags=re.S)
+    if pairs:
+        return [(int(i), v.strip()) for i, v in pairs if v.strip()]
+    return [(i+1, x.strip()) for i, x in enumerate(re.split(r";|\n", s)) if x.strip()]
 
-def codes(v):
-    out=[]
-    for x in numbered(v):
-        m=re.search(r"\b(\d{5})\b",x)
-        if m:out.append(m.group(1))
-    return out
-
-def filter_kbli(orv,items):
-    if orv not in {"ORHL","ORPP"}: return items
-    items=[x for x in items if not str(x.get("kode") or "").startswith("46") and "perdagangan besar" not in (x.get("judul") or "").lower()]
-    for i,x in enumerate(items,1):x["rank"]=i
-    return items
-
-def parse_tkt(v):
-    if pd.isna(v): return None
-    import datetime
-    if isinstance(v,(pd.Timestamp,datetime.datetime,datetime.date)): return v.day
-    s=str(v).strip()
-    if not s: return None
-    if re.fullmatch(r"\d+",s):
-        n=int(s); return n if 1<=n<=9 else None
-    return s if re.fullmatch(r"\d+\s*-\s*\d+",s) else None
-
-def parse_tkt(v):
-    if pd.isna(v): return None
-    import datetime
-    if isinstance(v,(pd.Timestamp,datetime.datetime,datetime.date)): return v.day
-    s=str(v).strip()
-    if not s: return None
-    if re.fullmatch(r"\d+",s):
-        n=int(s)
-        return n if 1<=n<=9 else None
-    return None
-
-def read_xlsx(path):
-    sheets=pd.ExcelFile(path).sheet_names
-    # ORPP/ORHL latest workbook stores the same dashboard fields in Copy-of-Sort ORHL.
-    if "Verifikasi Manual" in sheets:
-        sheet="Verifikasi Manual"
-    elif "Copy-of-Sort ORHL" in sheets and ("ORPP" in path.stem.upper() or "ORHL" in path.stem.upper()):
-        sheet="Copy-of-Sort ORHL"
-    else:
-        raise ValueError(f"{path.name}: expected 'Verifikasi Manual' sheet")
-    df=pd.read_excel(path,sheet_name=sheet,dtype=object)
-    df.columns=[str(c).strip() for c in df.columns]
-    default=next((x for x in ALLOWED if x in path.stem.upper()),None)
-    aliases={
-        "judul_ki":["Judul atau nama KI"],
-        "nomor_ki":["Nomor kekayaan intelektual (KI)"],
-        "jenis_ki":["Jenis kekayaan intelektual (KI)"],
-        "tkt":["TKT Terverifikasi","TKT Terverifikasi.1","TKT Terverifikasi [TRL Verified]"],
-        "nomor_kbli":["Nomor KBLI 2025","Nomor KBLI 2025 (Potensi Komersialisasi)","Nomor KBLI 2025\n(Potensi Komersialisasi)"],
-        "judul_kbli":["Judul KBLI 2025 (Resmi BPS)"],
-        "justifikasi":["Justifikasi","Justifikasi / Kondisi Komersialisasi"],
-        "sektor":["Sektor Utama","Sektor Industri"],
-        "or":["OR"]
-    }
-    def pick(names, required=True):
-        for n in names:
-            if n in df.columns:return n
-        if required: raise ValueError(f"{path.name}: missing one of {names}")
+def first_sector(s):
+    s = clean(s)
+    if not s:
         return None
-    c={k:pick(v, k not in {"tkt","or"}) for k,v in aliases.items()}
-    tkt_cols=[x for x in aliases["tkt"] if x in df.columns]
-    out=[]
-    for _,r in df.iterrows():
-        title=clean(r[c["judul_ki"]]); ki=clean(r[c["nomor_ki"]])
-        if not title and not ki: continue
-        orv=(clean(r[c["or"]]) if c["or"] else None) or default
-        if orv not in ALLOWED: raise ValueError(f"{path.name}: invalid/missing OR={orv!r}")
-        tkt=None
-        for tc in tkt_cols:
-            v=parse_tkt(r[tc])
-            if v is not None: tkt=v; break
-        cs,ts=codes(r[c["nomor_kbli"]]),numbered(r[c["judul_kbli"]])
-        kb=[{"rank":j+1,"kode":code,"judul":ts[j] if j<len(ts) else None} for j,code in enumerate(cs)]
-        out.append({"or":orv,"nomor_ki":ki,"judul_ki":title,"jenis_ki":clean(r[c["jenis_ki"]]),
-                    "trl":tkt,"sektor_utama":clean(r[c["sektor"]]),"justifikasi":clean(r[c["justifikasi"]]),
-                    "kbli":filter_kbli(orv,kb)})
-    return out
+    pairs = numbered(s)
+    if pairs:
+        return pairs[0][1]
+    return s
+
+def valid_kbli(code):
+    return re.sub(r"\D", "", str(code)) if code is not None else ""
+
+def wholesale(code, title):
+    c = valid_kbli(code)
+    t = (title or "").lower()
+    return c.startswith("46") or "perdagangan besar" in t
+
+def pick_master():
+    for p in MASTER_CANDIDATES:
+        if p.exists():
+            return p
+    xs = sorted(INPUT.glob("*.xlsx"))
+    if len(xs) == 1:
+        return xs[0]
+    raise FileNotFoundError(
+        "Tidak menemukan master workbook. Upload salah satu workbook master ke data/input/."
+    )
 
 def main():
-    rows=json.loads(LEGACY.read_text(encoding="utf-8")).get("records",[]) if LEGACY.exists() else []
-    for p in sorted(INPUT.glob("*.xlsx")): rows.extend(read_xlsx(p))
-    dedup={}
-    for x in rows:
-        # Keep distinct KI titles even when an organization reuses the same
-        # registration/record number across separate KI entries.
-        key=(x.get("or"), (x.get("nomor_ki") or "").strip(), (x.get("judul_ki") or "").strip().casefold())
-        dedup[key]=x
-    rows=list(dedup.values())
-    for x in rows:x["kbli"]=filter_kbli(x.get("or"),x.get("kbli") or [])
-    for x in rows:
-        x["trl_6_plus"] = isinstance(x.get("trl"), int) and x.get("trl") >= 6
-    rows.sort(key=lambda x:(x.get("or") or "",x.get("nomor_ki") or "",x.get("judul_ki") or ""))
-    if any(x.get("or") not in ALLOWED or not x.get("judul_ki") for x in rows):raise ValueError("Validation failed")
-    meta={
-        "dashboard":"KBLI 2025 – Potensi Komersialisasi KI BRIN 2026",
-        "schema_version":"1.1.0",
-        "organizations":sorted(ALLOWED),
-        "trl_6_plus_definition":"TKT Terverifikasi >= 6",
-        "trl_6_plus_total":sum(1 for x in rows if x.get("trl_6_plus")),
-        "trl_6_plus_by_or":{o:sum(1 for x in rows if x.get("or")==o and x.get("trl_6_plus")) for o in sorted(ALLOWED)}
-    }
-    OUT.write_text(json.dumps({"meta":meta,"records":rows},ensure_ascii=False,indent=2),encoding="utf-8")
-    print(f"Generated {len(rows)} records; TKT >= 6: {meta['trl_6_plus_total']}")
+    master = pick_master()
+    df = pd.read_excel(master, sheet_name="Dashboard Data", dtype=object)
+    required = [
+        "OR","Nomor KI","Judul KI","Jenis KI","TKT Terverifikasi",
+        "Sektor Utama","Nomor KBLI 2025","Judul KBLI 2025","Justifikasi"
+    ]
+    missing = [c for c in required if c not in df.columns]
+    if missing:
+        raise ValueError(f"Kolom wajib hilang dari {master.name}: {missing}")
 
-if __name__=="__main__":main()
+    rows = []
+    for _, r in df.iterrows():
+        orv = clean(r["OR"])
+        title = clean(r["Judul KI"])
+        if not orv or not title:
+            continue
+
+        # TKT/TRL must come from verified TKT only.
+        raw_tkt = clean(r["TKT Terverifikasi"])
+        try:
+            tkt = int(float(raw_tkt)) if raw_tkt is not None else None
+        except Exception:
+            tkt = None
+
+        kc = numbered(r["Nomor KBLI 2025"])
+        kt = dict(numbered(r["Judul KBLI 2025"]))
+        kblis = []
+        for rank, code in kc[:3]:
+            code = valid_kbli(code)
+            if not code:
+                continue
+            title_kbli = kt.get(rank)
+            if orv in {"ORPP", "ORHL"} and wholesale(code, title_kbli):
+                continue
+            kblis.append({"rank": rank, "kode": code, "judul": title_kbli})
+
+        rows.append({
+            "or": orv,
+            "nomor_ki": clean(r["Nomor KI"]),
+            "judul_ki": title,
+            "jenis_ki": clean(r["Jenis KI"]),
+            "trl": tkt,
+            "sektor_utama": first_sector(r["Sektor Utama"]),
+            "kbli": kblis,
+            "justifikasi": clean(r["Justifikasi"]),
+        })
+
+    # Deduplicate on OR + KI number/title, retaining the last row (latest adjustment).
+    dedup = {}
+    for row in rows:
+        key = (row["or"], row["nomor_ki"] or row["judul_ki"].casefold())
+        dedup[key] = row
+    rows = list(dedup.values())
+
+    for row in rows:
+        row["trl_6_plus"] = isinstance(row["trl"], int) and row["trl"] >= 6
+
+    rows.sort(key=lambda x: (x["or"], x["nomor_ki"] or "", x["judul_ki"]))
+
+    payload = {
+        "meta": {
+            "dashboard": "KBLI 2025 – KI BRIN",
+            "source_workbook": master.name,
+            "source_sheet": "Dashboard Data",
+            "trl_source": "TKT Terverifikasi",
+            "sector_rule": "Sektor Utama menggunakan item [1] jika sumber berisi beberapa sektor",
+            "wholesale_rule": "ORPP/ORHL mengecualikan kode 46xxx dan judul Perdagangan Besar",
+            "total_records": len(rows),
+            "trl_6_plus_total": sum(1 for r in rows if r["trl_6_plus"]),
+        },
+        "records": rows,
+    }
+    OUT.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
+    print(f"Generated {len(rows)} records from {master.name}")
+
+if __name__ == "__main__":
+    main()
