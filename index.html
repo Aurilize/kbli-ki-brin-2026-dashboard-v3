@@ -16,7 +16,7 @@
 main{flex:1;min-width:0;padding:24px 24px 34px;max-width:1540px;margin:0 auto}
 .header{display:flex;gap:18px;align-items:flex-start;justify-content:space-between;margin-bottom:16px}.header h1{margin:0;font-size:28px;color:#10224b}.header h2{margin:1px 0 5px;font-size:19px}.header p{margin:0;color:var(--muted)}
 .date{background:linear-gradient(135deg,#6048de,#3249c5);color:#fff;border-radius:12px;padding:10px 15px;min-width:160px}.date small{display:block;opacity:.8}.date b{font-size:15px}
-.filters{display:grid;grid-template-columns:1fr 1fr 2fr;gap:10px;margin:0 0 14px}.filters select,.filters input{width:100%;padding:10px 12px;border:1px solid #d5dae4;border-radius:9px;background:#fff;color:#24324a;outline:none}.filters input:focus,.filters select:focus{border-color:#7188e7;box-shadow:0 0 0 3px #7188e720}
+.filter-bar{position:sticky;top:0;z-index:20;background:rgba(244,246,251,.96);backdrop-filter:blur(8px);padding:8px 0 12px;margin-bottom:4px}.filter-title{font-size:11px;font-weight:900;color:#47546d;margin-bottom:6px;letter-spacing:.3px}.filters{display:grid;grid-template-columns:1fr 1fr 2fr;gap:10px;margin:0}.filters select,.filters input{width:100%;padding:10px 12px;border:1px solid #d5dae4;border-radius:9px;background:#fff;color:#24324a;outline:none}.filters input:focus,.filters select:focus{border-color:#7188e7;box-shadow:0 0 0 3px #7188e720}
 .kpis{display:grid;grid-template-columns:repeat(5,1fr);gap:11px;margin-bottom:14px}.card{background:var(--card);border:1px solid var(--line);border-radius:14px;box-shadow:0 4px 14px #15326708}.kpi{padding:15px 16px;position:relative;overflow:hidden}.kpi:after{content:"";position:absolute;right:-24px;top:-24px;width:88px;height:88px;border-radius:50%;background:currentColor;opacity:.06}.kpi .lbl{font-size:12px;font-weight:800}.kpi .num{font-size:29px;font-weight:900;margin:4px 0 2px}.kpi .sub{font-size:11px;font-weight:700;color:currentColor}.p{color:var(--p)}.b{color:var(--b)}.g{color:var(--g)}.o{color:var(--o)}.r{color:var(--r)}
 .grid{display:grid;grid-template-columns:1.15fr .85fr;gap:14px;margin-bottom:14px}.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px}.panel{padding:16px}.panel h3{margin:0 0 12px;font-size:15px}.section-tag{display:inline-block;padding:7px 11px;color:#fff;border-radius:9px 9px 9px 0;font-size:12px;font-weight:900;margin-bottom:10px}.tag-p{background:linear-gradient(90deg,#7a54e9,#6c50d8)}.tag-b{background:linear-gradient(90deg,#2f86f3,#4c64dd)}.tag-g{background:linear-gradient(90deg,#19ab6b,#0d9560)}
 .pie-wrap{display:grid;grid-template-columns:minmax(250px,1fr) minmax(245px,.95fr);gap:12px;align-items:center}.pie{width:min(285px,24vw);height:min(285px,24vw);min-width:205px;min-height:205px;border-radius:50%;position:relative;margin:auto;box-shadow:0 8px 22px #1e30531a}.pie:after{content:"";position:absolute;inset:27%;background:#fff;border-radius:50%;display:grid;place-items:center;content:"";}.pie-center{position:absolute;inset:0;display:grid;place-items:center;z-index:2;text-align:center}.pie-center b{display:block;font-size:28px}.pie-center span{font-size:11px;color:var(--muted)}
@@ -27,10 +27,10 @@ main{flex:1;min-width:0;padding:24px 24px 34px;max-width:1540px;margin:0 auto}
 .pagination{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;padding-top:10px}.pagination button{border:1px solid #d4dae5;background:#fff;border-radius:8px;padding:7px 10px;cursor:pointer}.pagination button:disabled{opacity:.45;cursor:not-allowed}.pagination select{border:1px solid #d4dae5;border-radius:8px;padding:7px 9px;background:#fff}
 .detail table{width:100%;border-collapse:collapse;min-width:980px}.detail th,.detail td{padding:9px 8px;border-bottom:1px solid #eef1f5;text-align:left;vertical-align:top;font-size:11px}.detail th{position:sticky;top:0;background:#f7f8fc;z-index:2}.tkt{display:inline-block;font-weight:900;border-radius:6px;padding:4px 7px}.t6{background:#d8f3e5;color:#0f8450}.t45{background:#fff0d7;color:#ad6800}.t13{background:#ffe1e1;color:#bd3535}
 .tooltip{position:fixed;pointer-events:none;background:#12223f;color:#fff;border-radius:8px;padding:8px 10px;font-size:11px;z-index:50;box-shadow:0 6px 16px #0d18302e;opacity:0;transform:translate(8px,8px);transition:opacity .1s}.tip-on{opacity:1}
-.trl-info{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.trl-item{border-left:4px solid var(--b);background:#f8f9fc;padding:8px 10px;border-radius:0 8px 8px 0}.trl-item b{font-size:11px}.trl-item span{display:block;font-size:10px;color:var(--muted)}
+.trl-info{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.trl-item{padding:9px 10px;border-radius:10px;background:#f8f9fc;border:1px solid var(--line);position:relative;overflow:hidden}.trl-item:before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:var(--c)}.trl-item b{font-size:11px}.trl-item span{display:block;font-size:10px;color:var(--muted);margin-top:2px}.trl-low{--c:#ef4545;background:linear-gradient(90deg,#fff1f1,#fff)}.trl-mid{--c:#f59b18;background:linear-gradient(90deg,#fff7e8,#fff)}.trl-high{--c:#18a968;background:linear-gradient(90deg,#effaf4,#fff)}.trl-max{--c:#6f4ae7;background:linear-gradient(90deg,#f3efff,#fff)}
 footer{display:none}
 @media(max-width:1200px){.kpis{grid-template-columns:repeat(3,1fr)}.grid,.grid2{grid-template-columns:1fr}.filters{grid-template-columns:1fr 1fr}.pie{width:250px;height:250px}}
-@media(max-width:760px){.layout{display:block}.sidebar{position:static;width:auto;height:auto;padding:12px}.logo{height:58px;margin:0}.logo img{max-height:50px}.nav{display:flex;gap:5px;overflow:auto}.nav a{white-space:nowrap}.side-note{display:none}main{padding:15px}.header{display:block}.date{margin-top:10px}.filters{grid-template-columns:1fr}.kpis{grid-template-columns:1fr 1fr}.pie-wrap{grid-template-columns:1fr}.pie{width:230px;height:230px}.trl-info{grid-template-columns:1fr}}
+@media(max-width:760px){.layout{display:block}.sidebar{position:static;width:auto;height:auto;padding:12px}.logo{height:58px;margin:0}.logo img{max-height:50px}.nav{display:flex;gap:5px;overflow:auto}.nav a{white-space:nowrap}.side-note{display:none}main{padding:15px}.header{display:block}.date{margin-top:10px}.filters{grid-template-columns:1fr}.filter-bar{top:0}.kpis{grid-template-columns:1fr 1fr}.pie-wrap{grid-template-columns:1fr}.pie{width:230px;height:230px}.trl-info{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -49,10 +49,13 @@ footer{display:none}
 <div class="date"><small>Data dashboard</small><b id="date">2026</b></div>
 </div>
 
+<div class="filter-bar">
+<div class="filter-title">FILTER DASHBOARD</div>
 <div class="filters">
 <select id="orFilter"><option value="">Semua OR</option></select>
 <select id="trlFilter"><option value="">Semua TKT</option></select>
 <input id="search" placeholder="Cari judul KI, nomor KI, KBLI, atau sektor...">
+</div>
 </div>
 
 <div class="kpis">
@@ -85,15 +88,20 @@ footer{display:none}
 <section class="card panel" style="margin-top:14px">
 <h3>PENJELASAN TKT / TRL</h3>
 <div class="trl-info">
-<div class="trl-item"><b>TRL 1 – Prinsip dasar</b><span>Prinsip ilmiah dasar diamati.</span></div>
-<div class="trl-item"><b>TRL 2 – Konsep teknologi</b><span>Konsep atau aplikasi teknologi dirumuskan.</span></div>
-<div class="trl-item"><b>TRL 3 – Bukti konsep</b><span>Konsep dibuktikan secara analitis/eksperimental.</span></div>
-<div class="trl-item"><b>TRL 4 – Validasi laboratorium</b><span>Komponen/subsistem divalidasi di laboratorium.</span></div>
-<div class="trl-item"><b>TRL 5 – Validasi lingk. relevan</b><span>Teknologi divalidasi di lingkungan yang relevan.</span></div>
-<div class="trl-item"><b>TRL 6 – Demo lingk. relevan</b><span>Prototipe/demonstrasi teknologi di lingkungan relevan.</span></div>
-<div class="trl-item"><b>TRL 7 – Demo lingk. operasional</b><span>Prototipe sistem didemonstrasikan di lingkungan operasional.</span></div>
-<div class="trl-item"><b>TRL 8 – Sistem lengkap &amp; kualifikasi</b><span>Sistem lengkap dan memenuhi kualifikasi.</span></div>
-<div class="trl-item"><b>TRL 9 – Sistem terbukti operasional</b><span>Sistem terbukti beroperasi pada kondisi nyata.</span></div>
+<div class="trl-item trl-low"><b>TRL 1 – Prinsip dasar</b><span>Prinsip ilmiah dasar diamati.</span></div>
+<div class="trl-item trl-low"><b>TRL 2 – Konsep teknologi</b><span>Konsep atau aplikasi teknologi dirumuskan.</span></div>
+<div class="trl-item trl-low"><b>TRL 3 – Bukti konsep</b><span>Konsep dibuktikan secara analitis/eksperimental.</span></div>
+<div class="trl-item trl-mid"><b>TRL 4 – Validasi laboratorium</b><span>Komponen/subsistem divalidasi di laboratorium.</span></div>
+<div class="trl-item trl-mid"><b>TRL 5 – Validasi lingk. relevan</b><span>Teknologi divalidasi di lingkungan yang relevan.</span></div>
+<div class="trl-item trl-mid"><b>TRL 6 – Demo lingk. relevan</b><span>Prototipe/demonstrasi teknologi di lingkungan relevan.</span></div>
+<div class="trl-item trl-high"><b>TRL 7 – Demo lingk. operasional</b><span>Prototipe sistem didemonstrasikan di lingkungan operasional.</span></div>
+<div class="trl-item trl-high"><b>TRL 8 – Sistem lengkap &amp; kualifikasi</b><span>Sistem lengkap dan memenuhi kualifikasi.</span></div>
+<div class="trl-item trl-max"><b>TRL 9 – Sistem terbukti operasional</b><span>Sistem terbukti beroperasi pada kondisi nyata.</span></div>
+</div>
+<div style="margin-top:10px;display:flex;align-items:center;gap:8px;font-size:11px;color:var(--muted)">
+<span style="font-weight:800">Kesiapterapan:</span>
+<span style="display:inline-block;width:90px;height:10px;border-radius:99px;background:linear-gradient(90deg,#ef4545,#f59b18,#18a968,#6f4ae7)"></span>
+<span>1 paling tidak siap</span><span>→</span><span>9 paling siap</span>
 </div>
 </section>
 
@@ -161,9 +169,26 @@ function renderKBLI(rows){
 }
 function levelChip(n,total){return `<span class="chip ${n>=6?"high":n>=4?"med":n>0?"low":"neutral"}">${n}<br><small>${pct(n,total)}</small></span>`}
 function renderSummary(rows){
- document.getElementById("summary").innerHTML=`<table><thead><tr><th>OR</th><th>Total</th><th>TKT 1–3</th><th>TKT 4–5</th><th>TKT 6</th><th>TKT 7</th><th>TKT 8</th><th>TKT 9</th><th>TKT ≥6</th></tr></thead><tbody>`+
- ORS.map(o=>{const a=rows.filter(x=>x.or===o);const by=t=>a.filter(x=>x.trl===t).length;const n6=a.filter(x=>Number.isInteger(x.trl)&&x.trl>=6).length;return `<tr><td><b>${o}</b></td><td><b>${a.length}</b></td><td>${levelChip(a.filter(x=>Number.isInteger(x.trl)&&x.trl<=3).length,a.length)}</td><td>${levelChip(a.filter(x=>Number.isInteger(x.trl)&&x.trl>=4&&x.trl<=5).length,a.length)}</td><td>${levelChip(by(6),a.length)}</td><td>${levelChip(by(7),a.length)}</td><td>${levelChip(by(8),a.length)}</td><td>${levelChip(by(9),a.length)}</td><td>${levelChip(n6,a.length)}</td></tr>`}).join("")+
-`<tr style="background:#fafbff"><td><b>TOTAL</b></td><td><b>${rows.length}</b></td><td>${levelChip(rows.filter(x=>Number.isInteger(x.trl)&&x.trl<=3).length,rows.length)}</td><td>${levelChip(rows.filter(x=>Number.isInteger(x.trl)&&x.trl>=4&&x.trl<=5).length,rows.length)}</td><td>${levelChip(rows.filter(x=>x.trl===6).length,rows.length)}</td><td>${levelChip(rows.filter(x=>x.trl===7).length,rows.length)}</td><td>${levelChip(rows.filter(x=>x.trl===8).length,rows.length)}</td><td>${levelChip(rows.filter(x=>x.trl===9).length,rows.length)}</td><td>${levelChip(rows.filter(x=>Number.isInteger(x.trl)&&x.trl>=6).length,rows.length)}</td></tr></tbody></table>`;
+ const ranges=[
+   ["1–3",a=>Number.isInteger(a.trl)&&a.trl>=1&&a.trl<=3,"low"],
+   ["4–6",a=>Number.isInteger(a.trl)&&a.trl>=4&&a.trl<=6,"mid"],
+   ["7–9",a=>Number.isInteger(a.trl)&&a.trl>=7&&a.trl<=9,"high"]
+ ];
+ function chip(n,total,cls){return `<span class="chip ${cls}">${n}<br><small>${pct(n,total)}</small></span>`}
+ const totals=ranges.map(r=>rows.filter(r[1]).length);
+ const orRows=ORS.map(o=>{
+   const a=rows.filter(x=>x.or===o);
+   const ns=ranges.map(r=>a.filter(r[1]).length);
+   return `<tr><td><b>${o}</b></td><td><b>${a.length}</b></td>`+
+      ranges.map((r,i)=>`<td>${chip(ns[i],a.length,r[2])}</td>`).join("")+
+      `</tr>`;
+ });
+ document.getElementById("summary").innerHTML=
+   `<table><thead><tr><th>OR</th><th>Total KI</th><th>TKT 1–3</th><th>TKT 4–6</th><th>TKT 7–9</th></tr></thead><tbody>`+
+   orRows.join("")+
+   `<tr style="background:#fafbff"><td><b>TOTAL</b></td><td><b>${rows.length}</b></td>`+
+   ranges.map((r,i)=>`<td>${chip(totals[i],rows.length,r[2])}</td>`).join("")+
+   `</tr></tbody></table>`;
 }
 function renderDetail(){
  const rows=filterRows(),start=(page-1)*size,end=Math.min(start+size,rows.length),slice=rows.slice(start,end);

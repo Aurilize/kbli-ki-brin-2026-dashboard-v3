@@ -17,3 +17,10 @@ Push an updated master workbook to `data/input/` and GitHub Actions will regener
 The generator reads only the `Dashboard Data` sheet of the master workbook.
 TRL/TRL is taken from `TKT Terverifikasi`.
 For ORPP/ORHL, KBLI 46xxx / Perdagangan Besar is excluded.
+
+
+## Dashboard UX v3
+- Global filter bar is sticky and drives KPIs, charts, KBLI statistics and tables.
+- Summary table uses TKT ranges 1–3, 4–6, 7–9.
+- TRL explanation uses readiness colors from low readiness (1) to highest readiness (9).
+- Detail KI pagination supports 10/20/50 rows per page.
