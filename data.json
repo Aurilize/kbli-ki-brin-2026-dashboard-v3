@@ -3,27 +3,12 @@
     "dashboard": "KBLI 2025 – Potensi Komersialisasi KI BRIN 2026",
     "schema_version": "1.0.0",
     "organizations": [
-      "ORPP",
-      "ORHL",
-      "OREM",
       "OREI",
-      "ORNM"
-    ],
-    "source_scope": [
-      "ORPP",
-      "ORHL",
       "OREM",
-      "OREI",
-      "ORNM"
-    ],
-    "exclusions": {
-      "OR": [
-        "ORHL",
-        "ORPP"
-      ],
-      "rule": "Exclude all wholesale-trade KBLI (46xxx / titles containing 'Perdagangan Besar')",
-      "removed_kbli_assignments": 19
-    }
+      "ORHL",
+      "ORNM",
+      "ORPP"
+    ]
   },
   "records": [
     {
