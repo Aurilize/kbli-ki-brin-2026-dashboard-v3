@@ -1,11 +1,13 @@
 {
   "meta": {
     "dashboard": "KBLI 2025 – KI BRIN",
-    "source": "KBLI_2025_Dashboard_Master_5OR_QA_Corrected.xlsx",
-    "total_records": 295,
-    "trl_definition": "TKT Terverifikasi",
-    "sector_rule": "Sektor Utama = item [1] bila sumber memiliki beberapa sektor",
-    "wholesale_exclusion": "ORPP/ORHL: kode 46xxx dan judul Perdagangan Besar dikecualikan"
+    "source_workbook": "KBLI_2025_Dashboard_Master_5OR_QA_Corrected.xlsx",
+    "source_sheet": "Dashboard Data",
+    "trl_source": "TKT Terverifikasi",
+    "sector_rule": "Sektor Utama menggunakan item [1] jika sumber berisi beberapa sektor",
+    "wholesale_rule": "ORPP/ORHL mengecualikan kode 46xxx dan judul Perdagangan Besar",
+    "total_records": 293,
+    "trl_6_plus_total": 56
   },
   "records": [
     {
@@ -28,7 +30,7 @@
         }
       ],
       "justifikasi": "KBLI dipilih berdasarkan objek/fungsi utama KI 'LabFonStudio versi 1.0'. Prioritas pertama adalah KBLI yang paling langsung merepresentasikan produk/aktivitas KI; KBLI berikutnya merupakan aktivitas terkait yang masih relevan.",
-      "kode_sektor_2_digit": "62 / 63"
+      "trl_6_plus": false
     },
     {
       "or": "OREI",
@@ -55,7 +57,7 @@
         }
       ],
       "justifikasi": "[1] Industri Barang Kimia Lainnya YTDL relevan karena objek/aktivitas pada KI \"FungiScannerID: Sistem Identifikasi Genus Jamur Real-Time Berbasis Android dan TensorFlow Lite\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Industri Bahan Baku Farmasi untuk Manusia relevan karena objek/aktivitas pada KI \"FungiScannerID: Sistem Identifikasi Genus Jamur Real-Time Berbasis Android dan TensorFlow Lite\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Industri Peralatan Kedokteran dan Kedokteran Gigi, serta Perlengkapan Lainnya relevan karena objek/aktivitas pada KI \"FungiScannerID: Sistem Identifikasi Genus Jamur Real-Time Berbasis Android dan TensorFlow Lite\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
-      "kode_sektor_2_digit": "20"
+      "trl_6_plus": false
     },
     {
       "or": "OREI",
@@ -82,7 +84,7 @@
         }
       ],
       "justifikasi": "[1] Industri Peralatan Listrik Lainnya relevan karena objek/aktivitas pada KI \"Lampu Pelampung Suar\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Industri Peralatan Komunikasi Lainnya relevan karena objek/aktivitas pada KI \"Lampu Pelampung Suar\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Industri Lampu dari Logam relevan karena objek/aktivitas pada KI \"Lampu Pelampung Suar\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
-      "kode_sektor_2_digit": "27"
+      "trl_6_plus": false
     },
     {
       "or": "OREI",
@@ -109,7 +111,7 @@
         }
       ],
       "justifikasi": "[1] Industri Peralatan Listrik Lainnya relevan karena objek/aktivitas pada KI \"Lampu Pelampung Suar Pintar\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Industri Peralatan Komunikasi Lainnya relevan karena objek/aktivitas pada KI \"Lampu Pelampung Suar Pintar\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Industri Lampu LED relevan karena objek/aktivitas pada KI \"Lampu Pelampung Suar Pintar\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
-      "kode_sektor_2_digit": "27"
+      "trl_6_plus": false
     },
     {
       "or": "OREI",
@@ -131,7 +133,7 @@
         }
       ],
       "justifikasi": "KBLI dipilih berdasarkan objek/fungsi utama KI 'Dataset Citra Perilaku Pengemudi Kendaraan Roda Empat'. Prioritas pertama adalah KBLI yang paling langsung merepresentasikan produk/aktivitas KI; KBLI berikutnya merupakan aktivitas terkait yang masih relevan.",
-      "kode_sektor_2_digit": "63 / 62"
+      "trl_6_plus": false
     },
     {
       "or": "OREI",
@@ -158,7 +160,7 @@
         }
       ],
       "justifikasi": "KBLI dipilih berdasarkan objek/fungsi utama KI 'Aplikasi Mobile SONIKApp berbasis Android untuk Pencarian Lokasi SPKLU'. Prioritas pertama adalah KBLI yang paling langsung merepresentasikan produk/aktivitas KI; KBLI berikutnya merupakan aktivitas terkait yang masih relevan.",
-      "kode_sektor_2_digit": "62 / 63 / 63"
+      "trl_6_plus": false
     },
     {
       "or": "OREI",
@@ -180,7 +182,7 @@
         }
       ],
       "justifikasi": "KBLI dipilih berdasarkan objek/fungsi utama KI 'Dataset Citra Kendaraan Berdasar Klasifikasi Tarif Tol Indonesia'. Prioritas pertama adalah KBLI yang paling langsung merepresentasikan produk/aktivitas KI; KBLI berikutnya merupakan aktivitas terkait yang masih relevan.",
-      "kode_sektor_2_digit": "63 / 62"
+      "trl_6_plus": false
     },
     {
       "or": "OREI",
@@ -207,7 +209,7 @@
         }
       ],
       "justifikasi": "KBLI dipilih berdasarkan objek/fungsi utama KI 'Bangkit-TS (Pembangkit Teks Berbasis Sinonim untuk Pembelajaran CNN dan LSTM)'. Prioritas pertama adalah KBLI yang paling langsung merepresentasikan produk/aktivitas KI; KBLI berikutnya merupakan aktivitas terkait yang masih relevan.",
-      "kode_sektor_2_digit": "62 / 62 / 63"
+      "trl_6_plus": false
     },
     {
       "or": "OREI",
@@ -234,7 +236,7 @@
         }
       ],
       "justifikasi": "KBLI dipilih berdasarkan objek/fungsi utama KI 'Program Segmentasi Citra Kapang Aspergillus, Trichoderma dan Cladosporium dengan Adaptive Thresholding, Otsu Thresholding dan K-Means Clustering'. Prioritas pertama adalah KBLI yang paling langsung merepresentasikan produk/aktivitas KI; KBLI berikutnya merupakan aktivitas terkait yang masih relevan.",
-      "kode_sektor_2_digit": "62 / 62 / 63"
+      "trl_6_plus": false
     },
     {
       "or": "OREI",
@@ -261,7 +263,7 @@
         }
       ],
       "justifikasi": "KBLI dipilih berdasarkan objek/fungsi utama KI 'SecureHi'. Prioritas pertama adalah KBLI yang paling langsung merepresentasikan produk/aktivitas KI; KBLI berikutnya merupakan aktivitas terkait yang masih relevan.",
-      "kode_sektor_2_digit": "62 / 62 / 62"
+      "trl_6_plus": false
     },
     {
       "or": "OREI",
@@ -288,7 +290,7 @@
         }
       ],
       "justifikasi": "[1] Industri Alat Ukur dan Alat Uji Elektronik relevan karena objek/aktivitas pada KI \"Simulator OBU (Ocean Bottom Unit) Untuk Pengujian Fungsi Sistem Pendeteksi Tsunami Ina-Buoy\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Industri Alat Ukur, Alat Uji, dan Peralatan Navigasi dan Kontrol Lainnya relevan karena objek/aktivitas pada KI \"Simulator OBU (Ocean Bottom Unit) Untuk Pengujian Fungsi Sistem Pendeteksi Tsunami Ina-Buoy\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Jasa Pengujian Teknis relevan karena objek/aktivitas pada KI \"Simulator OBU (Ocean Bottom Unit) Untuk Pengujian Fungsi Sistem Pendeteksi Tsunami Ina-Buoy\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
-      "kode_sektor_2_digit": "26"
+      "trl_6_plus": true
     },
     {
       "or": "OREI",
@@ -310,7 +312,7 @@
         }
       ],
       "justifikasi": "KBLI dipilih berdasarkan objek/fungsi utama KI 'InaCOVED (Indonesian Corpus For COVID-19 Event Detection) On Online News'. Prioritas pertama adalah KBLI yang paling langsung merepresentasikan produk/aktivitas KI; KBLI berikutnya merupakan aktivitas terkait yang masih relevan.",
-      "kode_sektor_2_digit": "63 / 62"
+      "trl_6_plus": false
     },
     {
       "or": "OREI",
@@ -337,7 +339,7 @@
         }
       ],
       "justifikasi": "[1] Konstruksi Bangunan Sipil Fasilitas Olah Raga relevan karena objek/aktivitas pada KI \"RAGLab v1.0\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Aktivitas Kelab Malam atau Diskotek yang Utamanya Menyediakan Minuman relevan karena objek/aktivitas pada KI \"RAGLab v1.0\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Klub Olahraga Lainnya relevan karena objek/aktivitas pada KI \"RAGLab v1.0\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
-      "kode_sektor_2_digit": "42"
+      "trl_6_plus": false
     },
     {
       "or": "OREI",
@@ -364,7 +366,7 @@
         }
       ],
       "justifikasi": "[1] Aktivitas Pemrograman Komputer Lainnya relevan karena objek/aktivitas pada KI \"FaCoSwap: Aplikasi Penukar Komponen Wajah\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Aktivitas Pemrograman Berbasis Kecerdasan Artifisial relevan karena objek/aktivitas pada KI \"FaCoSwap: Aplikasi Penukar Komponen Wajah\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Aktivitas Pengolahan Data relevan karena objek/aktivitas pada KI \"FaCoSwap: Aplikasi Penukar Komponen Wajah\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
-      "kode_sektor_2_digit": "62"
+      "trl_6_plus": true
     },
     {
       "or": "OREI",
@@ -391,7 +393,7 @@
         }
       ],
       "justifikasi": "[1] Pengolahan Sampah Tidak Berbahaya untuk Menghasilkan Energi relevan karena objek/aktivitas pada KI \"Sistem Monitoring InaCBT\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Perdagangan Besar Bahan Bakar Padat, Cair, dan Gas beserta Produk Terkait relevan karena objek/aktivitas pada KI \"Sistem Monitoring InaCBT\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Pemasangan Sistem Elektronika relevan karena objek/aktivitas pada KI \"Sistem Monitoring InaCBT\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
-      "kode_sektor_2_digit": "38"
+      "trl_6_plus": true
     },
     {
       "or": "OREI",
@@ -418,7 +420,7 @@
         }
       ],
       "justifikasi": "KBLI dipilih berdasarkan objek/fungsi utama KI 'MikSec-Auto: Automasi Pengamanan Router MikroTik Berbasis IaC'. Prioritas pertama adalah KBLI yang paling langsung merepresentasikan produk/aktivitas KI; KBLI berikutnya merupakan aktivitas terkait yang masih relevan.",
-      "kode_sektor_2_digit": "62 / 62 / 62"
+      "trl_6_plus": false
     },
     {
       "or": "OREI",
@@ -445,7 +447,7 @@
         }
       ],
       "justifikasi": "[1] Konstruksi Bangunan Sipil Sistem Pengolahan Limbah relevan karena objek/aktivitas pada KI \"SisMonSBNP v1.0\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Aktivitas Jasa Sistem Komunikasi Data relevan karena objek/aktivitas pada KI \"SisMonSBNP v1.0\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Penyelenggaraan Sistem Perdagangan Efek relevan karena objek/aktivitas pada KI \"SisMonSBNP v1.0\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
-      "kode_sektor_2_digit": "42"
+      "trl_6_plus": true
     },
     {
       "or": "OREI",
@@ -472,7 +474,7 @@
         }
       ],
       "justifikasi": "[1] Aktivitas Pemrograman Berbasis Kecerdasan Artifisial relevan karena objek/aktivitas pada KI \"Aplikasi Tews Mobile Sebagai Setting Parameter Dan Monitoring Inabuoy Menggunakan Komunikasi Bluetooth Low Energy\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Aktivitas Pemrograman Komputer Lainnya relevan karena objek/aktivitas pada KI \"Aplikasi Tews Mobile Sebagai Setting Parameter Dan Monitoring Inabuoy Menggunakan Komunikasi Bluetooth Low Energy\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Aktivitas Teknologi Informasi Dan Jasa Komputer Lainnya relevan karena objek/aktivitas pada KI \"Aplikasi Tews Mobile Sebagai Setting Parameter Dan Monitoring Inabuoy Menggunakan Komunikasi Bluetooth Low Energy\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
-      "kode_sektor_2_digit": "62"
+      "trl_6_plus": true
     },
     {
       "or": "OREI",
@@ -499,7 +501,7 @@
         }
       ],
       "justifikasi": "[1] Aktivitas Pemrograman Berbasis Kecerdasan Artifisial relevan karena objek/aktivitas pada KI \"AUDITIN: Aplikasi Penilaian Keamanan Informasi Berdasarkan ISO 27001\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Aktivitas Pemrograman Komputer Lainnya relevan karena objek/aktivitas pada KI \"AUDITIN: Aplikasi Penilaian Keamanan Informasi Berdasarkan ISO 27001\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Aktivitas Teknologi Informasi Dan Jasa Komputer Lainnya relevan karena objek/aktivitas pada KI \"AUDITIN: Aplikasi Penilaian Keamanan Informasi Berdasarkan ISO 27001\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
-      "kode_sektor_2_digit": "62"
+      "trl_6_plus": true
     },
     {
       "or": "OREI",
@@ -526,7 +528,7 @@
         }
       ],
       "justifikasi": "[1] Industri Alat Ukur dan Alat Uji Elektronik relevan karena objek/aktivitas pada KI \"Program Segmentasi Lapang Paru Berdasarkan  Citra Chest X-Ray Menggunakan Metode U-Net\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Jasa Pengujian Teknis relevan karena objek/aktivitas pada KI \"Program Segmentasi Lapang Paru Berdasarkan  Citra Chest X-Ray Menggunakan Metode U-Net\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Perdagangan Besar Suku Cadang Elektronik relevan karena objek/aktivitas pada KI \"Program Segmentasi Lapang Paru Berdasarkan  Citra Chest X-Ray Menggunakan Metode U-Net\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
-      "kode_sektor_2_digit": "26"
+      "trl_6_plus": false
     },
     {
       "or": "OREI",
@@ -553,7 +555,7 @@
         }
       ],
       "justifikasi": "[1] Aktivitas Pemrograman Komputer Lainnya relevan karena objek/aktivitas pada KI \"AR-Deni: Aplikasi Interaktif Berbasis Mobile Dengan Teknologi Augmented Reality (AR) Dan Retrieval-augmented Generation (RAG) Untuk Pembelajaran Topik Pembangkit Listrik Tenaga Nuklir Di Indonesia\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Aktivitas Pemrograman Berbasis Kecerdasan Artifisial relevan karena objek/aktivitas pada KI \"AR-Deni: Aplikasi Interaktif Berbasis Mobile Dengan Teknologi Augmented Reality (AR) Dan Retrieval-augmented Generation (RAG) Untuk Pembelajaran Topik Pembangkit Listrik Tenaga Nuklir Di Indonesia\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Aktivitas Pengolahan Data relevan karena objek/aktivitas pada KI \"AR-Deni: Aplikasi Interaktif Berbasis Mobile Dengan Teknologi Augmented Reality (AR) Dan Retrieval-augmented Generation (RAG) Untuk Pembelajaran Topik Pembangkit Listrik Tenaga Nuklir Di Indonesia\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
-      "kode_sektor_2_digit": "62"
+      "trl_6_plus": false
     },
     {
       "or": "OREI",
@@ -580,7 +582,7 @@
         }
       ],
       "justifikasi": "KBLI dipilih berdasarkan objek/fungsi utama KI 'SecureFile'. Prioritas pertama adalah KBLI yang paling langsung merepresentasikan produk/aktivitas KI; KBLI berikutnya merupakan aktivitas terkait yang masih relevan.",
-      "kode_sektor_2_digit": "62 / 62 / 62"
+      "trl_6_plus": false
     },
     {
       "or": "OREI",
@@ -607,7 +609,7 @@
         }
       ],
       "justifikasi": "[1] Aktivitas Pemrograman Komputer Lainnya relevan karena objek/aktivitas pada KI \"Aplikasi AUDIT TOOLS LATIK\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Aktivitas Pemrograman Berbasis Kecerdasan Artifisial relevan karena objek/aktivitas pada KI \"Aplikasi AUDIT TOOLS LATIK\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Aktivitas Pengolahan Data relevan karena objek/aktivitas pada KI \"Aplikasi AUDIT TOOLS LATIK\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
-      "kode_sektor_2_digit": "62"
+      "trl_6_plus": true
     },
     {
       "or": "OREI",
@@ -634,7 +636,7 @@
         }
       ],
       "justifikasi": "[1] Aktivitas Pemrograman Berbasis Kecerdasan Artifisial relevan karena objek/aktivitas pada KI \"CASING PORTABEL UNTUK ALAT PEMINDAI DAUN\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Aktivitas Pemrograman Komputer Lainnya relevan karena objek/aktivitas pada KI \"CASING PORTABEL UNTUK ALAT PEMINDAI DAUN\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Aktivitas Teknologi Informasi Dan Jasa Komputer Lainnya relevan karena objek/aktivitas pada KI \"CASING PORTABEL UNTUK ALAT PEMINDAI DAUN\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
-      "kode_sektor_2_digit": "62"
+      "trl_6_plus": false
     },
     {
       "or": "OREI",
@@ -661,7 +663,7 @@
         }
       ],
       "justifikasi": "[1] Pengolahan Kopi relevan karena objek/aktivitas pada KI \"AVU-Net: Program Segmentasi Citra Fungi Mikroskopis dengan Metode Attention VGG19 U-Net\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Pertanian Kopi relevan karena objek/aktivitas pada KI \"AVU-Net: Program Segmentasi Citra Fungi Mikroskopis dengan Metode Attention VGG19 U-Net\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Industri Minuman Ringan relevan karena objek/aktivitas pada KI \"AVU-Net: Program Segmentasi Citra Fungi Mikroskopis dengan Metode Attention VGG19 U-Net\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
-      "kode_sektor_2_digit": "10"
+      "trl_6_plus": false
     },
     {
       "or": "OREI",
@@ -688,7 +690,7 @@
         }
       ],
       "justifikasi": "[1] Aktivitas Pemrograman Komputer Lainnya YTDL relevan karena objek/aktivitas pada KI \"Sistem Big Data Bahasa dan Sastra Lisan Perbatasan (BAHASAN)\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Jasa Pengujian Teknis relevan karena objek/aktivitas pada KI \"Sistem Big Data Bahasa dan Sastra Lisan Perbatasan (BAHASAN)\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Aktivitas Jasa Sistem Komunikasi Data relevan karena objek/aktivitas pada KI \"Sistem Big Data Bahasa dan Sastra Lisan Perbatasan (BAHASAN)\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
-      "kode_sektor_2_digit": "62"
+      "trl_6_plus": true
     },
     {
       "or": "OREI",
@@ -715,7 +717,7 @@
         }
       ],
       "justifikasi": "KBLI dipilih berdasarkan objek/fungsi utama KI 'Aset Game 2D/3D Indonesia Timur Seri 2'. Prioritas pertama adalah KBLI yang paling langsung merepresentasikan produk/aktivitas KI; KBLI berikutnya merupakan aktivitas terkait yang masih relevan.",
-      "kode_sektor_2_digit": "62 / 62 / 62"
+      "trl_6_plus": true
     },
     {
       "or": "OREI",
@@ -742,7 +744,7 @@
         }
       ],
       "justifikasi": "[1] Aktivitas Pemrograman Berbasis Kecerdasan Artifisial relevan karena objek/aktivitas pada KI \"Mush Trace - Aplikasi rantai pasokan pangan dan pertanian dengan berbasis Smart Contracts Blockchain dan Integrasi Internet of Things (IoT)\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Aktivitas Pemrograman Komputer Lainnya relevan karena objek/aktivitas pada KI \"Mush Trace - Aplikasi rantai pasokan pangan dan pertanian dengan berbasis Smart Contracts Blockchain dan Integrasi Internet of Things (IoT)\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Aktivitas Teknologi Informasi Dan Jasa Komputer Lainnya relevan karena objek/aktivitas pada KI \"Mush Trace - Aplikasi rantai pasokan pangan dan pertanian dengan berbasis Smart Contracts Blockchain dan Integrasi Internet of Things (IoT)\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
-      "kode_sektor_2_digit": "62"
+      "trl_6_plus": false
     },
     {
       "or": "OREI",
@@ -769,7 +771,7 @@
         }
       ],
       "justifikasi": "KBLI dipilih berdasarkan objek/fungsi utama KI 'Aplikasi untuk Analisis Pengaruh Iklim terhadap Sebaran Tuberkulosis'. Prioritas pertama adalah KBLI yang paling langsung merepresentasikan produk/aktivitas KI; KBLI berikutnya merupakan aktivitas terkait yang masih relevan.",
-      "kode_sektor_2_digit": "62 / 62 / 63"
+      "trl_6_plus": false
     },
     {
       "or": "OREI",
@@ -796,7 +798,7 @@
         }
       ],
       "justifikasi": "[1] Aktivitas Pemrograman Berbasis Kecerdasan Artifisial relevan karena objek/aktivitas pada KI \"Kalponik (Kalkulator Nutrisi Hidroponik) Digital kalkulator untuk penghitungan pupuk hidroponik AB Mix berdasarkan nilai N-total yang berbasis aplikasi Android\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Aktivitas Pemrograman Komputer Lainnya relevan karena objek/aktivitas pada KI \"Kalponik (Kalkulator Nutrisi Hidroponik) Digital kalkulator untuk penghitungan pupuk hidroponik AB Mix berdasarkan nilai N-total yang berbasis aplikasi Android\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Aktivitas Teknologi Informasi Dan Jasa Komputer Lainnya relevan karena objek/aktivitas pada KI \"Kalponik (Kalkulator Nutrisi Hidroponik) Digital kalkulator untuk penghitungan pupuk hidroponik AB Mix berdasarkan nilai N-total yang berbasis aplikasi Android\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
-      "kode_sektor_2_digit": "62"
+      "trl_6_plus": false
     },
     {
       "or": "OREI",
@@ -823,7 +825,7 @@
         }
       ],
       "justifikasi": "KBLI dipilih berdasarkan objek/fungsi utama KI 'D-Sentinel'. Prioritas pertama adalah KBLI yang paling langsung merepresentasikan produk/aktivitas KI; KBLI berikutnya merupakan aktivitas terkait yang masih relevan.",
-      "kode_sektor_2_digit": "62 / 62 / 63"
+      "trl_6_plus": false
     },
     {
       "or": "OREI",
@@ -850,7 +852,7 @@
         }
       ],
       "justifikasi": "[1] Pengolahan Kopi relevan karena objek/aktivitas pada KI \"METODE IDENTIFIKASI LINGKARAN PORI KAYU PADA CITRA MAKROSKOPIK MENGGUNAKAN ALGORITMA KONTUR\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Pertanian Kopi relevan karena objek/aktivitas pada KI \"METODE IDENTIFIKASI LINGKARAN PORI KAYU PADA CITRA MAKROSKOPIK MENGGUNAKAN ALGORITMA KONTUR\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Industri Minuman Ringan relevan karena objek/aktivitas pada KI \"METODE IDENTIFIKASI LINGKARAN PORI KAYU PADA CITRA MAKROSKOPIK MENGGUNAKAN ALGORITMA KONTUR\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
-      "kode_sektor_2_digit": "10"
+      "trl_6_plus": false
     },
     {
       "or": "OREI",
@@ -877,7 +879,7 @@
         }
       ],
       "justifikasi": "[1] Aktivitas Pemrograman Komputer Lainnya relevan karena objek/aktivitas pada KI \"Sistem Informasi Antisipasi Penyebaran Penyakit (SIAPP)\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Aktivitas Pemrograman Berbasis Kecerdasan Artifisial relevan karena objek/aktivitas pada KI \"Sistem Informasi Antisipasi Penyebaran Penyakit (SIAPP)\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Aktivitas Pengolahan Data relevan karena objek/aktivitas pada KI \"Sistem Informasi Antisipasi Penyebaran Penyakit (SIAPP)\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
-      "kode_sektor_2_digit": "62"
+      "trl_6_plus": false
     },
     {
       "or": "OREI",
@@ -904,7 +906,7 @@
         }
       ],
       "justifikasi": "[1] Aktivitas Pemrograman Berbasis Kecerdasan Artifisial relevan karena objek/aktivitas pada KI \"RekomendasiMenu: Aplikasi Rekomendasi Menu Makanan Sesuai Kebutuhan Nutrisi Masyarakat Indonesia\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Aktivitas Pemrograman Komputer Lainnya relevan karena objek/aktivitas pada KI \"RekomendasiMenu: Aplikasi Rekomendasi Menu Makanan Sesuai Kebutuhan Nutrisi Masyarakat Indonesia\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Aktivitas Teknologi Informasi Dan Jasa Komputer Lainnya relevan karena objek/aktivitas pada KI \"RekomendasiMenu: Aplikasi Rekomendasi Menu Makanan Sesuai Kebutuhan Nutrisi Masyarakat Indonesia\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
-      "kode_sektor_2_digit": "62"
+      "trl_6_plus": false
     },
     {
       "or": "OREI",
@@ -931,7 +933,7 @@
         }
       ],
       "justifikasi": "[1] Aktivitas Pemrograman Komputer Lainnya relevan karena objek/aktivitas pada KI \"Aplikasi untuk Analisis Pengaruh Iklim terhadap Sebaran Tuberkulosis\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Aktivitas Pemrograman Berbasis Kecerdasan Artifisial relevan karena objek/aktivitas pada KI \"Aplikasi untuk Analisis Pengaruh Iklim terhadap Sebaran Tuberkulosis\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Aktivitas Pengolahan Data relevan karena objek/aktivitas pada KI \"Aplikasi untuk Analisis Pengaruh Iklim terhadap Sebaran Tuberkulosis\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
-      "kode_sektor_2_digit": "62"
+      "trl_6_plus": false
     },
     {
       "or": "OREI",
@@ -958,7 +960,7 @@
         }
       ],
       "justifikasi": "[1] Industri Alat Ukur dan Alat Uji Elektronik relevan karena objek/aktivitas pada KI \"METODE UNTUK MENGUKUR INDEKS KUALITAS AIR SECARA OTOMATIS\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Jasa Pengujian Teknis relevan karena objek/aktivitas pada KI \"METODE UNTUK MENGUKUR INDEKS KUALITAS AIR SECARA OTOMATIS\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Perdagangan Besar Suku Cadang Elektronik relevan karena objek/aktivitas pada KI \"METODE UNTUK MENGUKUR INDEKS KUALITAS AIR SECARA OTOMATIS\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
-      "kode_sektor_2_digit": "26"
+      "trl_6_plus": false
     },
     {
       "or": "OREI",
@@ -985,7 +987,7 @@
         }
       ],
       "justifikasi": "[1] Aktivitas Pemrograman Komputer Lainnya relevan karena objek/aktivitas pada KI \"Aplikasi  Berbasis Website untuk Pengelolaan Database Metabolit Ikan\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Aktivitas Pemrograman Berbasis Kecerdasan Artifisial relevan karena objek/aktivitas pada KI \"Aplikasi  Berbasis Website untuk Pengelolaan Database Metabolit Ikan\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Aktivitas Pengolahan Data relevan karena objek/aktivitas pada KI \"Aplikasi  Berbasis Website untuk Pengelolaan Database Metabolit Ikan\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
-      "kode_sektor_2_digit": "62"
+      "trl_6_plus": false
     },
     {
       "or": "OREI",
@@ -1012,7 +1014,7 @@
         }
       ],
       "justifikasi": "[1] Aktivitas Pemrograman Komputer Lainnya relevan karena objek/aktivitas pada KI \"Aplikasi Mobile SONIKApp berbasis Android untuk Pencarian Lokasi SPKLU\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Aktivitas Pemrograman Berbasis Kecerdasan Artifisial relevan karena objek/aktivitas pada KI \"Aplikasi Mobile SONIKApp berbasis Android untuk Pencarian Lokasi SPKLU\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Aktivitas Pengolahan Data relevan karena objek/aktivitas pada KI \"Aplikasi Mobile SONIKApp berbasis Android untuk Pencarian Lokasi SPKLU\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
-      "kode_sektor_2_digit": "62"
+      "trl_6_plus": false
     },
     {
       "or": "OREI",
@@ -1039,7 +1041,7 @@
         }
       ],
       "justifikasi": "KBLI dipilih berdasarkan objek/fungsi utama KI 'Hybrid RGB-D'. Prioritas pertama adalah KBLI yang paling langsung merepresentasikan produk/aktivitas KI; KBLI berikutnya merupakan aktivitas terkait yang masih relevan.",
-      "kode_sektor_2_digit": "62 / 62 / 26"
+      "trl_6_plus": false
     },
     {
       "or": "OREI",
@@ -1066,7 +1068,7 @@
         }
       ],
       "justifikasi": "KBLI dipilih berdasarkan objek/fungsi utama KI 'DXG-Boost Tedate'. Prioritas pertama adalah KBLI yang paling langsung merepresentasikan produk/aktivitas KI; KBLI berikutnya merupakan aktivitas terkait yang masih relevan.",
-      "kode_sektor_2_digit": "62 / 63 / 62"
+      "trl_6_plus": true
     },
     {
       "or": "OREI",
@@ -1088,7 +1090,7 @@
         }
       ],
       "justifikasi": "[1] Teknologi konversi energi diproduksi sbg sistem pembangkit energi terbarukan\n [2] Mendukung riset inovasi sistem konversi dan penyimpanan energi",
-      "kode_sektor_2_digit": "35"
+      "trl_6_plus": false
     },
     {
       "or": "OREI",
@@ -1105,7 +1107,7 @@
         }
       ],
       "justifikasi": "Invensi menghasilkan penguat sinyal AIS menggunakan antena Yagi dan LNA untuk menerima informasi posisi kapal pada frekuensi AIS. Produk akhirnya merupakan perangkat komunikasi/penerimaan sinyal nirkabel.",
-      "kode_sektor_2_digit": "26"
+      "trl_6_plus": true
     },
     {
       "or": "OREI",
@@ -1132,7 +1134,7 @@
         }
       ],
       "justifikasi": "[1] PERANGKAT SIMULASI DATA TEKANAN AIR LAUT UNTUK PENGUJIAN SISTEM OCEAN BOTTOM UNIT PADA SISTEM DETEKSI DINI TSUNAMI BERBASIS BOTTOM PRESSURE RECORDER diproduksi sebagai alat ukur elektronik atau sistem instrumentasi.\n [2] PERANGKAT SIMULASI DATA TEKANAN AIR LAUT UNTUK PENGUJIAN SISTEM OCEAN BOTTOM UNIT PADA SISTEM DETEKSI DINI TSUNAMI BERBASIS BOTTOM PRESSURE RECORDER digunakan dalam jasa pengujian teknis.\n [3] PERANGKAT SIMULASI DATA TEKANAN AIR LAUT UNTUK PENGUJIAN SISTEM OCEAN BOTTOM UNIT PADA SISTEM DETEKSI DINI TSUNAMI BERBASIS BOTTOM PRESSURE RECORDER didistribusikan melalui jalur perdagangan besar perangkat elektronik.",
-      "kode_sektor_2_digit": "26"
+      "trl_6_plus": true
     },
     {
       "or": "OREI",
@@ -1159,7 +1161,7 @@
         }
       ],
       "justifikasi": "[1] PERANGKAT PEMANTAU KONDISI BUOY NAVIGASI PELAYARAN DENGAN SENSOR PEMANTAU INTENSITAS CAHAYA LAMPU SUAR diproduksi sebagai alat ukur elektronik atau sistem instrumentasi.\n [2] PERANGKAT PEMANTAU KONDISI BUOY NAVIGASI PELAYARAN DENGAN SENSOR PEMANTAU INTENSITAS CAHAYA LAMPU SUAR digunakan dalam jasa pengujian teknis.\n [3] PERANGKAT PEMANTAU KONDISI BUOY NAVIGASI PELAYARAN DENGAN SENSOR PEMANTAU INTENSITAS CAHAYA LAMPU SUAR didistribusikan melalui jalur perdagangan besar perangkat elektronik.",
-      "kode_sektor_2_digit": "26"
+      "trl_6_plus": true
     },
     {
       "or": "OREI",
@@ -1186,7 +1188,7 @@
         }
       ],
       "justifikasi": "[1] ALAT DAN METODE PENGUKUR GAYA TOLAK MAGNETIS PADA PEMANEN ENERGI LISTRIK BERBASIS PUTARAN DENGAN TRANSDUSER PIEZOELEKTRIK diproduksi sebagai alat ukur elektronik atau sistem instrumentasi.\n [2] ALAT DAN METODE PENGUKUR GAYA TOLAK MAGNETIS PADA PEMANEN ENERGI LISTRIK BERBASIS PUTARAN DENGAN TRANSDUSER PIEZOELEKTRIK digunakan dalam jasa pengujian teknis.\n [3] ALAT DAN METODE PENGUKUR GAYA TOLAK MAGNETIS PADA PEMANEN ENERGI LISTRIK BERBASIS PUTARAN DENGAN TRANSDUSER PIEZOELEKTRIK didistribusikan melalui jalur perdagangan besar perangkat elektronik.",
-      "kode_sektor_2_digit": "26"
+      "trl_6_plus": false
     },
     {
       "or": "OREI",
@@ -1213,7 +1215,7 @@
         }
       ],
       "justifikasi": "[1] METODE UNTUK MENGUKUR INDEKS KUALITAS AIR SECARA OTOMATIS diproduksi sebagai alat ukur elektronik atau sistem instrumentasi.\n [2] METODE UNTUK MENGUKUR INDEKS KUALITAS AIR SECARA OTOMATIS digunakan dalam jasa pengujian teknis.\n [3] METODE UNTUK MENGUKUR INDEKS KUALITAS AIR SECARA OTOMATIS didistribusikan melalui jalur perdagangan besar perangkat elektronik.",
-      "kode_sektor_2_digit": "26"
+      "trl_6_plus": false
     },
     {
       "or": "OREI",
@@ -1240,7 +1242,7 @@
         }
       ],
       "justifikasi": "[1] Industri Peralatan Listrik Lainnya relevan karena objek/aktivitas pada KI \"PERANGKAT LAMPU PELAMPUNG SUAR INTELLIGENT DENGAN PENGATURAN CHARACTER CODE SECARA REMOTE MENGGUNAKAN LORA\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Industri Peralatan Komunikasi Lainnya relevan karena objek/aktivitas pada KI \"PERANGKAT LAMPU PELAMPUNG SUAR INTELLIGENT DENGAN PENGATURAN CHARACTER CODE SECARA REMOTE MENGGUNAKAN LORA\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Industri Alat Ukur dan Alat Uji Elektronik relevan karena objek/aktivitas pada KI \"PERANGKAT LAMPU PELAMPUNG SUAR INTELLIGENT DENGAN PENGATURAN CHARACTER CODE SECARA REMOTE MENGGUNAKAN LORA\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
-      "kode_sektor_2_digit": "27"
+      "trl_6_plus": true
     },
     {
       "or": "OREI",
@@ -1267,7 +1269,7 @@
         }
       ],
       "justifikasi": "[1] Aktivitas Pemrograman Berbasis Kecerdasan Artifisial relevan karena objek/aktivitas pada KI \"SISTEM DAN METODE BERBASIS BLOCKCHAIN UNTUK PEMESANAN, PEMBAYARAN, KENDALI JARAK JAUH, DAN VERIFIKASI FLEKSIBEL PADA KENDARAAN SEWA\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Aktivitas Pemrograman Komputer Lainnya relevan karena objek/aktivitas pada KI \"SISTEM DAN METODE BERBASIS BLOCKCHAIN UNTUK PEMESANAN, PEMBAYARAN, KENDALI JARAK JAUH, DAN VERIFIKASI FLEKSIBEL PADA KENDARAAN SEWA\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Aktivitas Teknologi Informasi Dan Jasa Komputer Lainnya relevan karena objek/aktivitas pada KI \"SISTEM DAN METODE BERBASIS BLOCKCHAIN UNTUK PEMESANAN, PEMBAYARAN, KENDALI JARAK JAUH, DAN VERIFIKASI FLEKSIBEL PADA KENDARAAN SEWA\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
-      "kode_sektor_2_digit": "62"
+      "trl_6_plus": false
     },
     {
       "or": "OREI",
@@ -1294,7 +1296,7 @@
         }
       ],
       "justifikasi": "KBLI dipilih berdasarkan objek/fungsi utama KI 'METODE IDENTIFIKASI LINGKARAN PORI KAYU PADA CITRA MAKROSKOPIK MENGGUNAKAN ALGORITMA KONTUR'. Prioritas pertama adalah KBLI yang paling langsung merepresentasikan produk/aktivitas KI; KBLI berikutnya merupakan aktivitas terkait yang masih relevan.",
-      "kode_sektor_2_digit": "62 / 62 / 63"
+      "trl_6_plus": false
     },
     {
       "or": "OREI",
@@ -1321,7 +1323,7 @@
         }
       ],
       "justifikasi": "[1] Pengolahan dan Pengawetan Ikan dengan Metode Lainnya relevan karena objek/aktivitas pada KI \"METODE UNTUK MEMPREDIKSI POTENSI AGLOMERASI TERMAL PADA UNIT PEMBANGKIT BERBASIS BOILER CIRCULATING FLUIDIZED BED (CFB)\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Industri Generator Pembangkit Listrik relevan karena objek/aktivitas pada KI \"METODE UNTUK MEMPREDIKSI POTENSI AGLOMERASI TERMAL PADA UNIT PEMBANGKIT BERBASIS BOILER CIRCULATING FLUIDIZED BED (CFB)\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Pengolahan dan Pengawetan Biota Air Lainnya dengan Metode Lainnya relevan karena objek/aktivitas pada KI \"METODE UNTUK MEMPREDIKSI POTENSI AGLOMERASI TERMAL PADA UNIT PEMBANGKIT BERBASIS BOILER CIRCULATING FLUIDIZED BED (CFB)\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
-      "kode_sektor_2_digit": "10"
+      "trl_6_plus": true
     },
     {
       "or": "OREI",
@@ -1348,7 +1350,7 @@
         }
       ],
       "justifikasi": "KBLI dipilih berdasarkan objek/fungsi utama KI 'METODE DETEKSI TUBERKULOSIS DAN TINGKAT KERUSAKAN PARU BERDASARKAN CXR (CHEST X-RAY) MENGGUNAKAN INTELLIIGENT COMPUTER VISION'. Prioritas pertama adalah KBLI yang paling langsung merepresentasikan produk/aktivitas KI; KBLI berikutnya merupakan aktivitas terkait yang masih relevan.",
-      "kode_sektor_2_digit": "62 / 62 / 32"
+      "trl_6_plus": false
     },
     {
       "or": "OREI",
@@ -1375,7 +1377,7 @@
         }
       ],
       "justifikasi": "[1] Industri Alat Ukur dan Alat Uji Elektronik relevan karena objek/aktivitas pada KI \"METODE LOKALISASI REAL-TIME KENDARAAN OTONOM BERBASIS FUSI MULTI SENSOR DAN PENANDA VISUAL\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Industri Alat Ukur, Alat Uji, dan Peralatan Navigasi dan Kontrol Lainnya relevan karena objek/aktivitas pada KI \"METODE LOKALISASI REAL-TIME KENDARAAN OTONOM BERBASIS FUSI MULTI SENSOR DAN PENANDA VISUAL\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Jasa Pengujian Teknis relevan karena objek/aktivitas pada KI \"METODE LOKALISASI REAL-TIME KENDARAAN OTONOM BERBASIS FUSI MULTI SENSOR DAN PENANDA VISUAL\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
-      "kode_sektor_2_digit": "26"
+      "trl_6_plus": false
     },
     {
       "or": "OREI",
@@ -1402,7 +1404,7 @@
         }
       ],
       "justifikasi": "KBLI dipilih berdasarkan objek/fungsi utama KI 'CASING PORTABEL UNTUK ALAT PEMINDAI DAUN'. Prioritas pertama adalah KBLI yang paling langsung merepresentasikan produk/aktivitas KI; KBLI berikutnya merupakan aktivitas terkait yang masih relevan.",
-      "kode_sektor_2_digit": "26 / 26 / 62"
+      "trl_6_plus": false
     },
     {
       "or": "OREM",
@@ -1429,7 +1431,7 @@
         }
       ],
       "justifikasi": "KBLI dipilih berdasarkan objek/fungsi utama KI 'Hydrolysis Test Suite Monitoring and Control Application'. Prioritas pertama adalah KBLI yang paling langsung merepresentasikan produk/aktivitas KI; KBLI berikutnya merupakan aktivitas terkait yang masih relevan.",
-      "kode_sektor_2_digit": "62 / 63 / 26"
+      "trl_6_plus": false
     },
     {
       "or": "OREM",
@@ -1456,7 +1458,7 @@
         }
       ],
       "justifikasi": "[1] Aktivitas Telekomunikasi dengan Nirkabel relevan karena objek/aktivitas pada KI \"PERANGKAT GENGGAM PENGENDALI MEJA UJI TRANSFER DAYA NIRKABEL\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Perdagangan Besar Perangkat Lunak relevan karena objek/aktivitas pada KI \"PERANGKAT GENGGAM PENGENDALI MEJA UJI TRANSFER DAYA NIRKABEL\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Industri Peralatan Dapur dan Peralatan Meja dari Logam relevan karena objek/aktivitas pada KI \"PERANGKAT GENGGAM PENGENDALI MEJA UJI TRANSFER DAYA NIRKABEL\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
-      "kode_sektor_2_digit": "61"
+      "trl_6_plus": false
     },
     {
       "or": "OREM",
@@ -1483,7 +1485,7 @@
         }
       ],
       "justifikasi": "[1] Aktivitas Pemrograman Berbasis Kecerdasan Artifisial relevan karena objek/aktivitas pada KI \"Desain Alat Pengangkut Tanaman Sorgum\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Aktivitas Pemrograman Komputer Lainnya relevan karena objek/aktivitas pada KI \"Desain Alat Pengangkut Tanaman Sorgum\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Aktivitas Teknologi Informasi Dan Jasa Komputer Lainnya relevan karena objek/aktivitas pada KI \"Desain Alat Pengangkut Tanaman Sorgum\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
-      "kode_sektor_2_digit": "62"
+      "trl_6_plus": false
     },
     {
       "or": "OREM",
@@ -1510,7 +1512,7 @@
         }
       ],
       "justifikasi": "[1] Industri Lokomotif dan Gerbong Kereta relevan karena objek/aktivitas pada KI \"Bentuk Kepala Kereta Api Cepat\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Aktivitas Enjinering dan Konsultansi Teknis Terkait Lainnya relevan karena objek/aktivitas pada KI \"Bentuk Kepala Kereta Api Cepat\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Industri Peralatan, Perlengkapan Dan Bagian Kapal relevan karena objek/aktivitas pada KI \"Bentuk Kepala Kereta Api Cepat\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
-      "kode_sektor_2_digit": "30"
+      "trl_6_plus": false
     },
     {
       "or": "OREM",
@@ -1537,7 +1539,7 @@
         }
       ],
       "justifikasi": "[1] Industri Mesin Keperluan Khusus Lainnya YTDL relevan karena objek/aktivitas pada KI \"REAKTOR BESI TEREDUKSI LANGSUNG MEMANFAATKAN GASIFIKASI BIOMASSA\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Industri Kimia Dasar Organik dari Sumber Daya Alam Hayati relevan karena objek/aktivitas pada KI \"REAKTOR BESI TEREDUKSI LANGSUNG MEMANFAATKAN GASIFIKASI BIOMASSA\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Industri Briket relevan karena objek/aktivitas pada KI \"REAKTOR BESI TEREDUKSI LANGSUNG MEMANFAATKAN GASIFIKASI BIOMASSA\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
-      "kode_sektor_2_digit": "28"
+      "trl_6_plus": false
     },
     {
       "or": "OREM",
@@ -1564,7 +1566,7 @@
         }
       ],
       "justifikasi": "KBLI dipilih berdasarkan objek/fungsi utama KI 'Dinding Penghalang Bising Tipe Balok Berulang'. Prioritas pertama adalah KBLI yang paling langsung merepresentasikan produk/aktivitas KI; KBLI berikutnya merupakan aktivitas terkait yang masih relevan.",
-      "kode_sektor_2_digit": "23 / 23 / 22"
+      "trl_6_plus": false
     },
     {
       "or": "OREM",
@@ -1591,7 +1593,7 @@
         }
       ],
       "justifikasi": "KBLI dipilih berdasarkan objek/fungsi utama KI 'Reaktor Hidrolisis Produksi Hidrogen berbasis Metode Difusi Bertekanan'. Prioritas pertama adalah KBLI yang paling langsung merepresentasikan produk/aktivitas KI; KBLI berikutnya merupakan aktivitas terkait yang masih relevan.",
-      "kode_sektor_2_digit": "28 / 20 / 35"
+      "trl_6_plus": false
     },
     {
       "or": "OREM",
@@ -1618,7 +1620,7 @@
         }
       ],
       "justifikasi": "KBLI dipilih berdasarkan objek/fungsi utama KI 'Mesin Pengering Menggunakan Dua Drum Berputar Dengan Sumber Panas Yang Dapat Dirubah'. Prioritas pertama adalah KBLI yang paling langsung merepresentasikan produk/aktivitas KI; KBLI berikutnya merupakan aktivitas terkait yang masih relevan.",
-      "kode_sektor_2_digit": "28 / 28 / 28"
+      "trl_6_plus": false
     },
     {
       "or": "OREM",
@@ -1645,7 +1647,7 @@
         }
       ],
       "justifikasi": "KBLI dipilih berdasarkan objek/fungsi utama KI 'Dataset Pengelasan FCAW Pada Baja KI Grade A untuk Konstruksi Kapal dan Struktur Kelautan'. Prioritas pertama adalah KBLI yang paling langsung merepresentasikan produk/aktivitas KI; KBLI berikutnya merupakan aktivitas terkait yang masih relevan.",
-      "kode_sektor_2_digit": "30 / 63 / 71"
+      "trl_6_plus": false
     },
     {
       "or": "OREM",
@@ -1672,7 +1674,7 @@
         }
       ],
       "justifikasi": "[1] Industri Peralatan, Perlengkapan Dan Bagian Kapal relevan karena objek/aktivitas pada KI \"Production Engineering Kapal Mini LNG 36 TEU’s\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Industri Kendaraan Air dan Bawah Air Berawak relevan karena objek/aktivitas pada KI \"Production Engineering Kapal Mini LNG 36 TEU’s\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Industri Kapal dan Perahu Untuk Tujuan Wisata atau Rekreasi dan Olahraga relevan karena objek/aktivitas pada KI \"Production Engineering Kapal Mini LNG 36 TEU’s\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
-      "kode_sektor_2_digit": "30"
+      "trl_6_plus": false
     },
     {
       "or": "OREM",
@@ -1699,7 +1701,7 @@
         }
       ],
       "justifikasi": "KBLI dipilih berdasarkan objek/fungsi utama KI 'PERANGKAT LUNAK PLC & SCADA UNTUK SISTEM PEMANTAUAN FASILITAS OLI BEKAS'. Prioritas pertama adalah KBLI yang paling langsung merepresentasikan produk/aktivitas KI; KBLI berikutnya merupakan aktivitas terkait yang masih relevan.",
-      "kode_sektor_2_digit": "62 / 26 / 62"
+      "trl_6_plus": false
     },
     {
       "or": "OREM",
@@ -1726,7 +1728,7 @@
         }
       ],
       "justifikasi": "KBLI dipilih berdasarkan objek/fungsi utama KI 'Dataset Ketidakseimbangan Massa Pada Mesin Berputar Dengan Variasi Kecepatan Mesin'. Prioritas pertama adalah KBLI yang paling langsung merepresentasikan produk/aktivitas KI; KBLI berikutnya merupakan aktivitas terkait yang masih relevan.",
-      "kode_sektor_2_digit": "63 / 26 / 62"
+      "trl_6_plus": false
     },
     {
       "or": "OREM",
@@ -1753,7 +1755,7 @@
         }
       ],
       "justifikasi": "[1] Aktivitas Pemrograman Komputer Lainnya relevan karena objek/aktivitas pada KI \"AHP Priority (Aplikasi Komputasi Analytical Hierarchy Process (AHP) untuk Penentuan Prioritas Alternatif)\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Aktivitas Pemrograman Berbasis Kecerdasan Artifisial relevan karena objek/aktivitas pada KI \"AHP Priority (Aplikasi Komputasi Analytical Hierarchy Process (AHP) untuk Penentuan Prioritas Alternatif)\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Aktivitas Pengolahan Data relevan karena objek/aktivitas pada KI \"AHP Priority (Aplikasi Komputasi Analytical Hierarchy Process (AHP) untuk Penentuan Prioritas Alternatif)\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
-      "kode_sektor_2_digit": "62"
+      "trl_6_plus": false
     },
     {
       "or": "OREM",
@@ -1780,7 +1782,7 @@
         }
       ],
       "justifikasi": "KBLI dipilih berdasarkan objek/fungsi utama KI 'Formulasi Pelapis Antifouling Multikomponen untuk Aplikasi Maritim Tropis Indonesia'. Prioritas pertama adalah KBLI yang paling langsung merepresentasikan produk/aktivitas KI; KBLI berikutnya merupakan aktivitas terkait yang masih relevan.",
-      "kode_sektor_2_digit": "20 / 20 / 22"
+      "trl_6_plus": false
     },
     {
       "or": "OREM",
@@ -1807,7 +1809,7 @@
         }
       ],
       "justifikasi": "Klasifikasi diperbaiki berdasarkan objek utama KI (Lambung kapal); KBLI pertama diprioritaskan sebagai aktivitas/produk paling langsung.",
-      "kode_sektor_2_digit": "30 / 30 / 71"
+      "trl_6_plus": true
     },
     {
       "or": "OREM",
@@ -1834,7 +1836,7 @@
         }
       ],
       "justifikasi": "[1] Industri Mesin Keperluan Khusus Lainnya YTDL relevan karena objek/aktivitas pada KI \"SISTEM KONTROL DAN MONITORING REAKTOR PIROLISIS TIPE AUGER\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Industri Kimia Dasar Organik dari Sumber Daya Alam Hayati relevan karena objek/aktivitas pada KI \"SISTEM KONTROL DAN MONITORING REAKTOR PIROLISIS TIPE AUGER\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Industri Briket relevan karena objek/aktivitas pada KI \"SISTEM KONTROL DAN MONITORING REAKTOR PIROLISIS TIPE AUGER\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
-      "kode_sektor_2_digit": "28"
+      "trl_6_plus": false
     },
     {
       "or": "OREM",
@@ -1861,7 +1863,7 @@
         }
       ],
       "justifikasi": "KBLI dipilih berdasarkan objek/fungsi utama KI 'Dataset Pengujian Rear Underrun Protection Menggunakan Standard UNECE R58'. Prioritas pertama adalah KBLI yang paling langsung merepresentasikan produk/aktivitas KI; KBLI berikutnya merupakan aktivitas terkait yang masih relevan.",
-      "kode_sektor_2_digit": "29 / 71 / 63"
+      "trl_6_plus": false
     },
     {
       "or": "OREM",
@@ -1888,7 +1890,7 @@
         }
       ],
       "justifikasi": "KBLI dipilih berdasarkan objek/fungsi utama KI 'TernakGrid (Smart Eartag IoT for Smart Livestock Village (SLV– Microgrid))'. Prioritas pertama adalah KBLI yang paling langsung merepresentasikan produk/aktivitas KI; KBLI berikutnya merupakan aktivitas terkait yang masih relevan.",
-      "kode_sektor_2_digit": "26 / 62 / 62"
+      "trl_6_plus": false
     },
     {
       "or": "OREM",
@@ -1915,7 +1917,7 @@
         }
       ],
       "justifikasi": "KBLI dipilih berdasarkan objek/fungsi utama KI 'Wahana Apung Katamaran Pesawat Terbang Displasmen 7.000 kg 98X0'. Prioritas pertama adalah KBLI yang paling langsung merepresentasikan produk/aktivitas KI; KBLI berikutnya merupakan aktivitas terkait yang masih relevan.",
-      "kode_sektor_2_digit": "30 / 30 / 30"
+      "trl_6_plus": false
     },
     {
       "or": "OREM",
@@ -1937,7 +1939,7 @@
         }
       ],
       "justifikasi": "Invensi menghasilkan sistem pendorong untuk penyelam di air. Sistem tersebut merupakan perangkat propulsi bawah air sehingga berhubungan dengan industri kendaraan/peralatan bawah air.",
-      "kode_sektor_2_digit": "30"
+      "trl_6_plus": true
     },
     {
       "or": "OREM",
@@ -1959,7 +1961,7 @@
         }
       ],
       "justifikasi": "Invensi menghasilkan sistem dan metode mitigasi hidrometeorologi air laut terintegrasi yang dapat digunakan untuk pemantauan dan mitigasi ancaman hidrometeorologi. Sektor utamanya berkaitan dengan instalasi dan layanan meteorologi/mitigasi.",
-      "kode_sektor_2_digit": "43"
+      "trl_6_plus": false
     },
     {
       "or": "OREM",
@@ -1981,7 +1983,7 @@
         }
       ],
       "justifikasi": "[1] KAPAL SUNGAI PENGANGKUT TIMBULAN SAMPAH diproduksi sebagai struktur terapung/kapal.\n [2] KAPAL SUNGAI PENGANGKUT TIMBULAN SAMPAH digunakan dalam jasa pengujian teknis.",
-      "kode_sektor_2_digit": "30"
+      "trl_6_plus": false
     },
     {
       "or": "OREM",
@@ -2008,7 +2010,7 @@
         }
       ],
       "justifikasi": "[1] Industri Peralatan, Perlengkapan Dan Bagian Kapal relevan karena objek/aktivitas pada KI \"Propeler Kapal Dengan Bentuk Foil Ogival  Yang Dimodifikasi Rasio Cambernya\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Industri Kendaraan Air dan Bawah Air Berawak relevan karena objek/aktivitas pada KI \"Propeler Kapal Dengan Bentuk Foil Ogival  Yang Dimodifikasi Rasio Cambernya\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Industri Kapal dan Perahu Untuk Tujuan Wisata atau Rekreasi dan Olahraga relevan karena objek/aktivitas pada KI \"Propeler Kapal Dengan Bentuk Foil Ogival  Yang Dimodifikasi Rasio Cambernya\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
-      "kode_sektor_2_digit": "30"
+      "trl_6_plus": false
     },
     {
       "or": "OREM",
@@ -2035,7 +2037,7 @@
         }
       ],
       "justifikasi": "[1] Industri Peralatan, Perlengkapan Dan Bagian Kapal relevan karena objek/aktivitas pada KI \"Sistem Kontrol Gerakan Kapal Dengan Menggunakan  Machine Learning\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Industri Kendaraan Air dan Bawah Air Berawak relevan karena objek/aktivitas pada KI \"Sistem Kontrol Gerakan Kapal Dengan Menggunakan  Machine Learning\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Industri Kapal dan Perahu Untuk Tujuan Wisata atau Rekreasi dan Olahraga relevan karena objek/aktivitas pada KI \"Sistem Kontrol Gerakan Kapal Dengan Menggunakan  Machine Learning\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
-      "kode_sektor_2_digit": "30"
+      "trl_6_plus": false
     },
     {
       "or": "OREM",
@@ -2057,7 +2059,7 @@
         }
       ],
       "justifikasi": "Invensi merupakan metode analisis 4-nonilfenol pada sedimen menggunakan ekstraksi fase padat dan GC-FID, sehingga nilai komersialnya terutama berupa metode/jasa pengujian lingkungan.",
-      "kode_sektor_2_digit": "71"
+      "trl_6_plus": true
     },
     {
       "or": "OREM",
@@ -2079,7 +2081,7 @@
         }
       ],
       "justifikasi": "[1] Berdasarkan judul dan abstrak, KI menghasilkan/mengembangkan sistem pelumasan udara bertekanan untuk kapal berbentuk surface effect planing hull; Industri Pompa Lainnya, Kompresor, Keran, dan Klep/Katup merupakan sektor komersialisasi yang paling dekat.\n[2] Alternatif berdasarkan fungsi atau penggunaan yang dijelaskan dalam abstrak; Aktivitas Penyimpanan Tenaga Listrik relevan sebagai industri pengguna/penghasil pada tahap komersialisasi.",
-      "kode_sektor_2_digit": "28"
+      "trl_6_plus": true
     },
     {
       "or": "OREM",
@@ -2106,7 +2108,7 @@
         }
       ],
       "justifikasi": "[1] Pembangkitan Tenaga Listrik dari Sumber Energi Terbarukan relevan karena objek/aktivitas pada KI \"Modul Pijakan Kaki Piezoelektrik Penghasil Energi Listrik\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Pembangkitan Tenaga Listrik dari Sumber Energi Tidak Terbarukan yang Menghasilkan Emisi relevan karena objek/aktivitas pada KI \"Modul Pijakan Kaki Piezoelektrik Penghasil Energi Listrik\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Pembangkitan Tenaga Listrik dari Sumber Energi Tidak Terbarukan yang Tidak Menghasilkan Emisi relevan karena objek/aktivitas pada KI \"Modul Pijakan Kaki Piezoelektrik Penghasil Energi Listrik\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
-      "kode_sektor_2_digit": "35"
+      "trl_6_plus": false
     },
     {
       "or": "OREM",
@@ -2118,12 +2120,12 @@
       "kbli": [
         {
           "rank": 1,
-          "kode": "30111                                [2] 03110",
+          "kode": "30111203110",
           "judul": "Industri Kendaraan Air dan Bawah Air Berawak                                             [2] Penangkapan Ikan dan Biota Air Lainnya di Laut"
         }
       ],
       "justifikasi": "[1] Invensi berupa kapal penangkap rajungan berawak dengan lambung, sistem propulsi, baterai, generator, layar, palka dan perlengkapan penangkapan. KBLI 30111 secara eksplisit mencakup kapal penangkap ikan.                                                                                  [2] Rajungan merupakan krustasea laut dan KBLI 03110 secara eksplisit mencakup penangkapan komersial rajungan, kepiting, udang dan krustasea lainnya.",
-      "kode_sektor_2_digit": "30"
+      "trl_6_plus": true
     },
     {
       "or": "OREM",
@@ -2150,7 +2152,7 @@
         }
       ],
       "justifikasi": "Klasifikasi diperbaiki berdasarkan objek utama KI (Desain kapal patroli); KBLI pertama diprioritaskan sebagai aktivitas/produk paling langsung.",
-      "kode_sektor_2_digit": "30 / 30 / 30"
+      "trl_6_plus": true
     },
     {
       "or": "OREM",
@@ -2177,7 +2179,7 @@
         }
       ],
       "justifikasi": "[1] METODE KALIBRASI VOLUMETRIK PERBANDINGAN LANGSUNG DENGAN STANDAR TANGKI PROVER, MENGGUNAKAN POMPA SEBAGAI PEMINDAH CAIRAN diproduksi sebagai alat ukur elektronik atau sistem instrumentasi.\n [2] METODE KALIBRASI VOLUMETRIK PERBANDINGAN LANGSUNG DENGAN STANDAR TANGKI PROVER, MENGGUNAKAN POMPA SEBAGAI PEMINDAH CAIRAN digunakan dalam jasa pengujian teknis.\n [3] METODE KALIBRASI VOLUMETRIK PERBANDINGAN LANGSUNG DENGAN STANDAR TANGKI PROVER, MENGGUNAKAN POMPA SEBAGAI PEMINDAH CAIRAN didistribusikan melalui jalur perdagangan besar perangkat elektronik.",
-      "kode_sektor_2_digit": "26"
+      "trl_6_plus": true
     },
     {
       "or": "OREM",
@@ -2199,7 +2201,7 @@
         }
       ],
       "justifikasi": "[1] METODE PRODUKSI MODULAR KAPAL MINI LNG 36 TEU’S diterapkan sebagai jasa konsultasi teknik/pemetaan spasial.\n [2] METODE PRODUKSI MODULAR KAPAL MINI LNG 36 TEU’S digunakan dalam jasa pengujian dan analisis teknis.",
-      "kode_sektor_2_digit": "85"
+      "trl_6_plus": true
     },
     {
       "or": "OREM",
@@ -2221,7 +2223,7 @@
         }
       ],
       "justifikasi": "Output berupa proses torefaksi tandan kosong kelapa sawit untuk menghasilkan biomassa bernilai bahan bakar. 16295 merupakan industri pelet/biomassa; 20297 menjadi jalur biofuel bila diarahkan ke bahan bakar cair.",
-      "kode_sektor_2_digit": "16 / 20"
+      "trl_6_plus": false
     },
     {
       "or": "OREM",
@@ -2243,7 +2245,7 @@
         }
       ],
       "justifikasi": "Output berupa formulasi mikroba-nutrisi untuk meningkatkan efisiensi pengolahan air limbah sistem lumpur aktif. 37001 mewakili domain pengolahan air limbah dan 20299 bahan/formulasi kimia pendukung.",
-      "kode_sektor_2_digit": "37 / 20"
+      "trl_6_plus": false
     },
     {
       "or": "OREM",
@@ -2270,7 +2272,7 @@
         }
       ],
       "justifikasi": "[1] Aktivitas Telekomunikasi dengan Nirkabel relevan karena objek/aktivitas pada KI \"SISTEM PENGUKURAN KEKUATAN DAN GERAKAN PERENANG SECARA NIRKABEL\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Pemasangan Sistem Elektronika relevan karena objek/aktivitas pada KI \"SISTEM PENGUKURAN KEKUATAN DAN GERAKAN PERENANG SECARA NIRKABEL\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Penyelenggara Penunjang Sistem Pembayaran relevan karena objek/aktivitas pada KI \"SISTEM PENGUKURAN KEKUATAN DAN GERAKAN PERENANG SECARA NIRKABEL\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
-      "kode_sektor_2_digit": "61"
+      "trl_6_plus": true
     },
     {
       "or": "OREM",
@@ -2297,7 +2299,7 @@
         }
       ],
       "justifikasi": "[1] Aktivitas Pemrograman Berbasis Kecerdasan Artifisial relevan karena objek/aktivitas pada KI \"Proses Pembuatan Silika Mesopori dari Abu Sekam Padi Menggunakan Metode Sol-Gel dengan Surfaktan Polietilen Glikol Sebagai Cetakan Pori dan Produk yang Dihasilkannya\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Aktivitas Pemrograman Komputer Lainnya relevan karena objek/aktivitas pada KI \"Proses Pembuatan Silika Mesopori dari Abu Sekam Padi Menggunakan Metode Sol-Gel dengan Surfaktan Polietilen Glikol Sebagai Cetakan Pori dan Produk yang Dihasilkannya\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Aktivitas Teknologi Informasi Dan Jasa Komputer Lainnya relevan karena objek/aktivitas pada KI \"Proses Pembuatan Silika Mesopori dari Abu Sekam Padi Menggunakan Metode Sol-Gel dengan Surfaktan Polietilen Glikol Sebagai Cetakan Pori dan Produk yang Dihasilkannya\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
-      "kode_sektor_2_digit": "62"
+      "trl_6_plus": false
     },
     {
       "or": "OREM",
@@ -2324,7 +2326,7 @@
         }
       ],
       "justifikasi": "[1] Industri Barang Lainnya dari Kayu; Industri Barang dari Gabus, Jerami, Rotan, Bambu, dan Sejenisnya YTDL relevan karena objek/aktivitas pada KI \"Wahana Apung Pesawat Terbang Berbahan Komposit dengan Lapisan Quasi-Isotropik\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Industri Barang Lainnya dari Plastik relevan karena objek/aktivitas pada KI \"Wahana Apung Pesawat Terbang Berbahan Komposit dengan Lapisan Quasi-Isotropik\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Industri Produk Mineral Nonlogam Lainnya YTDL relevan karena objek/aktivitas pada KI \"Wahana Apung Pesawat Terbang Berbahan Komposit dengan Lapisan Quasi-Isotropik\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
-      "kode_sektor_2_digit": "16"
+      "trl_6_plus": false
     },
     {
       "or": "OREM",
@@ -2351,7 +2353,7 @@
         }
       ],
       "justifikasi": "[1] Jasa Pengujian Teknis relevan karena objek/aktivitas pada KI \"METODE PENGUKURAN LAJU ALIRAN GAS PADA FLOWMETER FILM SABUN DENGAN PEMANTAUAN VISUAL DATA WAKTU DAN BATAS VOLUME MELALUI INTEGRASI CERMIN OPTIK\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Industri Alat Ukur, Alat Uji, dan Peralatan Navigasi dan Kontrol Lainnya relevan karena objek/aktivitas pada KI \"METODE PENGUKURAN LAJU ALIRAN GAS PADA FLOWMETER FILM SABUN DENGAN PEMANTAUAN VISUAL DATA WAKTU DAN BATAS VOLUME MELALUI INTEGRASI CERMIN OPTIK\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Pengolahan dan Pengawetan Ikan dengan Metode Lainnya relevan karena objek/aktivitas pada KI \"METODE PENGUKURAN LAJU ALIRAN GAS PADA FLOWMETER FILM SABUN DENGAN PEMANTAUAN VISUAL DATA WAKTU DAN BATAS VOLUME MELALUI INTEGRASI CERMIN OPTIK\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
-      "kode_sektor_2_digit": "71"
+      "trl_6_plus": false
     },
     {
       "or": "OREM",
@@ -2378,7 +2380,7 @@
         }
       ],
       "justifikasi": "Klasifikasi diperbaiki berdasarkan objek utama KI (Lambung kapal katamaran); KBLI pertama diprioritaskan sebagai aktivitas/produk paling langsung.",
-      "kode_sektor_2_digit": "30 / 30 / 30"
+      "trl_6_plus": false
     },
     {
       "or": "OREM",
@@ -2405,7 +2407,7 @@
         }
       ],
       "justifikasi": "[1] Industri Produk Logam Struktural Lainnya relevan karena objek/aktivitas pada KI \"KOMPOSISI DAN METODE PEMBUATAN KATALIS NIFE/SAPO11 PADA PROSES HIDRODEOKSIGENASI MINYAK NABATI NON PANGAN\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Jasa Pengujian Teknis relevan karena objek/aktivitas pada KI \"KOMPOSISI DAN METODE PEMBUATAN KATALIS NIFE/SAPO11 PADA PROSES HIDRODEOKSIGENASI MINYAK NABATI NON PANGAN\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Perdagangan Besar Bahan Konstruksi dari Logam relevan karena objek/aktivitas pada KI \"KOMPOSISI DAN METODE PEMBUATAN KATALIS NIFE/SAPO11 PADA PROSES HIDRODEOKSIGENASI MINYAK NABATI NON PANGAN\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
-      "kode_sektor_2_digit": "25"
+      "trl_6_plus": false
     },
     {
       "or": "OREM",
@@ -2432,7 +2434,7 @@
         }
       ],
       "justifikasi": "[1] Aktivitas Pemrograman Berbasis Kecerdasan Artifisial relevan karena objek/aktivitas pada KI \"PENAMPUNG AIR HUJAN YANG DILENGKAPI DENGAN PENGURAS OTOMATIS UNTUK MEMPERCEPAT PENGURASAN\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Aktivitas Pemrograman Komputer Lainnya relevan karena objek/aktivitas pada KI \"PENAMPUNG AIR HUJAN YANG DILENGKAPI DENGAN PENGURAS OTOMATIS UNTUK MEMPERCEPAT PENGURASAN\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Aktivitas Teknologi Informasi Dan Jasa Komputer Lainnya relevan karena objek/aktivitas pada KI \"PENAMPUNG AIR HUJAN YANG DILENGKAPI DENGAN PENGURAS OTOMATIS UNTUK MEMPERCEPAT PENGURASAN\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
-      "kode_sektor_2_digit": "62"
+      "trl_6_plus": true
     },
     {
       "or": "OREM",
@@ -2454,7 +2456,7 @@
         }
       ],
       "justifikasi": "KBLI dipilih berdasarkan objek/fungsi utama KI 'SOLVEN ORGANIK OPTIMUM UNTUK EKSTRAKSI ASPAL BUTON'. Prioritas pertama adalah KBLI yang paling langsung merepresentasikan produk/aktivitas KI; KBLI berikutnya merupakan aktivitas terkait yang masih relevan.",
-      "kode_sektor_2_digit": "23 / 20"
+      "trl_6_plus": false
     },
     {
       "or": "OREM",
@@ -2481,7 +2483,7 @@
         }
       ],
       "justifikasi": "[1] Aktivitas Pemrograman Berbasis Kecerdasan Artifisial relevan karena objek/aktivitas pada KI \"Alat Bantu Dudukan Spesimen Perisai Kolong Belakang untuk Pengukuran Beban Statik\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Aktivitas Pemrograman Komputer Lainnya relevan karena objek/aktivitas pada KI \"Alat Bantu Dudukan Spesimen Perisai Kolong Belakang untuk Pengukuran Beban Statik\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Aktivitas Teknologi Informasi Dan Jasa Komputer Lainnya relevan karena objek/aktivitas pada KI \"Alat Bantu Dudukan Spesimen Perisai Kolong Belakang untuk Pengukuran Beban Statik\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
-      "kode_sektor_2_digit": "62"
+      "trl_6_plus": false
     },
     {
       "or": "OREM",
@@ -2508,7 +2510,7 @@
         }
       ],
       "justifikasi": "KBLI dipilih berdasarkan objek/fungsi utama KI 'KOMPOSISI PUPUK KOMPOSIT BERBASIS TALUS GRACILARIA BEBAS GETAH DAN METODE PEMBUATANNYA'. Prioritas pertama adalah KBLI yang paling langsung merepresentasikan produk/aktivitas KI; KBLI berikutnya merupakan aktivitas terkait yang masih relevan.",
-      "kode_sektor_2_digit": "20 / 20 / 20"
+      "trl_6_plus": false
     },
     {
       "or": "OREM",
@@ -2535,7 +2537,7 @@
         }
       ],
       "justifikasi": "[1] Industri Pati Ubi Kayu relevan karena objek/aktivitas pada KI \"Komposisi dan Proses Pembuatan Sol Karet Cetak Padat Menggunakan Komposit Biosilika Abu Kelapa Sawit dan Silika Sintetis serta Pengkompatibel untuk Outsole Sepatu Harian\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Industri Pati dan Produk Pati Lainnya relevan karena objek/aktivitas pada KI \"Komposisi dan Proses Pembuatan Sol Karet Cetak Padat Menggunakan Komposit Biosilika Abu Kelapa Sawit dan Silika Sintetis serta Pengkompatibel untuk Outsole Sepatu Harian\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Industri Produk Makanan Lainnya relevan karena objek/aktivitas pada KI \"Komposisi dan Proses Pembuatan Sol Karet Cetak Padat Menggunakan Komposit Biosilika Abu Kelapa Sawit dan Silika Sintetis serta Pengkompatibel untuk Outsole Sepatu Harian\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
-      "kode_sektor_2_digit": "10"
+      "trl_6_plus": false
     },
     {
       "or": "OREM",
@@ -2562,7 +2564,7 @@
         }
       ],
       "justifikasi": "[1] Industri Pengolahan dan Pengawetan Lainnya Buah-buahan Dan Sayuran Bukan Kacangkacangan relevan karena objek/aktivitas pada KI \"FORMULASI EDIBLE COATING BERBASIS HIDROKOLOID DAN APLIKASINYA UNTUK MENINGKATKAN STABILITAS FISIKOKIMIA BAWANG MERAH IRIS KERING\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Industri Produk Makanan Lainnya relevan karena objek/aktivitas pada KI \"FORMULASI EDIBLE COATING BERBASIS HIDROKOLOID DAN APLIKASINYA UNTUK MENINGKATKAN STABILITAS FISIKOKIMIA BAWANG MERAH IRIS KERING\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Industri Sediaan Pewarna dan Pelapis Lainnya relevan karena objek/aktivitas pada KI \"FORMULASI EDIBLE COATING BERBASIS HIDROKOLOID DAN APLIKASINYA UNTUK MENINGKATKAN STABILITAS FISIKOKIMIA BAWANG MERAH IRIS KERING\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
-      "kode_sektor_2_digit": "10"
+      "trl_6_plus": false
     },
     {
       "or": "OREM",
@@ -2589,7 +2591,7 @@
         }
       ],
       "justifikasi": "[1] Industri Mesin Keperluan Khusus Lainnya YTDL relevan karena objek/aktivitas pada KI \"Tungku Pirolisis Ulir Pita Tanpa Sumbu\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Industri Kimia Dasar Organik dari Sumber Daya Alam Hayati relevan karena objek/aktivitas pada KI \"Tungku Pirolisis Ulir Pita Tanpa Sumbu\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Industri Briket relevan karena objek/aktivitas pada KI \"Tungku Pirolisis Ulir Pita Tanpa Sumbu\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
-      "kode_sektor_2_digit": "28"
+      "trl_6_plus": false
     },
     {
       "or": "OREM",
@@ -2616,7 +2618,7 @@
         }
       ],
       "justifikasi": "[1] Industri Mesin Keperluan Khusus Lainnya YTDL relevan karena objek/aktivitas pada KI \"Metode Peningkatan Kualitas Bioarang dari Limbah Bonggol Jagung dan Produk yang Dihasilkannya\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Industri Kimia Dasar Organik dari Sumber Daya Alam Hayati relevan karena objek/aktivitas pada KI \"Metode Peningkatan Kualitas Bioarang dari Limbah Bonggol Jagung dan Produk yang Dihasilkannya\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Industri Briket relevan karena objek/aktivitas pada KI \"Metode Peningkatan Kualitas Bioarang dari Limbah Bonggol Jagung dan Produk yang Dihasilkannya\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
-      "kode_sektor_2_digit": "28"
+      "trl_6_plus": false
     },
     {
       "or": "OREM",
@@ -2643,7 +2645,7 @@
         }
       ],
       "justifikasi": "[1] Industri Barang dari Plastik dan Bioplastik untuk Pengemasan relevan karena objek/aktivitas pada KI \"METODE PENINGKATAN KUALITAS MINYAK TANAH DARI SAMPAH PLASTIK MENJADI BAHAN BAKAR PENERBANGAN MELALUI ALKILASI KATALITIK\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Industri Barang Lainnya dari Plastik relevan karena objek/aktivitas pada KI \"METODE PENINGKATAN KUALITAS MINYAK TANAH DARI SAMPAH PLASTIK MENJADI BAHAN BAKAR PENERBANGAN MELALUI ALKILASI KATALITIK\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Industri Damar Buatan (Resin Sintetis) dan Bahan Baku Plastik relevan karena objek/aktivitas pada KI \"METODE PENINGKATAN KUALITAS MINYAK TANAH DARI SAMPAH PLASTIK MENJADI BAHAN BAKAR PENERBANGAN MELALUI ALKILASI KATALITIK\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
-      "kode_sektor_2_digit": "22"
+      "trl_6_plus": false
     },
     {
       "or": "OREM",
@@ -2670,7 +2672,7 @@
         }
       ],
       "justifikasi": "[1] Aktivitas Pemrograman Berbasis Kecerdasan Artifisial relevan karena objek/aktivitas pada KI \"SARINGAN PASIR RUMAHAN UNTUK MENGHASILKAN AIR MINUM\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Aktivitas Pemrograman Komputer Lainnya relevan karena objek/aktivitas pada KI \"SARINGAN PASIR RUMAHAN UNTUK MENGHASILKAN AIR MINUM\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Aktivitas Teknologi Informasi Dan Jasa Komputer Lainnya relevan karena objek/aktivitas pada KI \"SARINGAN PASIR RUMAHAN UNTUK MENGHASILKAN AIR MINUM\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
-      "kode_sektor_2_digit": "62"
+      "trl_6_plus": true
     },
     {
       "or": "OREM",
@@ -2697,7 +2699,7 @@
         }
       ],
       "justifikasi": "[1] Industri Barang Lainnya dari Kayu; Industri Barang dari Gabus, Jerami, Rotan, Bambu, dan Sejenisnya YTDL relevan karena objek/aktivitas pada KI \"KEPING PIRINGAN MULSA TANAMAN SAWIT BERBAHAN TANDAN KOSONG KELAPA SAWIT (TKKS)\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Industri Barang Lainnya dari Plastik relevan karena objek/aktivitas pada KI \"KEPING PIRINGAN MULSA TANAMAN SAWIT BERBAHAN TANDAN KOSONG KELAPA SAWIT (TKKS)\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Industri Damar Buatan (Resin Sintetis) dan Bahan Baku Plastik relevan karena objek/aktivitas pada KI \"KEPING PIRINGAN MULSA TANAMAN SAWIT BERBAHAN TANDAN KOSONG KELAPA SAWIT (TKKS)\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
-      "kode_sektor_2_digit": "16"
+      "trl_6_plus": false
     },
     {
       "or": "OREM",
@@ -2724,7 +2726,7 @@
         }
       ],
       "justifikasi": "[1] Industri Produk Mineral Nonlogam Lainnya YTDL relevan karena objek/aktivitas pada KI \"PROSES PEMBUATAN MATERIAL SUPERPARAMAGNETIK NEODIMIUM FERIT TERMODIFIKASI rGO DAN TiO2\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Industri Produk Logam Lainnya YTDL relevan karena objek/aktivitas pada KI \"PROSES PEMBUATAN MATERIAL SUPERPARAMAGNETIK NEODIMIUM FERIT TERMODIFIKASI rGO DAN TiO2\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Industri Logam Dasar Bukan Besi Lainnya relevan karena objek/aktivitas pada KI \"PROSES PEMBUATAN MATERIAL SUPERPARAMAGNETIK NEODIMIUM FERIT TERMODIFIKASI rGO DAN TiO2\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
-      "kode_sektor_2_digit": "23"
+      "trl_6_plus": false
     },
     {
       "or": "OREM",
@@ -2751,7 +2753,7 @@
         }
       ],
       "justifikasi": "KBLI dipilih berdasarkan objek/fungsi utama KI 'SISTEM PENGOLAHAN HIDROTERMAL PORTABEL UNTUK LIMBAH MAKANAN INSTITUSIONAL'. Prioritas pertama adalah KBLI yang paling langsung merepresentasikan produk/aktivitas KI; KBLI berikutnya merupakan aktivitas terkait yang masih relevan.",
-      "kode_sektor_2_digit": "38 / 28 / 37"
+      "trl_6_plus": false
     },
     {
       "or": "OREM",
@@ -2778,7 +2780,7 @@
         }
       ],
       "justifikasi": "[1] Industri Mesin Keperluan Khusus Lainnya YTDL relevan karena objek/aktivitas pada KI \"METODE DESULFURISASI OKSIDATIF ULTRASONIK SEMI-KONTINU UNTUK PENINGKATAN KUALITAS MINYAK HASIL PIROLISIS LIMBAH BAN BEKAS\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Industri Kimia Dasar Organik dari Sumber Daya Alam Hayati relevan karena objek/aktivitas pada KI \"METODE DESULFURISASI OKSIDATIF ULTRASONIK SEMI-KONTINU UNTUK PENINGKATAN KUALITAS MINYAK HASIL PIROLISIS LIMBAH BAN BEKAS\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Industri Briket relevan karena objek/aktivitas pada KI \"METODE DESULFURISASI OKSIDATIF ULTRASONIK SEMI-KONTINU UNTUK PENINGKATAN KUALITAS MINYAK HASIL PIROLISIS LIMBAH BAN BEKAS\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
-      "kode_sektor_2_digit": "28"
+      "trl_6_plus": false
     },
     {
       "or": "OREM",
@@ -2805,7 +2807,7 @@
         }
       ],
       "justifikasi": "[1] Berdasarkan judul dan abstrak, KI menghasilkan/mengembangkan alat kolektor data terpusat siklus pengisian daya untuk prediksi sisa masa manfaat baterai; INDUSTRI ALAT UKUR, ALAT UJI, DAN PERALATAN NAVIGASI DAN KONTROL LAINNYA merupakan sektor komersialisasi yang paling dekat.\n[2] Alternatif berdasarkan fungsi atau penggunaan yang dijelaskan dalam abstrak; INDUSTRI BATU BATERAI relevan sebagai industri pengguna/penghasil pada tahap komersialisasi.\n[3] Alternatif berdasarkan fungsi atau penggunaan yang dijelaskan dalam abstrak; AKTIVITAS PEMROGRAMAN KOMPUTER LAINNYA relevan sebagai industri pengguna/penghasil pada tahap komersialisasi.",
-      "kode_sektor_2_digit": "26"
+      "trl_6_plus": true
     },
     {
       "or": "OREM",
@@ -2832,7 +2834,7 @@
         }
       ],
       "justifikasi": "KBLI dipilih berdasarkan objek/fungsi utama KI 'Metode Remediasi Tanah Tercemar Minyak Mentah Dengan Teknik Dispersif Desorpsi Termal'. Prioritas pertama adalah KBLI yang paling langsung merepresentasikan produk/aktivitas KI; KBLI berikutnya merupakan aktivitas terkait yang masih relevan.",
-      "kode_sektor_2_digit": "39 / 38 / 37"
+      "trl_6_plus": false
     },
     {
       "or": "OREM",
@@ -2859,7 +2861,7 @@
         }
       ],
       "justifikasi": "[1] Aktivitas Pemrograman Berbasis Kecerdasan Artifisial relevan karena objek/aktivitas pada KI \"Metode Penyerapan Merkuri (Hg2+) Dalam Air Menggunakan Bioadsorben Rumput Laut\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Aktivitas Pemrograman Komputer Lainnya relevan karena objek/aktivitas pada KI \"Metode Penyerapan Merkuri (Hg2+) Dalam Air Menggunakan Bioadsorben Rumput Laut\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Aktivitas Teknologi Informasi Dan Jasa Komputer Lainnya relevan karena objek/aktivitas pada KI \"Metode Penyerapan Merkuri (Hg2+) Dalam Air Menggunakan Bioadsorben Rumput Laut\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
-      "kode_sektor_2_digit": "62"
+      "trl_6_plus": false
     },
     {
       "or": "OREM",
@@ -2886,7 +2888,7 @@
         }
       ],
       "justifikasi": "[1] Industri Produk Mineral Nonlogam Lainnya YTDL relevan karena objek/aktivitas pada KI \"Metode Pembuatan Material Zeolit Termodifikasi Aluminium Untuk Teknologi Capping Sedimen\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Industri Barang Kimia Lainnya YTDL relevan karena objek/aktivitas pada KI \"Metode Pembuatan Material Zeolit Termodifikasi Aluminium Untuk Teknologi Capping Sedimen\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Aktivitas Remediasi dan Pengelolaan Limbah dan Sampah Lainnya relevan karena objek/aktivitas pada KI \"Metode Pembuatan Material Zeolit Termodifikasi Aluminium Untuk Teknologi Capping Sedimen\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
-      "kode_sektor_2_digit": "23"
+      "trl_6_plus": false
     },
     {
       "or": "OREM",
@@ -2913,7 +2915,7 @@
         }
       ],
       "justifikasi": "KBLI dipilih berdasarkan objek/fungsi utama KI 'KOMPOSTER AEROBIK SKALA BESAR'. Prioritas pertama adalah KBLI yang paling langsung merepresentasikan produk/aktivitas KI; KBLI berikutnya merupakan aktivitas terkait yang masih relevan.",
-      "kode_sektor_2_digit": "38 / 28 / 38"
+      "trl_6_plus": true
     },
     {
       "or": "OREM",
@@ -2940,7 +2942,7 @@
         }
       ],
       "justifikasi": "[1] Industri Alat Ukur dan Alat Uji Elektronik relevan karena objek/aktivitas pada KI \"PROSES PEMBUATAN ELEKTRODA BERBASIS CARBON QUANTUM DOTS (CQD) LIMBAH KULIT NANAS SEBAGAI NANO-SENSOR UNTUK DETEKSI POLUTAN DALAM AIR\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Industri Alat Ukur, Alat Uji, dan Peralatan Navigasi dan Kontrol Lainnya relevan karena objek/aktivitas pada KI \"PROSES PEMBUATAN ELEKTRODA BERBASIS CARBON QUANTUM DOTS (CQD) LIMBAH KULIT NANAS SEBAGAI NANO-SENSOR UNTUK DETEKSI POLUTAN DALAM AIR\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Jasa Pengujian Teknis relevan karena objek/aktivitas pada KI \"PROSES PEMBUATAN ELEKTRODA BERBASIS CARBON QUANTUM DOTS (CQD) LIMBAH KULIT NANAS SEBAGAI NANO-SENSOR UNTUK DETEKSI POLUTAN DALAM AIR\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
-      "kode_sektor_2_digit": "26"
+      "trl_6_plus": false
     },
     {
       "or": "ORHL",
@@ -2967,7 +2969,7 @@
         }
       ],
       "justifikasi": "KI merupakan alat sensor dan monitoring serangga. KBLI 26513 diprioritaskan karena objek utama berupa alat/instrumen sensor elektronik; KBLI 62019 dan 63101 merupakan aktivitas perangkat lunak/pengolahan data yang dapat terkait dengan sistem monitoring.",
-      "kode_sektor_2_digit": "26 / 62 / 63"
+      "trl_6_plus": true
     },
     {
       "or": "ORHL",
@@ -2989,7 +2991,7 @@
         }
       ],
       "justifikasi": "[1] Formulasi diproduksi sbg industri zat pengatur tumbuh/biopestisida\n[2] Didistribusikan sbg produk seed treatment ke perdagangan besar agrokimia\n[3] Diadopsi pertanian hortikultura sayuran buah (cabai merah)",
-      "kode_sektor_2_digit": null
+      "trl_6_plus": true
     },
     {
       "or": "ORHL",
@@ -3011,7 +3013,7 @@
         }
       ],
       "justifikasi": "[1] Proses hidrolisis sorgum di industri produk gilingan aneka umbi/tanaman\n[2] Diproduksi sbg produk makanan lainnya fungsional\n[3] Didistribusikan sbg bahan baku pangan fungsional",
-      "kode_sektor_2_digit": null
+      "trl_6_plus": true
     },
     {
       "or": "ORHL",
@@ -3038,7 +3040,7 @@
         }
       ],
       "justifikasi": "[1] Kit IVD diproduksi sbg alat diagnosis medis dan penunjang kesehatan\n[2] Reagen kit dikategorikan sbg produk farmasi untuk manusia\n[3] Dikomersialisasikan sbg layanan pelayanan penunjang kesehatan di lab klinik",
-      "kode_sektor_2_digit": null
+      "trl_6_plus": true
     },
     {
       "or": "ORHL",
@@ -3060,7 +3062,7 @@
         }
       ],
       "justifikasi": "[1] Formulasi produk bibir diproduksi sbg kosmetik untuk manusia\n[2] Fikoeritrin sbg bahan kimia dasar organik dari sumber daya alam hayati",
-      "kode_sektor_2_digit": null
+      "trl_6_plus": false
     },
     {
       "or": "ORHL",
@@ -3087,7 +3089,7 @@
         }
       ],
       "justifikasi": "Klasifikasi diperbaiki berdasarkan objek utama KI (Pupuk Organik Hayati); KBLI pertama diprioritaskan sebagai aktivitas/produk paling langsung.",
-      "kode_sektor_2_digit": "20 / 20 / 20"
+      "trl_6_plus": true
     },
     {
       "or": "ORHL",
@@ -3114,7 +3116,7 @@
         }
       ],
       "justifikasi": "[1] Sediaan/eksipien farmasi diproduksi sbg bahan baku atau produk obat untuk manusia\n [2] Bahan kimia farmasi/eksipien diproduksi sbg bahan baku industri farmasi\n [3] Mendukung riset pengembangan sediaan farmasi dan eksipien untuk terapi manusia",
-      "kode_sektor_2_digit": "21 / 20 / 72"
+      "trl_6_plus": false
     },
     {
       "or": "ORHL",
@@ -3131,7 +3133,7 @@
         }
       ],
       "justifikasi": "Invensi menghasilkan pakan buatan berbentuk bar untuk burung Kakatua Koki yang praktis untuk pemeliharaan ex situ. Produk akhir merupakan ransum/pakan hewan siap pakai.",
-      "kode_sektor_2_digit": "10"
+      "trl_6_plus": false
     },
     {
       "or": "ORHL",
@@ -3158,7 +3160,7 @@
         }
       ],
       "justifikasi": "[1] Diproduksi sbg pupuk pelengkap/hayati biofortifikasi Zn\n[2] Didistribusikan melalui perdagangan besar pupuk dan produk agrokimia\n[3] Diadopsi usaha pertanian padi hibrida untuk biofortifikasi\n[4] Diadopsi usaha pertanian padi inbrida untuk biofortifikasi\n[5] Diadopsi pertanian serealia selain padi dan jagung untuk biofortifikasi",
-      "kode_sektor_2_digit": null
+      "trl_6_plus": true
     },
     {
       "or": "ORHL",
@@ -3180,7 +3182,7 @@
         }
       ],
       "justifikasi": "[1] Dikomersialisasikan sbg alat penunjang kesehatan/collection device\n[2] Diadopsi sbg protokol standar pelayanan penunjang kesehatan",
-      "kode_sektor_2_digit": null
+      "trl_6_plus": false
     },
     {
       "or": "ORHL",
@@ -3199,15 +3201,10 @@
           "rank": 2,
           "kode": "71204",
           "judul": null
-        },
-        {
-          "rank": 3,
-          "kode": "46530",
-          "judul": null
         }
       ],
       "justifikasi": "[1] KIT BIOASSAY UNTUK UJI IN VITRO INHIBISI PROTEASE SARSCOV2 SEBAGAI ALAT SKRINING OBAT ANTI COVID19 diproduksi sebagai mesin/peralatan industri.\n [2] KIT BIOASSAY UNTUK UJI IN VITRO INHIBISI PROTEASE SARSCOV2 SEBAGAI ALAT SKRINING OBAT ANTI COVID19 digunakan dalam jasa pengujian teknis.\n [3] KIT BIOASSAY UNTUK UJI IN VITRO INHIBISI PROTEASE SARSCOV2 SEBAGAI ALAT SKRINING OBAT ANTI COVID19 didistribusikan melalui jalur perdagangan besar mesin/peralatan.",
-      "kode_sektor_2_digit": "28 / 71 / 46"
+      "trl_6_plus": false
     },
     {
       "or": "ORHL",
@@ -3229,7 +3226,7 @@
         }
       ],
       "justifikasi": "[1] Metode diadopsi industri budi daya dan pembibitan ulat sutra\n[2] Mendukung ketersediaan kokon untuk industri persiapan serat tekstil",
-      "kode_sektor_2_digit": null
+      "trl_6_plus": true
     },
     {
       "or": "ORHL",
@@ -3251,7 +3248,7 @@
         }
       ],
       "justifikasi": "[1] Formulasi diproduksi sbg industri zat pengatur tumbuh/biostimulant\n[2] Dikategorikan sbg pupuk pelengkap untuk pertanian lahan salin\n[3] Didistribusikan melalui perdagangan besar pupuk dan produk agrokimia",
-      "kode_sektor_2_digit": null
+      "trl_6_plus": false
     },
     {
       "or": "ORHL",
@@ -3273,7 +3270,7 @@
         }
       ],
       "justifikasi": "[1] Berdasarkan judul dan abstrak, KI menghasilkan/mengembangkan kit deteksi dan identifikasi dna babi dan sapi pada satu tabung tunggal berbasis sybr green i qpcr; Jasa Pengujian Teknis merupakan sektor komersialisasi yang paling dekat.\n[2] Alternatif berdasarkan fungsi atau penggunaan yang dijelaskan dalam abstrak; Industri Peralatan Kedokteran dan Kedokteran Gigi, serta Perlengkapan Lainnya relevan sebagai industri pengguna/penghasil pada tahap komersialisasi.",
-      "kode_sektor_2_digit": "71 / 32"
+      "trl_6_plus": false
     },
     {
       "or": "ORHL",
@@ -3290,7 +3287,7 @@
         }
       ],
       "justifikasi": "[1] Formulasi konsorsium bakteri pemacu tumbuh merupakan produk biostimulan untuk efisiensi hara tanaman.",
-      "kode_sektor_2_digit": "20"
+      "trl_6_plus": true
     },
     {
       "or": "ORHL",
@@ -3312,7 +3309,7 @@
         }
       ],
       "justifikasi": "[1] Fikoeritrin secara eksplisit diformulasikan sebagai pewarna natural untuk produk kosmetik bibir.\n [2] Pigmen alami juga berpotensi digunakan sebagai pewarna pada pangan, meskipun sektor kosmetik lebih utama.",
-      "kode_sektor_2_digit": "20 / 10"
+      "trl_6_plus": true
     },
     {
       "or": "ORHL",
@@ -3334,7 +3331,7 @@
         }
       ],
       "justifikasi": "[1] Selulase terimobilisasi merupakan biokatalis untuk proses hidrolisis bahan lignoselulosa.\n [2] Aplikasi lanjutannya menghasilkan bioetanol yang dapat masuk rantai industri minuman/bioproses; sektor utama tetap biokatalis.",
-      "kode_sektor_2_digit": "20 / 11"
+      "trl_6_plus": false
     },
     {
       "or": "ORHL",
@@ -3356,7 +3353,7 @@
         }
       ],
       "justifikasi": "[1] Dikomersialisasikan sbg produk obat bahan alam untuk manusia\n[2] Dijual sbg produk makanan lainnya/suplemen fungsional",
-      "kode_sektor_2_digit": null
+      "trl_6_plus": true
     },
     {
       "or": "ORHL",
@@ -3383,7 +3380,7 @@
         }
       ],
       "justifikasi": "Klasifikasi diperbaiki berdasarkan objek utama KI (Pupuk Organik Hayati); KBLI pertama diprioritaskan sebagai aktivitas/produk paling langsung.",
-      "kode_sektor_2_digit": "20 / 20 / 20"
+      "trl_6_plus": false
     },
     {
       "or": "ORHL",
@@ -3405,7 +3402,7 @@
         }
       ],
       "justifikasi": "[1] Enzim selulase diproduksi sbg barang kimia lainnya/biokatalis industri\n[2] Dikategorikan sbg bahan kimia dasar organik dari sumber daya alam hayati",
-      "kode_sektor_2_digit": null
+      "trl_6_plus": true
     },
     {
       "or": "ORHL",
@@ -3419,15 +3416,10 @@
           "rank": 1,
           "kode": "01469",
           "judul": null
-        },
-        {
-          "rank": 2,
-          "kode": "46752",
-          "judul": null
         }
       ],
       "justifikasi": "[1] KOMPOSISI PUPUK HAYATI UNTUK MENINGKATKAN PRODUKTIVITAS PADI DI LAHAN SAWAH TERPAPAR KERING DAN PROSES PEMBUATANNYA diterapkan sebagai metode perbanyakan/pembibitan tanaman.\n [2] KOMPOSISI PUPUK HAYATI UNTUK MENINGKATKAN PRODUKTIVITAS PADI DI LAHAN SAWAH TERPAPAR KERING DAN PROSES PEMBUATANNYA dikomersialisasikan melalui jalur perdagangan produk agrokimia.",
-      "kode_sektor_2_digit": "01 / 46"
+      "trl_6_plus": false
     },
     {
       "or": "ORHL",
@@ -3454,7 +3446,7 @@
         }
       ],
       "justifikasi": "[1] Diproduksi massal sbg pupuk pelengkap/pupuk hayati komersial\n[2] Didistribusikan melalui perdagangan besar pupuk dan produk agrokimia\n[3] Diadopsi langsung usaha pertanian padi hibrida di lahan kering\n[4] Diadopsi langsung usaha pertanian padi inbrida di lahan kering",
-      "kode_sektor_2_digit": null
+      "trl_6_plus": true
     },
     {
       "or": "ORHL",
@@ -3468,37 +3460,10 @@
           "rank": 1,
           "kode": "01619",
           "judul": null
-        },
-        {
-          "rank": 2,
-          "kode": "46752",
-          "judul": null
         }
       ],
       "justifikasi": "[1] PROSES PEMBUATAN BIOAGEN FOTOSINTESIS DENGAN BAHAN AKTIF KONSORSIUM BAKTERI DAN PRODUK YANG DIHASILKANNYA diterapkan sebagai metode/teknologi penunjang pertanian.\n [2] PROSES PEMBUATAN BIOAGEN FOTOSINTESIS DENGAN BAHAN AKTIF KONSORSIUM BAKTERI DAN PRODUK YANG DIHASILKANNYA dikomersialisasikan melalui jalur perdagangan produk agrokimia.",
-      "kode_sektor_2_digit": "01 / 46"
-    },
-    {
-      "or": "ORHL",
-      "nomor_ki": "P00202510394",
-      "judul_ki": "METODE OPTIMASI PROTOKOL REGENERASI KALUS  SOMATIK EMBRIOGENIK TEBU (Saccharum officinarum L.)  DENGAN KOMBINASI SUMBER KARBON DAN HORMON  PERTUMBUHAN TANAMAN",
-      "jenis_ki": "Paten",
-      "trl": 6,
-      "sektor_utama": "Pertanian/Bioteknologi Tanaman",
-      "kbli": [
-        {
-          "rank": 1,
-          "kode": "01309",
-          "judul": null
-        },
-        {
-          "rank": 2,
-          "kode": "72105",
-          "judul": null
-        }
-      ],
-      "justifikasi": "Abstrak menghasilkan protokol regenerasi kalus embriogenik tebu secara in vitro untuk penyediaan bahan tanaman dan mendukung rekayasa genetika. 01309 mewakili pembiakan tanaman, sedangkan 72105 merepresentasikan layanan/aktivitas R&D pertanian sebagai jalur sekunder.",
-      "kode_sektor_2_digit": "01 / 72"
+      "trl_6_plus": true
     },
     {
       "or": "ORHL",
@@ -3520,7 +3485,7 @@
         }
       ],
       "justifikasi": "[1] Sama dgn row 3 – protokol perbanyakan bibit tebu\n[2] Sama dgn row 3 – teknologi pembiakan tanaman",
-      "kode_sektor_2_digit": null
+      "trl_6_plus": true
     },
     {
       "or": "ORHL",
@@ -3542,7 +3507,7 @@
         }
       ],
       "justifikasi": "[1] VLP diproduksi sbg produk farmasi/bahan baku vaksin HPV\n[2] VLP dikategorikan sbg alat diagnosis/penunjang kesehatan bahan baku vaksin",
-      "kode_sektor_2_digit": null
+      "trl_6_plus": false
     },
     {
       "or": "ORHL",
@@ -3564,7 +3529,7 @@
         }
       ],
       "justifikasi": "[1] Diproduksi sbg industri alat ukur dan alat uji elektronik (IoT pertanian)\n[2] Didistribusikan melalui perdagangan besar suku cadang elektronik\n[3] Diintegrasikan ke jasa penunjang pertanian precision farming",
-      "kode_sektor_2_digit": null
+      "trl_6_plus": false
     },
     {
       "or": "ORHL",
@@ -3586,7 +3551,7 @@
         }
       ],
       "justifikasi": "[1] Benih varietas kacang hijau Muri diproduksi penangkar benih komersial\n[2] Benih didistribusikan melalui perdagangan besar padi dan palawija\n[3] Varietas mendorong industri pengolahan dan pengawetan kacang-kacangan",
-      "kode_sektor_2_digit": null
+      "trl_6_plus": false
     },
     {
       "or": "ORHL",
@@ -3608,7 +3573,7 @@
         }
       ],
       "justifikasi": "[1] Medium + kultur BAL diproduksi sbg produk obat bahan alam untuk hewan\n[2] Diadopsi jasa penunjang peternakan untuk efisiensi pakan ruminansia",
-      "kode_sektor_2_digit": null
+      "trl_6_plus": false
     },
     {
       "or": "ORHL",
@@ -3630,7 +3595,7 @@
         }
       ],
       "justifikasi": "[1] Dikomersialisasikan sbg pembiakan tanaman rempah endemik andaliman\n[2] Mendukung budidaya pertanian tanaman rempah-rempah dan aromatik",
-      "kode_sektor_2_digit": null
+      "trl_6_plus": false
     },
     {
       "or": "ORHL",
@@ -3652,7 +3617,7 @@
         }
       ],
       "justifikasi": "[1] Medium biokatalis diadopsi industri ekstraksi garam untuk meningkatkan yield\n[2] Medium mikrobiologi diproduksi sbg produk bahan kimia lainnya untuk bioproses",
-      "kode_sektor_2_digit": null
+      "trl_6_plus": true
     },
     {
       "or": "ORHL",
@@ -3669,7 +3634,7 @@
         }
       ],
       "justifikasi": "[1] Teh celup buah kayu ules, jahe dan stevia merupakan minuman/pangan olahan berbasis herbal.",
-      "kode_sektor_2_digit": "10"
+      "trl_6_plus": true
     },
     {
       "or": "ORHL",
@@ -3691,7 +3656,7 @@
         }
       ],
       "justifikasi": "[1] Produk invensi adalah metode analisis HPLC/UFLC untuk mengukur GABA pada sampel beras berpigmen. KBLI 2025 71204 berada pada kelompok pengujian dan analisis teknis.                                         [2] Produsen/pengolah beras dapat menggunakan metode ini untuk karakterisasi kandungan GABA dan pengendalian mutu beras. KBLI 10631 mencakup penggilingan padi menjadi beras dan penyosohan.",
-      "kode_sektor_2_digit": "71 / 10"
+      "trl_6_plus": false
     },
     {
       "or": "ORHL",
@@ -3702,7 +3667,7 @@
       "sektor_utama": "Industri Persuteraan",
       "kbli": [],
       "justifikasi": "Invensi menghasilkan metode hibernasi buatan telur ulat sutra Bombyx mori yang mempertahankan kualitas telur dan meningkatkan keserempakan penetasan serta kualitas kokon. Penerapannya berada langsung pada kegiatan pembibitan ulat sutra.",
-      "kode_sektor_2_digit": null
+      "trl_6_plus": true
     },
     {
       "or": "ORNM",
@@ -3729,7 +3694,7 @@
         }
       ],
       "justifikasi": "[1] Industri Barang Lainnya dari Kayu; Industri Barang dari Gabus, Jerami, Rotan, Bambu, dan Sejenisnya YTDL relevan karena objek/aktivitas pada KI \"METODE PEMBUATAN KOMPOSIT EPOKSI RINGAN-KUAT BERBASIS SERAT KACA TERFUNGSIONALISASI\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Industri Barang Lainnya dari Plastik relevan karena objek/aktivitas pada KI \"METODE PEMBUATAN KOMPOSIT EPOKSI RINGAN-KUAT BERBASIS SERAT KACA TERFUNGSIONALISASI\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Industri Produk Mineral Nonlogam Lainnya YTDL relevan karena objek/aktivitas pada KI \"METODE PEMBUATAN KOMPOSIT EPOKSI RINGAN-KUAT BERBASIS SERAT KACA TERFUNGSIONALISASI\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
-      "kode_sektor_2_digit": "16"
+      "trl_6_plus": false
     },
     {
       "or": "ORNM",
@@ -3756,7 +3721,7 @@
         }
       ],
       "justifikasi": "[1] Industri Barang Lainnya dari Kayu; Industri Barang dari Gabus, Jerami, Rotan, Bambu, dan Sejenisnya YTDL relevan karena objek/aktivitas pada KI \"METODE PEMBUATAN KOMPOSIT EPOKSI RINGAN-KUAT BERBASIS SERAT KENAF TERFUNGSIONALISASI\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Industri Barang Lainnya dari Plastik relevan karena objek/aktivitas pada KI \"METODE PEMBUATAN KOMPOSIT EPOKSI RINGAN-KUAT BERBASIS SERAT KENAF TERFUNGSIONALISASI\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Industri Produk Mineral Nonlogam Lainnya YTDL relevan karena objek/aktivitas pada KI \"METODE PEMBUATAN KOMPOSIT EPOKSI RINGAN-KUAT BERBASIS SERAT KENAF TERFUNGSIONALISASI\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
-      "kode_sektor_2_digit": "16"
+      "trl_6_plus": false
     },
     {
       "or": "ORNM",
@@ -3783,7 +3748,7 @@
         }
       ],
       "justifikasi": "[1] Industri Barang Lainnya dari Kayu; Industri Barang dari Gabus, Jerami, Rotan, Bambu, dan Sejenisnya YTDL relevan karena objek/aktivitas pada KI \"Komposit Sandwich Epoxy–Glass Microballoon dengan Lapisan Serat Karbon Multilapis Berdensitas Rendah dan Berkekuatan Tinggi untuk Aplikasi Struktural Ringan\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Industri Barang Lainnya dari Plastik relevan karena objek/aktivitas pada KI \"Komposit Sandwich Epoxy–Glass Microballoon dengan Lapisan Serat Karbon Multilapis Berdensitas Rendah dan Berkekuatan Tinggi untuk Aplikasi Struktural Ringan\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Industri Produk Mineral Nonlogam Lainnya YTDL relevan karena objek/aktivitas pada KI \"Komposit Sandwich Epoxy–Glass Microballoon dengan Lapisan Serat Karbon Multilapis Berdensitas Rendah dan Berkekuatan Tinggi untuk Aplikasi Struktural Ringan\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
-      "kode_sektor_2_digit": "16"
+      "trl_6_plus": false
     },
     {
       "or": "ORNM",
@@ -3810,7 +3775,7 @@
         }
       ],
       "justifikasi": "[1] Industri Alat Ukur dan Alat Uji Elektronik relevan karena objek/aktivitas pada KI \"BMPT Logger (Ball Mill Pressure – Temperature Logger)\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Industri Mesin Keperluan Khusus Lainnya YTDL relevan karena objek/aktivitas pada KI \"BMPT Logger (Ball Mill Pressure – Temperature Logger)\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Industri Kimia Dasar Organik dari Sumber Daya Alam Hayati relevan karena objek/aktivitas pada KI \"BMPT Logger (Ball Mill Pressure – Temperature Logger)\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
-      "kode_sektor_2_digit": "26"
+      "trl_6_plus": false
     },
     {
       "or": "ORNM",
@@ -3832,7 +3797,7 @@
         }
       ],
       "justifikasi": "Produk berupa karbon grafitik dan berpori dari sabut kelapa yang dapat digunakan sebagai komponen fuel cell, baterai, katalis maupun adsorben.",
-      "kode_sektor_2_digit": "20"
+      "trl_6_plus": false
     },
     {
       "or": "ORNM",
@@ -3854,7 +3819,7 @@
         }
       ],
       "justifikasi": "[1] Berdasarkan judul dan abstrak, KI menghasilkan/mengembangkan alat pencacah dan pencuci sampah plastik kemasan multi lapis terintegrasi; Industri Mesin Keperluan Khusus Lainnya YTDL merupakan sektor komersialisasi yang paling dekat.\n[2] Alternatif berdasarkan fungsi atau penggunaan yang dijelaskan dalam abstrak; Pemulihan Material Barang Plastik relevan sebagai industri pengguna/penghasil pada tahap komersialisasi.",
-      "kode_sektor_2_digit": "28"
+      "trl_6_plus": false
     },
     {
       "or": "ORNM",
@@ -3881,7 +3846,7 @@
         }
       ],
       "justifikasi": "[1] Industri Semen relevan karena objek/aktivitas pada KI \"KLINKER SEMEN DENGAN PENAMBAHAN MATERIAL BASALT DAN BATUBARA\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Perdagangan Eceran Bahan dan Material Konstruksi relevan karena objek/aktivitas pada KI \"KLINKER SEMEN DENGAN PENAMBAHAN MATERIAL BASALT DAN BATUBARA\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Pemulihan Material Lainnya relevan karena objek/aktivitas pada KI \"KLINKER SEMEN DENGAN PENAMBAHAN MATERIAL BASALT DAN BATUBARA\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
-      "kode_sektor_2_digit": "23"
+      "trl_6_plus": false
     },
     {
       "or": "ORNM",
@@ -3903,7 +3868,7 @@
         }
       ],
       "justifikasi": "[1] Komposit kayu-plastik dari limbah kemasan diproduksi sbg material bangunan\n [2] Material komposit bioplastik dikomersialisasikan sbg produk industri daur ulang",
-      "kode_sektor_2_digit": "16"
+      "trl_6_plus": false
     },
     {
       "or": "ORNM",
@@ -3925,7 +3890,7 @@
         }
       ],
       "justifikasi": "Invensi menghasilkan serbuk mikropartikel higroskopis sebagai bahan semai awan, berupa campuran NaCl dan material anti-kempal berbasis oksida logam. Produk akhirnya merupakan bahan kimia khusus untuk teknologi modifikasi cuaca.",
-      "kode_sektor_2_digit": "20"
+      "trl_6_plus": true
     },
     {
       "or": "ORNM",
@@ -3947,7 +3912,7 @@
         }
       ],
       "justifikasi": "Produk akhir berupa lembaran biokomposit mulsa berbasis LDPE dan serbuk sabut kelapa yang tahan paparan UV. Produk diproduksi sebagai lembaran plastik dan digunakan sebagai mulsa pada kegiatan pertanian.",
-      "kode_sektor_2_digit": "22"
+      "trl_6_plus": false
     },
     {
       "or": "ORNM",
@@ -3969,7 +3934,7 @@
         }
       ],
       "justifikasi": "Invensi menghasilkan paving block plastik dari limbah kemasan plastik multilapis dan kantong kresek dengan kuat tekan hingga 50,4 MPa. Produk akhirnya merupakan material bangunan berbasis plastik, sehingga industri barang plastik untuk bangunan menjadi sektor utama.",
-      "kode_sektor_2_digit": "22"
+      "trl_6_plus": false
     },
     {
       "or": "ORNM",
@@ -3991,7 +3956,7 @@
         }
       ],
       "justifikasi": "[1] PROSES PEMBUATAN BETON DENGAN PENGISI HIDROGEL DARI SERAT ALAM DAN PRODUK YANG DIHASILKANNYA diproduksi sebagai material canggih (komposit/paduan/nonlogam).\n [2] PROSES PEMBUATAN BETON DENGAN PENGISI HIDROGEL DARI SERAT ALAM DAN PRODUK YANG DIHASILKANNYA didistribusikan melalui jalur perdagangan besar bahan/material.",
-      "kode_sektor_2_digit": "23"
+      "trl_6_plus": false
     },
     {
       "or": "ORNM",
@@ -4013,7 +3978,7 @@
         }
       ],
       "justifikasi": "[1] METODE CETAK PRODUK POLIURETAN DENGAN MENGGUNAKAN WADAH BERLAPIS FILM POLIPROPILEN diproduksi sebagai produk/bahan kimia (katalis, polimer, atau turunannya).\n [2] METODE CETAK PRODUK POLIURETAN DENGAN MENGGUNAKAN WADAH BERLAPIS FILM POLIPROPILEN didistribusikan melalui jalur perdagangan besar bahan kimia.",
-      "kode_sektor_2_digit": "20"
+      "trl_6_plus": false
     },
     {
       "or": "ORNM",
@@ -4035,7 +4000,7 @@
         }
       ],
       "justifikasi": "[1] PROSES PEMBUATAN, PENGGUNAAN, DAN KARAKTER ASAP CAIR DARI KULIT ROTAN UNTUK PENGAWETAN ROTAN diproduksi sebagai produk kayu/panel/rotan olahan.\n [2] PROSES PEMBUATAN, PENGGUNAAN, DAN KARAKTER ASAP CAIR DARI KULIT ROTAN UNTUK PENGAWETAN ROTAN didistribusikan melalui jalur perdagangan besar produk kayu.",
-      "kode_sektor_2_digit": "16"
+      "trl_6_plus": true
     },
     {
       "or": "ORNM",
@@ -4062,7 +4027,7 @@
         }
       ],
       "justifikasi": "[1] ALAT UJI PELAPIS ANTIFOULING diproduksi sebagai alat ukur elektronik atau sistem instrumentasi.\n [2] ALAT UJI PELAPIS ANTIFOULING digunakan dalam jasa pengujian teknis.\n [3] ALAT UJI PELAPIS ANTIFOULING didistribusikan melalui jalur perdagangan besar perangkat elektronik.",
-      "kode_sektor_2_digit": "26"
+      "trl_6_plus": false
     },
     {
       "or": "ORNM",
@@ -4084,7 +4049,7 @@
         }
       ],
       "justifikasi": "[1] KOMPOSISI DAN PROSES PEMBUATAN FILAMEN PENCETAKAN TIGA DIMENSI DARI BIOKOMPOSIT POLIKAPROLAKTON DAN SODIUM ALGINAT TERMOPLASTIS diproduksi sebagai material film/bioplastik.\n [2] KOMPOSISI DAN PROSES PEMBUATAN FILAMEN PENCETAKAN TIGA DIMENSI DARI BIOKOMPOSIT POLIKAPROLAKTON DAN SODIUM ALGINAT TERMOPLASTIS didistribusikan melalui jalur perdagangan besar bahan/material.",
-      "kode_sektor_2_digit": "22"
+      "trl_6_plus": false
     },
     {
       "or": "ORNM",
@@ -4106,7 +4071,7 @@
         }
       ],
       "justifikasi": "[1] KOMPOSISI DAN PROSES PEMBUATAN KOMPOSIT EPOKSI SYNTACTIC FOAM SEBAGAI PELAMPUNG LAUT DALAM diproduksi sebagai material canggih (komposit/paduan/nonlogam).\n [2] KOMPOSISI DAN PROSES PEMBUATAN KOMPOSIT EPOKSI SYNTACTIC FOAM SEBAGAI PELAMPUNG LAUT DALAM didistribusikan melalui jalur perdagangan besar bahan/material.",
-      "kode_sektor_2_digit": "23"
+      "trl_6_plus": false
     },
     {
       "or": "ORNM",
@@ -4128,7 +4093,7 @@
         }
       ],
       "justifikasi": "[1] Berdasarkan judul dan abstrak, KI menghasilkan/mengembangkan biokomposit berbahan high density poly ethylene, rumput laut hijau (caulerpa lentillifera), dan polyethylene-grafted-maleic anhydride untuk bahan kemasan kaku (rigid); Industri Barang Lainnya dari Plastik merupakan sektor komersialisasi yang paling dekat.\n[2] Alternatif berdasarkan fungsi atau penggunaan yang dijelaskan dalam abstrak; Industri Pengolahan Lainnya YTDL relevan sebagai industri pengguna/penghasil pada tahap komersialisasi.",
-      "kode_sektor_2_digit": "22"
+      "trl_6_plus": false
     },
     {
       "or": "ORNM",
@@ -4150,7 +4115,7 @@
         }
       ],
       "justifikasi": "[1] Berdasarkan judul dan abstrak, KI menghasilkan/mengembangkan proses pembuatan grafit yang berpelapis nanokomposit nikel-tabung nanokarbon serta produk yang dihasilkannya; Industri Barang Kimia Lainnya YTDL merupakan sektor komersialisasi yang paling dekat.\n[2] Alternatif berdasarkan fungsi atau penggunaan yang dijelaskan dalam abstrak; Pertambangan Bijih Nikel relevan sebagai industri pengguna/penghasil pada tahap komersialisasi.",
-      "kode_sektor_2_digit": "20"
+      "trl_6_plus": false
     },
     {
       "or": "ORNM",
@@ -4172,7 +4137,7 @@
         }
       ],
       "justifikasi": "[1] Berdasarkan judul dan abstrak, KI menghasilkan/mengembangkan komposisi dan metode pembuatan busa campuran polietilen dan etilen vinil asetat menggunakan mesin rotational moulding; Industri Barang Lainnya dari Plastik merupakan sektor komersialisasi yang paling dekat.\n[2] Alternatif berdasarkan fungsi atau penggunaan yang dijelaskan dalam abstrak; Industri Damar Buatan (Resin Sintetis) dan Bahan Baku Plastik relevan sebagai industri pengguna/penghasil pada tahap komersialisasi.",
-      "kode_sektor_2_digit": "22"
+      "trl_6_plus": false
     },
     {
       "or": "ORNM",
@@ -4199,7 +4164,7 @@
         }
       ],
       "justifikasi": "[1] Berdasarkan judul dan abstrak, KI menghasilkan/mengembangkan metode pembuatan beton serat kekuatan tinggi dengan penambahan serat arang hidro serta produk yang dihasilkannya; Industri Mortar, Acian, dan Beton Siap Pakai merupakan sektor komersialisasi yang paling dekat.\n[2] Alternatif berdasarkan fungsi atau penggunaan yang dijelaskan dalam abstrak; Industri Semen relevan sebagai industri pengguna/penghasil pada tahap komersialisasi.\n[3] Alternatif berdasarkan fungsi atau penggunaan yang dijelaskan dalam abstrak; Industri Bahan Bangunan Lainnya dari Tanah Liat atau Keramik relevan sebagai industri pengguna/penghasil pada tahap komersialisasi.",
-      "kode_sektor_2_digit": "23"
+      "trl_6_plus": false
     },
     {
       "or": "ORNM",
@@ -4226,7 +4191,7 @@
         }
       ],
       "justifikasi": "[1] Aktivitas Pemrograman Berbasis Kecerdasan Artifisial relevan karena objek/aktivitas pada KI \"METODE MODIFIKASI JERAMI PADI DENGAN ULTRASONIK-PLASMA SEBAGAI BAHAN PEMBUAT KOMPOSIT POLIMER DAN PRODUK YANG DIHASILKANNYA\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Aktivitas Pemrograman Komputer Lainnya relevan karena objek/aktivitas pada KI \"METODE MODIFIKASI JERAMI PADI DENGAN ULTRASONIK-PLASMA SEBAGAI BAHAN PEMBUAT KOMPOSIT POLIMER DAN PRODUK YANG DIHASILKANNYA\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Aktivitas Teknologi Informasi Dan Jasa Komputer Lainnya relevan karena objek/aktivitas pada KI \"METODE MODIFIKASI JERAMI PADI DENGAN ULTRASONIK-PLASMA SEBAGAI BAHAN PEMBUAT KOMPOSIT POLIMER DAN PRODUK YANG DIHASILKANNYA\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
-      "kode_sektor_2_digit": "62"
+      "trl_6_plus": false
     },
     {
       "or": "ORNM",
@@ -4253,7 +4218,7 @@
         }
       ],
       "justifikasi": "[1] Aktivitas Pemrograman Berbasis Kecerdasan Artifisial relevan karena objek/aktivitas pada KI \"METODE PEMBUATAN AEROGEL KOMPOSIT POLIVINIL ALKOHOL (PVA)/LIGNIN DARI LIMBAH LINDI HITAM TANDAN KOSONG KELAPA SAWIT (TKKS) SEBAGAI ADSORBEN METILEN BIRU DAN PRODUK YANG DIHASILKAN\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Aktivitas Pemrograman Komputer Lainnya relevan karena objek/aktivitas pada KI \"METODE PEMBUATAN AEROGEL KOMPOSIT POLIVINIL ALKOHOL (PVA)/LIGNIN DARI LIMBAH LINDI HITAM TANDAN KOSONG KELAPA SAWIT (TKKS) SEBAGAI ADSORBEN METILEN BIRU DAN PRODUK YANG DIHASILKAN\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Aktivitas Teknologi Informasi Dan Jasa Komputer Lainnya relevan karena objek/aktivitas pada KI \"METODE PEMBUATAN AEROGEL KOMPOSIT POLIVINIL ALKOHOL (PVA)/LIGNIN DARI LIMBAH LINDI HITAM TANDAN KOSONG KELAPA SAWIT (TKKS) SEBAGAI ADSORBEN METILEN BIRU DAN PRODUK YANG DIHASILKAN\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
-      "kode_sektor_2_digit": "62"
+      "trl_6_plus": false
     },
     {
       "or": "ORNM",
@@ -4280,7 +4245,7 @@
         }
       ],
       "justifikasi": "[1] Pengolahan dan Pengawetan Ikan dengan Metode Lainnya relevan karena objek/aktivitas pada KI \"KOMPOSISI, METODE, DAN ALAT PEMBUATAN PELAMPUNG BERBASIS BUSA DENGAN TEKNIK TEKAN PANAS\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Industri Kulit Komposisi relevan karena objek/aktivitas pada KI \"KOMPOSISI, METODE, DAN ALAT PEMBUATAN PELAMPUNG BERBASIS BUSA DENGAN TEKNIK TEKAN PANAS\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Industri Alat Laboratorium dan Alat Listrik atau Teknik dari Porselen relevan karena objek/aktivitas pada KI \"KOMPOSISI, METODE, DAN ALAT PEMBUATAN PELAMPUNG BERBASIS BUSA DENGAN TEKNIK TEKAN PANAS\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
-      "kode_sektor_2_digit": "10"
+      "trl_6_plus": false
     },
     {
       "or": "ORNM",
@@ -4302,7 +4267,7 @@
         }
       ],
       "justifikasi": "[1] Komposit busa sintaktik hibrid ringan dan kuat merupakan material teknik untuk mengurangi bobot produk dan konsumsi bahan bakar.",
-      "kode_sektor_2_digit": "22"
+      "trl_6_plus": false
     },
     {
       "or": "ORNM",
@@ -4319,7 +4284,7 @@
         }
       ],
       "justifikasi": "[1] Sistem kamera endoskopi untuk mengukur kesuburan lapisan tanah merupakan instrumen monitoring tanah.",
-      "kode_sektor_2_digit": "26"
+      "trl_6_plus": false
     },
     {
       "or": "ORNM",
@@ -4336,7 +4301,7 @@
         }
       ],
       "justifikasi": "[1] Metode jatuhan dan alat ukur kekerasan kulit lada merupakan alat/metode pengujian mutu komoditas.",
-      "kode_sektor_2_digit": "71"
+      "trl_6_plus": false
     },
     {
       "or": "ORNM",
@@ -4353,7 +4318,7 @@
         }
       ],
       "justifikasi": "[1] Pelapisan membran gelatin/CHA dengan monomer organik menggunakan deposisi plasma merupakan teknologi coating permukaan material.",
-      "kode_sektor_2_digit": "20"
+      "trl_6_plus": false
     },
     {
       "or": "ORNM",
@@ -4370,7 +4335,7 @@
         }
       ],
       "justifikasi": "[1] Pelapis antimikroba berbasis propolis dan ZnO digunakan pada kemasan, sehingga pengguna langsung adalah industri coating dan kemasan pangan.",
-      "kode_sektor_2_digit": "20"
+      "trl_6_plus": false
     },
     {
       "or": "ORNM",
@@ -4387,7 +4352,7 @@
         }
       ],
       "justifikasi": "[1] Produk berupa cat komposit syntactic foam yang diaplikasikan pada permukaan baja dan berfungsi sebagai insulasi panas.",
-      "kode_sektor_2_digit": "20"
+      "trl_6_plus": false
     },
     {
       "or": "ORNM",
@@ -4399,12 +4364,12 @@
       "kbli": [
         {
           "rank": 1,
-          "kode": "20131                           [2] 22220                                   [3] 22290",
+          "kode": "20131222220322290",
           "judul": "Industri Damar Buatan (Resin Sintetis) dan Bahan Baku Plastik                                                                                   [2] Industri Barang dari Plastik untuk                              Pengemasan                                                                                                                    [3] Industri Barang dari Plastik Lainnya"
         }
       ],
       "justifikasi": "[1] (Rekomendasi Utama) Invensi menghasilkan kompon biodegradable nanokomposit berbentuk pelet (compound resin) berbasis pati tapioka, LLDPE, dan organo silika melalui proses pembentukan masterbatch. Produk ini merupakan bahan baku plastik yang akan diproses lebih lanjut oleh industri manufaktur plastik menjadi berbagai produk, sehingga paling sesuai dengan industri resin dan compound plastik.                                                                                                                                                                                                [2] Produk yang dihasilkan memiliki karakteristik dapat diproses dengan teknologi blown film, sehingga sangat potensial digunakan sebagai bahan baku pembuatan kantong plastik, film kemasan, dan kemasan fleksibel yang biodegradable. Oleh karena itu, industri kemasan plastik merupakan calon penerima lisensi yang kuat.                                                                                                                                                         [3] Selain untuk kemasan, pelet biodegradable ini juga dapat digunakan untuk berbagai produk plastik ramah lingkungan lainnya melalui proses ekstrusi atau pencetakan, sehingga industri manufaktur produk plastik menjadi target lisensi alternatif.",
-      "kode_sektor_2_digit": "20"
+      "trl_6_plus": false
     },
     {
       "or": "ORNM",
@@ -4431,7 +4396,7 @@
         }
       ],
       "justifikasi": "KBLI dipilih berdasarkan objek/fungsi utama KI 'KOMPOSISI DAN METODE PEMBUATAN MATERIAL VITRIMER EPOKSI DENGAN SENYAWA VANILIN TERMODIFIKASI'. Prioritas pertama adalah KBLI yang paling langsung merepresentasikan produk/aktivitas KI; KBLI berikutnya merupakan aktivitas terkait yang masih relevan.",
-      "kode_sektor_2_digit": "20 / 22 / 20"
+      "trl_6_plus": false
     },
     {
       "or": "ORNM",
@@ -4458,7 +4423,7 @@
         }
       ],
       "justifikasi": "[1] Industri Pati Ubi Kayu relevan karena objek/aktivitas pada KI \"FORMULA BIJIH BIOPLASTIK DARI CAMPURAN PBAT DAN PLA DENGAN PENAMBAHAN PATI SINGKONG DAN SERBUK BEKATUL SERTA PROSES PEMBUATANNYA\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Industri Pati dan Produk Pati Lainnya relevan karena objek/aktivitas pada KI \"FORMULA BIJIH BIOPLASTIK DARI CAMPURAN PBAT DAN PLA DENGAN PENAMBAHAN PATI SINGKONG DAN SERBUK BEKATUL SERTA PROSES PEMBUATANNYA\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Industri Produk Makanan Lainnya relevan karena objek/aktivitas pada KI \"FORMULA BIJIH BIOPLASTIK DARI CAMPURAN PBAT DAN PLA DENGAN PENAMBAHAN PATI SINGKONG DAN SERBUK BEKATUL SERTA PROSES PEMBUATANNYA\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
-      "kode_sektor_2_digit": "10"
+      "trl_6_plus": true
     },
     {
       "or": "ORNM",
@@ -4485,7 +4450,7 @@
         }
       ],
       "justifikasi": "[1] Industri Alat Ukur dan Alat Uji Elektronik relevan karena objek/aktivitas pada KI \"ALAT DAN METODE UKUR PERUBAHAN KELUNAKAN KULIT  LADA MENGGUNAKAN SISTEM KENDALI DAN SENSOR  TOTAL DISSOLVED SOLID (TDS)\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Industri Alat Ukur, Alat Uji, dan Peralatan Navigasi dan Kontrol Lainnya relevan karena objek/aktivitas pada KI \"ALAT DAN METODE UKUR PERUBAHAN KELUNAKAN KULIT  LADA MENGGUNAKAN SISTEM KENDALI DAN SENSOR  TOTAL DISSOLVED SOLID (TDS)\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Jasa Pengujian Teknis relevan karena objek/aktivitas pada KI \"ALAT DAN METODE UKUR PERUBAHAN KELUNAKAN KULIT  LADA MENGGUNAKAN SISTEM KENDALI DAN SENSOR  TOTAL DISSOLVED SOLID (TDS)\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
-      "kode_sektor_2_digit": "26"
+      "trl_6_plus": false
     },
     {
       "or": "ORNM",
@@ -4507,7 +4472,7 @@
         }
       ],
       "justifikasi": "[1] METODE PEMBUATAN LAPISAN TIPIS BERBASIS LASER NdYAG UNTUK PENINGKATAN UMUR PIN DIES SKD 61 diproduksi sebagai material canggih (komposit/paduan/nonlogam).\n [2] METODE PEMBUATAN LAPISAN TIPIS BERBASIS LASER NdYAG UNTUK PENINGKATAN UMUR PIN DIES SKD 61 didistribusikan melalui jalur perdagangan besar bahan/material.",
-      "kode_sektor_2_digit": "23"
+      "trl_6_plus": false
     },
     {
       "or": "ORNM",
@@ -4529,7 +4494,7 @@
         }
       ],
       "justifikasi": "[1] PROSES PEMBUATAN FILM BIOKOMPOSIT DARI PATI SAGU HMT DENGAN PENAMBAHAN SELULOSA MIKROKRISTAL DAN EKSTRAK SECANG SERTA PRODUK YANG DIHASILKANNYA diproduksi sebagai material film/bioplastik.\n [2] PROSES PEMBUATAN FILM BIOKOMPOSIT DARI PATI SAGU HMT DENGAN PENAMBAHAN SELULOSA MIKROKRISTAL DAN EKSTRAK SECANG SERTA PRODUK YANG DIHASILKANNYA didistribusikan melalui jalur perdagangan besar bahan/material.",
-      "kode_sektor_2_digit": "22"
+      "trl_6_plus": false
     },
     {
       "or": "ORNM",
@@ -4551,7 +4516,7 @@
         }
       ],
       "justifikasi": "[1] PROSES PEMBUATAN PATI SAGU TERMODIFIKASI HMT DAN PRODUK YANG DIHASILKANNYA diproduksi sebagai produk silika/mineral nonlogam (SiO2 kemurnian tinggi) melalui proses presipitasi/kalsinasi.\n [2] PROSES PEMBUATAN PATI SAGU TERMODIFIKASI HMT DAN PRODUK YANG DIHASILKANNYA didistribusikan melalui jalur perdagangan besar bahan/material.",
-      "kode_sektor_2_digit": "23"
+      "trl_6_plus": false
     },
     {
       "or": "ORNM",
@@ -4573,7 +4538,7 @@
         }
       ],
       "justifikasi": "[1] METODE PEMBUATAN MATERIAL PLAT LOGAM BERLAPIS DENGAN INTERLAYER NANO NIKEL UNTUK MENINGKATKAN ADHESI DAN KETAHANAN KOROSI diproduksi sebagai material canggih (komposit/paduan/nonlogam).\n [2] METODE PEMBUATAN MATERIAL PLAT LOGAM BERLAPIS DENGAN INTERLAYER NANO NIKEL UNTUK MENINGKATKAN ADHESI DAN KETAHANAN KOROSI didistribusikan melalui jalur perdagangan besar bahan/material.",
-      "kode_sektor_2_digit": "23"
+      "trl_6_plus": false
     },
     {
       "or": "ORNM",
@@ -4595,7 +4560,7 @@
         }
       ],
       "justifikasi": "[1] METODE SINTESIS HIDROGEL BERBASIS KITOSAN YANG MEMILIKI KESTABILAN MEKANIK DAN ADHESI DAN PRODUK YANG DIHASILKAN diproduksi sebagai produk/bahan kimia (katalis, polimer, atau turunannya).\n [2] METODE SINTESIS HIDROGEL BERBASIS KITOSAN YANG MEMILIKI KESTABILAN MEKANIK DAN ADHESI DAN PRODUK YANG DIHASILKAN didistribusikan melalui jalur perdagangan besar bahan kimia.",
-      "kode_sektor_2_digit": "20"
+      "trl_6_plus": false
     },
     {
       "or": "ORNM",
@@ -4617,7 +4582,7 @@
         }
       ],
       "justifikasi": "Output berupa benang pilin dari limbah kulit rotan. 13111 relevan pada pembuatan benang/tekstil; 13139 jalur penyempurnaan tekstil.",
-      "kode_sektor_2_digit": "13 / 13"
+      "trl_6_plus": false
     },
     {
       "or": "ORNM",
@@ -4639,7 +4604,7 @@
         }
       ],
       "justifikasi": "Output berupa substrat SERS fleksibel dengan nanopartikel perak untuk deteksi. 20299 merupakan material fungsional; 26519 jalur sensor/instrumentasi.",
-      "kode_sektor_2_digit": "20 / 26"
+      "trl_6_plus": false
     },
     {
       "or": "ORNM",
@@ -4661,7 +4626,7 @@
         }
       ],
       "justifikasi": "Output berupa sistem pengukuran kecerahan kapulaga dengan operasi jarak jauh. 26519 merupakan industri alat ukur dan 62199 untuk sistem digital/pengendalian.",
-      "kode_sektor_2_digit": "26 / 62"
+      "trl_6_plus": false
     },
     {
       "or": "ORNM",
@@ -4683,7 +4648,7 @@
         }
       ],
       "justifikasi": "Output berupa sistem deteksi kebocoran arus dengan sensor UV pada panel listrik. 26519 merupakan industri alat ukur/kontrol dan 62199 jalur sistem/perangkat lunak.",
-      "kode_sektor_2_digit": "26 / 62"
+      "trl_6_plus": false
     },
     {
       "or": "ORNM",
@@ -4705,7 +4670,7 @@
         }
       ],
       "justifikasi": "Output berupa nanopartikel perak hasil sintesis ramah lingkungan. 20299 merupakan industri material kimia; 32509 relevan bila diaplikasikan pada produk diagnostik/medis.",
-      "kode_sektor_2_digit": "20 / 32"
+      "trl_6_plus": false
     },
     {
       "or": "ORNM",
@@ -4727,7 +4692,7 @@
         }
       ],
       "justifikasi": "Output berupa ion-imprinted polymer (IIP) sebagai material polimer fungsional. 20131 mewakili bahan polimer dan 20299 material kimia khusus.",
-      "kode_sektor_2_digit": "20 / 20"
+      "trl_6_plus": false
     },
     {
       "or": "ORNM",
@@ -4749,7 +4714,7 @@
         }
       ],
       "justifikasi": "Output berupa pelapis bioplastik berbasis pati untuk kemasan aktif pangan. 22202 merupakan industri barang plastik/bioplastik untuk pengemasan dan 20131 mewakili bahan biopolimer.",
-      "kode_sektor_2_digit": "22 / 20"
+      "trl_6_plus": false
     },
     {
       "or": "ORNM",
@@ -4771,7 +4736,7 @@
         }
       ],
       "justifikasi": "Output akhir berupa garam rendah natrium dari rumput laut untuk penggunaan pangan. 10773 merupakan industri garam industri aneka pangan; 10799 menjadi jalur produk pangan lainnya.",
-      "kode_sektor_2_digit": "10 / 10"
+      "trl_6_plus": false
     },
     {
       "or": "ORNM",
@@ -4793,7 +4758,7 @@
         }
       ],
       "justifikasi": "Output berupa komposit aerogel selulosa-kitosan-MOF sebagai material fungsional. 20131 mewakili biopolimer/material dan 20299 untuk material kimia khusus.",
-      "kode_sektor_2_digit": "20 / 20"
+      "trl_6_plus": false
     },
     {
       "or": "ORNM",
@@ -4815,7 +4780,7 @@
         }
       ],
       "justifikasi": "Output berupa polimer/biopolimer/biokomposit atau barang berbasis plastik yang berpotensi menjadi bahan baku/produk plastik; 20131 mencakup bahan baku plastik dan biopolimer.",
-      "kode_sektor_2_digit": "20 / 22"
+      "trl_6_plus": false
     },
     {
       "or": "ORNM",
@@ -4837,7 +4802,7 @@
         }
       ],
       "justifikasi": "Output berupa polimer/biopolimer/biokomposit atau barang berbasis plastik yang berpotensi menjadi bahan baku/produk plastik; 20131 mencakup bahan baku plastik dan biopolimer.",
-      "kode_sektor_2_digit": "20 / 22"
+      "trl_6_plus": false
     },
     {
       "or": "ORNM",
@@ -4864,7 +4829,7 @@
         }
       ],
       "justifikasi": "KBLI dipilih berdasarkan objek/fungsi utama KI 'MATERIAL POLIURETAN PENYEMBUHAN DIRI BERBASIS BIO-ISOSIANAT TRIMER DAN SINTESISNYA MENGGUNAKAN REAKSI DIELS-ALDER'. Prioritas pertama adalah KBLI yang paling langsung merepresentasikan produk/aktivitas KI; KBLI berikutnya merupakan aktivitas terkait yang masih relevan.",
-      "kode_sektor_2_digit": "20 / 22 / 20"
+      "trl_6_plus": false
     },
     {
       "or": "ORNM",
@@ -4891,7 +4856,7 @@
         }
       ],
       "justifikasi": "[1] Industri Produk Mineral Nonlogam Lainnya YTDL relevan karena objek/aktivitas pada KI \"METODE PEMBUATAN SERBUK MATERIAL MAGNETIK TIMBAL HEKSAFERIT DARI BAHAN BAKU PASIR BESI ALAM DAN PRODUK YANG DIHASILKANNYA\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Industri Produk Logam Lainnya YTDL relevan karena objek/aktivitas pada KI \"METODE PEMBUATAN SERBUK MATERIAL MAGNETIK TIMBAL HEKSAFERIT DARI BAHAN BAKU PASIR BESI ALAM DAN PRODUK YANG DIHASILKANNYA\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Industri Logam Dasar Bukan Besi Lainnya relevan karena objek/aktivitas pada KI \"METODE PEMBUATAN SERBUK MATERIAL MAGNETIK TIMBAL HEKSAFERIT DARI BAHAN BAKU PASIR BESI ALAM DAN PRODUK YANG DIHASILKANNYA\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
-      "kode_sektor_2_digit": "23"
+      "trl_6_plus": false
     },
     {
       "or": "ORNM",
@@ -4918,7 +4883,7 @@
         }
       ],
       "justifikasi": "[1] Pengolahan dan Pengawetan Ikan dengan Metode Lainnya relevan karena objek/aktivitas pada KI \"METODE PRODUKSI SUPERKONDUKTOR MgB₂ DENGAN PENAMBAHAN Fe DAN Sn MELALUI TEKNIK POWDER IN SEALED TUBE DAN HIGH ENERGY MILLING\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Pengolahan dan Pengawetan Biota Air Lainnya dengan Metode Lainnya relevan karena objek/aktivitas pada KI \"METODE PRODUKSI SUPERKONDUKTOR MgB₂ DENGAN PENAMBAHAN Fe DAN Sn MELALUI TEKNIK POWDER IN SEALED TUBE DAN HIGH ENERGY MILLING\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Produksi Es relevan karena objek/aktivitas pada KI \"METODE PRODUKSI SUPERKONDUKTOR MgB₂ DENGAN PENAMBAHAN Fe DAN Sn MELALUI TEKNIK POWDER IN SEALED TUBE DAN HIGH ENERGY MILLING\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
-      "kode_sektor_2_digit": "10"
+      "trl_6_plus": false
     },
     {
       "or": "ORNM",
@@ -4945,7 +4910,7 @@
         }
       ],
       "justifikasi": "KBLI dipilih berdasarkan objek/fungsi utama KI 'KATALIS GENERASI GAS HIDROGEN BERBASIS NANOPARTIKEL KOBAL MAGNETIK DARI KOMPOSIT ZIF-67/KITOSAN UDANG DAN METODE PEMBUATANNYA'. Prioritas pertama adalah KBLI yang paling langsung merepresentasikan produk/aktivitas KI; KBLI berikutnya merupakan aktivitas terkait yang masih relevan.",
-      "kode_sektor_2_digit": "20 / 20 / 35"
+      "trl_6_plus": false
     },
     {
       "or": "ORNM",
@@ -4972,7 +4937,7 @@
         }
       ],
       "justifikasi": "[1] Industri Barang Lainnya dari Kayu; Industri Barang dari Gabus, Jerami, Rotan, Bambu, dan Sejenisnya YTDL relevan karena objek/aktivitas pada KI \"KOMPOSISI DAN PROSES PEMBUATAN KOMPOSIT ARANG AKTIF BATANG BAMBU SEMBILANG DENGAN SENG OKSIDA DAN TEMBAGA OKSIDA\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Industri Barang Lainnya dari Plastik relevan karena objek/aktivitas pada KI \"KOMPOSISI DAN PROSES PEMBUATAN KOMPOSIT ARANG AKTIF BATANG BAMBU SEMBILANG DENGAN SENG OKSIDA DAN TEMBAGA OKSIDA\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Industri Produk Mineral Nonlogam Lainnya YTDL relevan karena objek/aktivitas pada KI \"KOMPOSISI DAN PROSES PEMBUATAN KOMPOSIT ARANG AKTIF BATANG BAMBU SEMBILANG DENGAN SENG OKSIDA DAN TEMBAGA OKSIDA\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
-      "kode_sektor_2_digit": "16"
+      "trl_6_plus": false
     },
     {
       "or": "ORNM",
@@ -4999,7 +4964,7 @@
         }
       ],
       "justifikasi": "KBLI dipilih berdasarkan objek/fungsi utama KI 'METODE PEMBUATAN BIO-BRIKET DENGAN NILAI KALOR TINGGI BERBAHAN TANDAN KOSONG KELAPA SAWIT (Elaeis guineensis Jacq) MELALUI DELIGNIFIKASI DAN RESIDU JELANTAH'. Prioritas pertama adalah KBLI yang paling langsung merepresentasikan produk/aktivitas KI; KBLI berikutnya merupakan aktivitas terkait yang masih relevan.",
-      "kode_sektor_2_digit": "19 / 20 / 28"
+      "trl_6_plus": false
     },
     {
       "or": "ORNM",
@@ -5026,7 +4991,7 @@
         }
       ],
       "justifikasi": "[1] Aktivitas Pemrograman Berbasis Kecerdasan Artifisial relevan karena objek/aktivitas pada KI \"PROSES PEMBUATAN BUAH MENGKUDU (Morinda citrifolia L.) DAN  JAHE EMPRIT (Zingiber officinale var. Amarum)SEBAGAI MINUMAN  FUNGSIONAL ANTIDIABETES DAN ANTIOKSIDAN\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Aktivitas Pemrograman Komputer Lainnya relevan karena objek/aktivitas pada KI \"PROSES PEMBUATAN BUAH MENGKUDU (Morinda citrifolia L.) DAN  JAHE EMPRIT (Zingiber officinale var. Amarum)SEBAGAI MINUMAN  FUNGSIONAL ANTIDIABETES DAN ANTIOKSIDAN\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Aktivitas Teknologi Informasi Dan Jasa Komputer Lainnya relevan karena objek/aktivitas pada KI \"PROSES PEMBUATAN BUAH MENGKUDU (Morinda citrifolia L.) DAN  JAHE EMPRIT (Zingiber officinale var. Amarum)SEBAGAI MINUMAN  FUNGSIONAL ANTIDIABETES DAN ANTIOKSIDAN\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
-      "kode_sektor_2_digit": "62"
+      "trl_6_plus": false
     },
     {
       "or": "ORNM",
@@ -5053,7 +5018,7 @@
         }
       ],
       "justifikasi": "[1] Industri Barang dari Plastik dan Bioplastik untuk Pengemasan relevan karena objek/aktivitas pada KI \"1.KOMPOSISI DAN METODE PEMBUATAN AEROGEL SELULOSA BERBASIS TANDAN KOSONG KELAPA SAWIT UNTUK ADSORBEN MIKROPLASTIK\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Industri Barang Lainnya dari Plastik relevan karena objek/aktivitas pada KI \"1.KOMPOSISI DAN METODE PEMBUATAN AEROGEL SELULOSA BERBASIS TANDAN KOSONG KELAPA SAWIT UNTUK ADSORBEN MIKROPLASTIK\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Industri Damar Buatan (Resin Sintetis) dan Bahan Baku Plastik relevan karena objek/aktivitas pada KI \"1.KOMPOSISI DAN METODE PEMBUATAN AEROGEL SELULOSA BERBASIS TANDAN KOSONG KELAPA SAWIT UNTUK ADSORBEN MIKROPLASTIK\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
-      "kode_sektor_2_digit": "22"
+      "trl_6_plus": false
     },
     {
       "or": "ORNM",
@@ -5080,7 +5045,7 @@
         }
       ],
       "justifikasi": "KBLI dipilih berdasarkan objek/fungsi utama KI 'Metoda Proses Pemisahan dan Pemekatan Sediaan L-Theanin (L-The) Dalam Ekstrak Teh Hijau (Camellia sinensis} Lokal Melalui Sistem Diafiltrasi-Nanofiltrasi (DF-NF)F'. Prioritas pertama adalah KBLI yang paling langsung merepresentasikan produk/aktivitas KI; KBLI berikutnya merupakan aktivitas terkait yang masih relevan.",
-      "kode_sektor_2_digit": "10 / 10 / 10"
+      "trl_6_plus": false
     },
     {
       "or": "ORNM",
@@ -5107,7 +5072,7 @@
         }
       ],
       "justifikasi": "[1] Industri Barang dari Plastik dan Bioplastik untuk Pengemasan relevan karena objek/aktivitas pada KI \"PROSES PEMBUATAN BELAT GIGI BERBAHAN DASAR POLIURETAN TERMOPLASTIK (TPU) DENGAN TEKNIK 3D PRINTING\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Industri Barang Lainnya dari Plastik relevan karena objek/aktivitas pada KI \"PROSES PEMBUATAN BELAT GIGI BERBAHAN DASAR POLIURETAN TERMOPLASTIK (TPU) DENGAN TEKNIK 3D PRINTING\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Industri Damar Buatan (Resin Sintetis) dan Bahan Baku Plastik relevan karena objek/aktivitas pada KI \"PROSES PEMBUATAN BELAT GIGI BERBAHAN DASAR POLIURETAN TERMOPLASTIK (TPU) DENGAN TEKNIK 3D PRINTING\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
-      "kode_sektor_2_digit": "22"
+      "trl_6_plus": false
     },
     {
       "or": "ORNM",
@@ -5134,7 +5099,7 @@
         }
       ],
       "justifikasi": "[1] Industri Mesin Keperluan Khusus Lainnya YTDL relevan karena objek/aktivitas pada KI \"METODE PEMBUATAN LAPISAN KOMPAK NANOPARTIKEL EMAS NANOSTAR, NANOROD, DAN NANOSPHERE\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Industri Barang Kimia Lainnya YTDL relevan karena objek/aktivitas pada KI \"METODE PEMBUATAN LAPISAN KOMPAK NANOPARTIKEL EMAS NANOSTAR, NANOROD, DAN NANOSPHERE\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Industri Alat Ukur, Alat Uji, dan Peralatan Navigasi dan Kontrol Lainnya relevan karena objek/aktivitas pada KI \"METODE PEMBUATAN LAPISAN KOMPAK NANOPARTIKEL EMAS NANOSTAR, NANOROD, DAN NANOSPHERE\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
-      "kode_sektor_2_digit": "28"
+      "trl_6_plus": false
     },
     {
       "or": "ORNM",
@@ -5161,7 +5126,7 @@
         }
       ],
       "justifikasi": "[1] Industri Barang Kimia Lainnya YTDL relevan karena objek/aktivitas pada KI \"Metode Pembuatan Sudu Turbin untuk Pembangkit Listrik Tenaga Panas Bumi (PLTP) dan Produk Yang Dihasilkannya.\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Industri Damar Buatan (Resin Sintetis) dan Bahan Baku Plastik relevan karena objek/aktivitas pada KI \"Metode Pembuatan Sudu Turbin untuk Pembangkit Listrik Tenaga Panas Bumi (PLTP) dan Produk Yang Dihasilkannya.\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Industri Mesin Keperluan Khusus Lainnya YTDL relevan karena objek/aktivitas pada KI \"Metode Pembuatan Sudu Turbin untuk Pembangkit Listrik Tenaga Panas Bumi (PLTP) dan Produk Yang Dihasilkannya.\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
-      "kode_sektor_2_digit": "20"
+      "trl_6_plus": false
     },
     {
       "or": "ORNM",
@@ -5188,7 +5153,7 @@
         }
       ],
       "justifikasi": "[1] Industri Pati dan Produk Pati Lainnya relevan karena objek/aktivitas pada KI \"METODE SINTESIS OLIGOMER ASAM LAKTAT MELALUI POLIKONDENSASI LANGSUNG PADA TEKANAN VAKUM RENDAH DAN PRODUK YANG DIHASILKANNYA\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Industri Kimia Dasar Organik Yang Menghasilkan Bahan Kimia Khusus relevan karena objek/aktivitas pada KI \"METODE SINTESIS OLIGOMER ASAM LAKTAT MELALUI POLIKONDENSASI LANGSUNG PADA TEKANAN VAKUM RENDAH DAN PRODUK YANG DIHASILKANNYA\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Pengolahan dan Pengawetan Ikan dengan Metode Lainnya relevan karena objek/aktivitas pada KI \"METODE SINTESIS OLIGOMER ASAM LAKTAT MELALUI POLIKONDENSASI LANGSUNG PADA TEKANAN VAKUM RENDAH DAN PRODUK YANG DIHASILKANNYA\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
-      "kode_sektor_2_digit": "10"
+      "trl_6_plus": false
     },
     {
       "or": "ORNM",
@@ -5215,7 +5180,7 @@
         }
       ],
       "justifikasi": "[1] Industri Alat Ukur dan Alat Uji Elektronik relevan karena objek/aktivitas pada KI \"METODE PEMBUATAN SUBSTRAT SURFACE-ENHANCED RAMAN  SPECRTOSCOPY (SERS) MELALUI INTEGRASI LASER-INDUCED GRAPHENE OXIDE (LIGO)-GOLD NANOSTAR (AuNS) DAN PRODUK YANG DIHASILKANNYA\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Industri Barang Kimia Lainnya YTDL relevan karena objek/aktivitas pada KI \"METODE PEMBUATAN SUBSTRAT SURFACE-ENHANCED RAMAN  SPECRTOSCOPY (SERS) MELALUI INTEGRASI LASER-INDUCED GRAPHENE OXIDE (LIGO)-GOLD NANOSTAR (AuNS) DAN PRODUK YANG DIHASILKANNYA\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Industri Produk Mineral Nonlogam Lainnya YTDL relevan karena objek/aktivitas pada KI \"METODE PEMBUATAN SUBSTRAT SURFACE-ENHANCED RAMAN  SPECRTOSCOPY (SERS) MELALUI INTEGRASI LASER-INDUCED GRAPHENE OXIDE (LIGO)-GOLD NANOSTAR (AuNS) DAN PRODUK YANG DIHASILKANNYA\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
-      "kode_sektor_2_digit": "26"
+      "trl_6_plus": false
     },
     {
       "or": "ORNM",
@@ -5242,7 +5207,7 @@
         }
       ],
       "justifikasi": "[1] Industri Barang Kimia Lainnya YTDL relevan karena objek/aktivitas pada KI \"METODA PEMBUATAN NANOSELULOSA TERMODIFIKASI DARI LIMBAH PELEPAH NIPAH (NYPA FRUTICANS WURMB/PALMAE) SERTA PRODUK YANG DIHASILKANNYA\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Industri Produk dari Bahan Limbah Minyak Pelumas relevan karena objek/aktivitas pada KI \"METODA PEMBUATAN NANOSELULOSA TERMODIFIKASI DARI LIMBAH PELEPAH NIPAH (NYPA FRUTICANS WURMB/PALMAE) SERTA PRODUK YANG DIHASILKANNYA\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Industri Mesin Penyiapan Dan Pembuatan Produk Kulit relevan karena objek/aktivitas pada KI \"METODA PEMBUATAN NANOSELULOSA TERMODIFIKASI DARI LIMBAH PELEPAH NIPAH (NYPA FRUTICANS WURMB/PALMAE) SERTA PRODUK YANG DIHASILKANNYA\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
-      "kode_sektor_2_digit": "20"
+      "trl_6_plus": false
     },
     {
       "or": "ORNM",
@@ -5269,7 +5234,7 @@
         }
       ],
       "justifikasi": "[1] Industri Produk Gilingan Gandum (Selain Tepung Terigu) dan Serelia Selain Beras dan Jagung relevan karena objek/aktivitas pada KI \"METODE PEMBUATAN KAWAT SUPERKONDUKTOR MAGNESIUM DIBORIDA (MGB2) BERSELUBUNG BAJA TAHAN KARAT (SS) DENGAN TEKNIK POWDER-IN-TUBE (PIT) MELALUI OPTIMASI SUHU KRITIS (Tc) DAN RAPAT ARUS KRITIS (Jc) SERTA PROSES COLD DRAWING BERTAHAP\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Industri Produk Makanan Lainnya relevan karena objek/aktivitas pada KI \"METODE PEMBUATAN KAWAT SUPERKONDUKTOR MAGNESIUM DIBORIDA (MGB2) BERSELUBUNG BAJA TAHAN KARAT (SS) DENGAN TEKNIK POWDER-IN-TUBE (PIT) MELALUI OPTIMASI SUHU KRITIS (Tc) DAN RAPAT ARUS KRITIS (Jc) SERTA PROSES COLD DRAWING BERTAHAP\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Industri Kabel dan Kawat Listrik dan Elektronik Lainnya relevan karena objek/aktivitas pada KI \"METODE PEMBUATAN KAWAT SUPERKONDUKTOR MAGNESIUM DIBORIDA (MGB2) BERSELUBUNG BAJA TAHAN KARAT (SS) DENGAN TEKNIK POWDER-IN-TUBE (PIT) MELALUI OPTIMASI SUHU KRITIS (Tc) DAN RAPAT ARUS KRITIS (Jc) SERTA PROSES COLD DRAWING BERTAHAP\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
-      "kode_sektor_2_digit": "10"
+      "trl_6_plus": false
     },
     {
       "or": "ORNM",
@@ -5296,7 +5261,7 @@
         }
       ],
       "justifikasi": "KBLI dipilih berdasarkan objek/fungsi utama KI 'BONE GRAFT BIPHASIC CALCIUM PHOSPHATE BERBAHAN BAKU BATU GAMPING DENGAN SUBSTITUSI ZINC DAN METODE PEMBUATANNYA UNTUK TERAPI KERUSAKAN TULANG'. Prioritas pertama adalah KBLI yang paling langsung merepresentasikan produk/aktivitas KI; KBLI berikutnya merupakan aktivitas terkait yang masih relevan.",
-      "kode_sektor_2_digit": "32 / 21 / 08"
+      "trl_6_plus": false
     },
     {
       "or": "ORNM",
@@ -5323,7 +5288,7 @@
         }
       ],
       "justifikasi": "[1] Aktivitas Pemrograman Berbasis Kecerdasan Artifisial relevan karena objek/aktivitas pada KI \"KOMPOSISI DAN METODE PEMBUATAN MATERIAL KOMPOSIT KARBON AKTIF BATUBARA, LUMPUR MERAH, DAN MAGNETIT SEBAGAI ADSORBEN ZAT WARNA SINTETIK SERTA PRODUK YANG DIHASILKANNYA\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Aktivitas Pemrograman Komputer Lainnya relevan karena objek/aktivitas pada KI \"KOMPOSISI DAN METODE PEMBUATAN MATERIAL KOMPOSIT KARBON AKTIF BATUBARA, LUMPUR MERAH, DAN MAGNETIT SEBAGAI ADSORBEN ZAT WARNA SINTETIK SERTA PRODUK YANG DIHASILKANNYA\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Aktivitas Teknologi Informasi Dan Jasa Komputer Lainnya relevan karena objek/aktivitas pada KI \"KOMPOSISI DAN METODE PEMBUATAN MATERIAL KOMPOSIT KARBON AKTIF BATUBARA, LUMPUR MERAH, DAN MAGNETIT SEBAGAI ADSORBEN ZAT WARNA SINTETIK SERTA PRODUK YANG DIHASILKANNYA\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
-      "kode_sektor_2_digit": "62"
+      "trl_6_plus": true
     },
     {
       "or": "ORNM",
@@ -5350,7 +5315,7 @@
         }
       ],
       "justifikasi": "[1] Industri Pati Ubi Kayu relevan karena objek/aktivitas pada KI \"KEMASAN PANGAN CERDAS BERBASIS PATI DAN BIO-METAL ORGANIC FRAMEWORKS (BIO-MOF) SERTA METODE PEMBUATANNYA\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Industri Pati dan Produk Pati Lainnya relevan karena objek/aktivitas pada KI \"KEMASAN PANGAN CERDAS BERBASIS PATI DAN BIO-METAL ORGANIC FRAMEWORKS (BIO-MOF) SERTA METODE PEMBUATANNYA\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Industri Produk Makanan Lainnya relevan karena objek/aktivitas pada KI \"KEMASAN PANGAN CERDAS BERBASIS PATI DAN BIO-METAL ORGANIC FRAMEWORKS (BIO-MOF) SERTA METODE PEMBUATANNYA\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
-      "kode_sektor_2_digit": "10"
+      "trl_6_plus": false
     },
     {
       "or": "ORNM",
@@ -5377,7 +5342,7 @@
         }
       ],
       "justifikasi": "[1] Industri Barang Lainnya dari Kayu; Industri Barang dari Gabus, Jerami, Rotan, Bambu, dan Sejenisnya YTDL relevan karena objek/aktivitas pada KI \"PANEL KOMPOSIT SANDWICH MENGGUNAKAN SERAT KENAF/EPOKSI DENGAN INTI BUSA POLIURETAN DALAM PERFORMA AKUSTIK DAN KETAHANAN TERHADAP SINAR UV\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Industri Barang Lainnya dari Plastik relevan karena objek/aktivitas pada KI \"PANEL KOMPOSIT SANDWICH MENGGUNAKAN SERAT KENAF/EPOKSI DENGAN INTI BUSA POLIURETAN DALAM PERFORMA AKUSTIK DAN KETAHANAN TERHADAP SINAR UV\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Industri Produk Mineral Nonlogam Lainnya YTDL relevan karena objek/aktivitas pada KI \"PANEL KOMPOSIT SANDWICH MENGGUNAKAN SERAT KENAF/EPOKSI DENGAN INTI BUSA POLIURETAN DALAM PERFORMA AKUSTIK DAN KETAHANAN TERHADAP SINAR UV\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
-      "kode_sektor_2_digit": "16"
+      "trl_6_plus": false
     },
     {
       "or": "ORNM",
@@ -5404,7 +5369,7 @@
         }
       ],
       "justifikasi": "[1] Industri Barang Lainnya dari Kayu; Industri Barang dari Gabus, Jerami, Rotan, Bambu, dan Sejenisnya YTDL relevan karena objek/aktivitas pada KI \"KOMPOSISI DAN PROSES PEMBUATAN PELAT BIPOLAR KOMPOSIT EBONIT UNTUK SEL BAHAN BAKAR MEMBRAN PENUKAR PROTON SERTA PRODUK YANG DIHASILKANNYA\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Industri Barang Lainnya dari Plastik relevan karena objek/aktivitas pada KI \"KOMPOSISI DAN PROSES PEMBUATAN PELAT BIPOLAR KOMPOSIT EBONIT UNTUK SEL BAHAN BAKAR MEMBRAN PENUKAR PROTON SERTA PRODUK YANG DIHASILKANNYA\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Industri Produk Mineral Nonlogam Lainnya YTDL relevan karena objek/aktivitas pada KI \"KOMPOSISI DAN PROSES PEMBUATAN PELAT BIPOLAR KOMPOSIT EBONIT UNTUK SEL BAHAN BAKAR MEMBRAN PENUKAR PROTON SERTA PRODUK YANG DIHASILKANNYA\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
-      "kode_sektor_2_digit": "16"
+      "trl_6_plus": false
     },
     {
       "or": "ORNM",
@@ -5431,7 +5396,7 @@
         }
       ],
       "justifikasi": "[1] Industri Produk Farmasi untuk Manusia relevan karena objek/aktivitas pada KI \"METODE PRODUKSI NANOKONJUGAT FIKOSIANIN DAN NANOBONES EMAS (AuNBs) HASIL INTERAKSI MUATAN LISTRIK UNTUK APLIKASI TERAPI FOTODINAMIK DAN FOTOTERMAL SERTA PRODUK YANG DIHASILKANNYA\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Industri Alat Diagnosis Medis, Perban, Kasa, dan Penunjang Kesehatan Lainnya relevan karena objek/aktivitas pada KI \"METODE PRODUKSI NANOKONJUGAT FIKOSIANIN DAN NANOBONES EMAS (AuNBs) HASIL INTERAKSI MUATAN LISTRIK UNTUK APLIKASI TERAPI FOTODINAMIK DAN FOTOTERMAL SERTA PRODUK YANG DIHASILKANNYA\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Industri Barang Kimia Lainnya YTDL relevan karena objek/aktivitas pada KI \"METODE PRODUKSI NANOKONJUGAT FIKOSIANIN DAN NANOBONES EMAS (AuNBs) HASIL INTERAKSI MUATAN LISTRIK UNTUK APLIKASI TERAPI FOTODINAMIK DAN FOTOTERMAL SERTA PRODUK YANG DIHASILKANNYA\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
-      "kode_sektor_2_digit": "21"
+      "trl_6_plus": false
     },
     {
       "or": "ORNM",
@@ -5458,7 +5423,7 @@
         }
       ],
       "justifikasi": "KBLI dipilih berdasarkan objek/fungsi utama KI 'PROSES PEMBUATAN PERANCAH TULANG MAMPU LURUH BERBAHAN DASAR  POLI ASAM LAKTAT (PLA) DENGAN TEKNIK 3D PRINTING'. Prioritas pertama adalah KBLI yang paling langsung merepresentasikan produk/aktivitas KI; KBLI berikutnya merupakan aktivitas terkait yang masih relevan.",
-      "kode_sektor_2_digit": "32 / 18 / 22"
+      "trl_6_plus": false
     },
     {
       "or": "ORNM",
@@ -5485,7 +5450,7 @@
         }
       ],
       "justifikasi": "[1] Industri Mesin Keperluan Khusus Lainnya YTDL relevan karena objek/aktivitas pada KI \"PELINDIAN BERBANTUAN GELOMBANG MIKRO UNTUK EKSTRAKSI EMAS DARI BIJIH EMAS DENGAN MENGGUNAKAN OKSIDATOR IODIN DAN PELARUT TIPE DEEP EUTECTIC SOLVENT YANG RAMAH LINGKUNGAN\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Pertambangan Bahan Galian Lainnya yang Tidak Mengandung Bijih Besi YTDL relevan karena objek/aktivitas pada KI \"PELINDIAN BERBANTUAN GELOMBANG MIKRO UNTUK EKSTRAKSI EMAS DARI BIJIH EMAS DENGAN MENGGUNAKAN OKSIDATOR IODIN DAN PELARUT TIPE DEEP EUTECTIC SOLVENT YANG RAMAH LINGKUNGAN\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Industri Bubur Kertas (Pulp) relevan karena objek/aktivitas pada KI \"PELINDIAN BERBANTUAN GELOMBANG MIKRO UNTUK EKSTRAKSI EMAS DARI BIJIH EMAS DENGAN MENGGUNAKAN OKSIDATOR IODIN DAN PELARUT TIPE DEEP EUTECTIC SOLVENT YANG RAMAH LINGKUNGAN\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
-      "kode_sektor_2_digit": "28"
+      "trl_6_plus": false
     },
     {
       "or": "ORNM",
@@ -5512,7 +5477,7 @@
         }
       ],
       "justifikasi": "[1] Pengolahan Kopi relevan karena objek/aktivitas pada KI \"KOMPOSISI DAN METODE PEMBUATAN FILAMEN PENCETAK 3D BERBASIS MATERIAL KOMPOSIT DAUR ULANG POLIETILENA TEREFTALAT-POLIETILENA DENSITAS TINGGI-LIMBAH KULIT KOPI\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Pertanian Kopi relevan karena objek/aktivitas pada KI \"KOMPOSISI DAN METODE PEMBUATAN FILAMEN PENCETAK 3D BERBASIS MATERIAL KOMPOSIT DAUR ULANG POLIETILENA TEREFTALAT-POLIETILENA DENSITAS TINGGI-LIMBAH KULIT KOPI\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Industri Minuman Ringan relevan karena objek/aktivitas pada KI \"KOMPOSISI DAN METODE PEMBUATAN FILAMEN PENCETAK 3D BERBASIS MATERIAL KOMPOSIT DAUR ULANG POLIETILENA TEREFTALAT-POLIETILENA DENSITAS TINGGI-LIMBAH KULIT KOPI\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
-      "kode_sektor_2_digit": "10"
+      "trl_6_plus": false
     },
     {
       "or": "ORNM",
@@ -5539,7 +5504,7 @@
         }
       ],
       "justifikasi": "KBLI dipilih berdasarkan objek/fungsi utama KI 'FORMULA HIDROGEL MENGANDUNG LIGNIN-KITOSAN DAN ASAM SALISILAT UNTUK PATCH ANTI JERAWAT DAN PROSES PEMBUATANNYA'. Prioritas pertama adalah KBLI yang paling langsung merepresentasikan produk/aktivitas KI; KBLI berikutnya merupakan aktivitas terkait yang masih relevan.",
-      "kode_sektor_2_digit": "20 / 32 / 21"
+      "trl_6_plus": false
     },
     {
       "or": "ORNM",
@@ -5566,7 +5531,7 @@
         }
       ],
       "justifikasi": "[1] Industri Makaroni, Mi, Couscous, dan Produk Sejenisnya relevan karena objek/aktivitas pada KI \"PROSES PEMISAHAN ASAM FOLAT ALAMI DARI JERUK (Citrus sp)  TERFERMENTASI UNTUK FORTIFIKAN MAKANAN KESEHATAN\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Pertanian Buah Jeruk relevan karena objek/aktivitas pada KI \"PROSES PEMISAHAN ASAM FOLAT ALAMI DARI JERUK (Citrus sp)  TERFERMENTASI UNTUK FORTIFIKAN MAKANAN KESEHATAN\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Industri Barang dari Karet untuk Kesehatan relevan karena objek/aktivitas pada KI \"PROSES PEMISAHAN ASAM FOLAT ALAMI DARI JERUK (Citrus sp)  TERFERMENTASI UNTUK FORTIFIKAN MAKANAN KESEHATAN\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
-      "kode_sektor_2_digit": "10"
+      "trl_6_plus": false
     },
     {
       "or": "ORNM",
@@ -5593,7 +5558,7 @@
         }
       ],
       "justifikasi": "[1] Pengolahan Kopi relevan karena objek/aktivitas pada KI \"FORMULASI FILM KOMPOSIT UNTUK PENGEMASAN MAKANAN BERBASIS KITOSAN, NANOPARTIKEL SENG DIOKSIDA DAN AMPAS KOPI GAYO SERTA METODE PEMBUATANNYA\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Pertanian Kopi relevan karena objek/aktivitas pada KI \"FORMULASI FILM KOMPOSIT UNTUK PENGEMASAN MAKANAN BERBASIS KITOSAN, NANOPARTIKEL SENG DIOKSIDA DAN AMPAS KOPI GAYO SERTA METODE PEMBUATANNYA\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Industri Minuman Ringan relevan karena objek/aktivitas pada KI \"FORMULASI FILM KOMPOSIT UNTUK PENGEMASAN MAKANAN BERBASIS KITOSAN, NANOPARTIKEL SENG DIOKSIDA DAN AMPAS KOPI GAYO SERTA METODE PEMBUATANNYA\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
-      "kode_sektor_2_digit": "10"
+      "trl_6_plus": false
     },
     {
       "or": "ORNM",
@@ -5620,7 +5585,7 @@
         }
       ],
       "justifikasi": "KBLI dipilih berdasarkan objek/fungsi utama KI 'PROSES PEMBUATAN MIKROKRISTALIN SELULOSA BERBAHAN DASAR SELULOSA BAKTERI SCOBY DARI KOMBUCHA JAMBU BIJI MERAH (Psidium guajava L)'. Prioritas pertama adalah KBLI yang paling langsung merepresentasikan produk/aktivitas KI; KBLI berikutnya merupakan aktivitas terkait yang masih relevan.",
-      "kode_sektor_2_digit": "20 / 22 / 10"
+      "trl_6_plus": false
     },
     {
       "or": "ORNM",
@@ -5647,7 +5612,7 @@
         }
       ],
       "justifikasi": "[1] Pengolahan dan Pengawetan Rumput Laut relevan karena objek/aktivitas pada KI \"Proses pembuatan agar bakto dari rumput laut merah Gelidium sp dan karakteristik produk yang dihasilkan\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Industri Bahan Makanan dari Rumput Laut relevan karena objek/aktivitas pada KI \"Proses pembuatan agar bakto dari rumput laut merah Gelidium sp dan karakteristik produk yang dihasilkan\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Pembudidayaan Ikan Bersirip (Selain Ikan Hias) dan Biota Air Tawar Lainnya yang Tidak Dilindungi relevan karena objek/aktivitas pada KI \"Proses pembuatan agar bakto dari rumput laut merah Gelidium sp dan karakteristik produk yang dihasilkan\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
-      "kode_sektor_2_digit": "10"
+      "trl_6_plus": false
     },
     {
       "or": "ORNM",
@@ -5674,7 +5639,7 @@
         }
       ],
       "justifikasi": "[1] Industri Barang Lainnya dari Kayu; Industri Barang dari Gabus, Jerami, Rotan, Bambu, dan Sejenisnya YTDL relevan karena objek/aktivitas pada KI \"KOMPOSISI KOMPOSIT AEROGEL BERBASIS SELULOSA-KITOSAN-ZEOLITIC IMIDAZOLATE FRAMEWORK-8 DAN METODE PEMBUATANNYA\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Industri Barang Lainnya dari Plastik relevan karena objek/aktivitas pada KI \"KOMPOSISI KOMPOSIT AEROGEL BERBASIS SELULOSA-KITOSAN-ZEOLITIC IMIDAZOLATE FRAMEWORK-8 DAN METODE PEMBUATANNYA\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Industri Produk Mineral Nonlogam Lainnya YTDL relevan karena objek/aktivitas pada KI \"KOMPOSISI KOMPOSIT AEROGEL BERBASIS SELULOSA-KITOSAN-ZEOLITIC IMIDAZOLATE FRAMEWORK-8 DAN METODE PEMBUATANNYA\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
-      "kode_sektor_2_digit": "16"
+      "trl_6_plus": false
     },
     {
       "or": "ORNM",
@@ -5701,7 +5666,7 @@
         }
       ],
       "justifikasi": "KBLI dipilih berdasarkan objek/fungsi utama KI 'FORMULA DAN METODE PEMBUATAN CROSSLINKER BERBASIS DISULFIDA'. Prioritas pertama adalah KBLI yang paling langsung merepresentasikan produk/aktivitas KI; KBLI berikutnya merupakan aktivitas terkait yang masih relevan.",
-      "kode_sektor_2_digit": "20 / 20 / 21"
+      "trl_6_plus": false
     },
     {
       "or": "ORNM",
@@ -5728,7 +5693,7 @@
         }
       ],
       "justifikasi": "[1] Industri Alat Ukur dan Alat Uji Elektronik relevan karena objek/aktivitas pada KI \"Metode Penumbuhan Nanopartikel Emas Terfungsionalisasi Sitrat Berbasis Hasil Ablasi Laser dan Produk yang Dihasilkan\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Industri Barang Kimia Lainnya YTDL relevan karena objek/aktivitas pada KI \"Metode Penumbuhan Nanopartikel Emas Terfungsionalisasi Sitrat Berbasis Hasil Ablasi Laser dan Produk yang Dihasilkan\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Industri Produk Hasil Pemurnian Mineral Nonlogam relevan karena objek/aktivitas pada KI \"Metode Penumbuhan Nanopartikel Emas Terfungsionalisasi Sitrat Berbasis Hasil Ablasi Laser dan Produk yang Dihasilkan\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
-      "kode_sektor_2_digit": "26"
+      "trl_6_plus": false
     },
     {
       "or": "ORNM",
@@ -5755,7 +5720,7 @@
         }
       ],
       "justifikasi": "[1] Industri Barang Lainnya dari Kayu; Industri Barang dari Gabus, Jerami, Rotan, Bambu, dan Sejenisnya YTDL relevan karena objek/aktivitas pada KI \"FORMULASI BIOFILM KOMPOSIT UNTUK PENGEMASAN MAKANAN BERBASIS KITOSAN, SENG OKSIDA DAN EKSTRAK Terminalia catappa SERTA METODE PEMBUATANNYA\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Industri Barang Lainnya dari Plastik relevan karena objek/aktivitas pada KI \"FORMULASI BIOFILM KOMPOSIT UNTUK PENGEMASAN MAKANAN BERBASIS KITOSAN, SENG OKSIDA DAN EKSTRAK Terminalia catappa SERTA METODE PEMBUATANNYA\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Industri Produk Mineral Nonlogam Lainnya YTDL relevan karena objek/aktivitas pada KI \"FORMULASI BIOFILM KOMPOSIT UNTUK PENGEMASAN MAKANAN BERBASIS KITOSAN, SENG OKSIDA DAN EKSTRAK Terminalia catappa SERTA METODE PEMBUATANNYA\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
-      "kode_sektor_2_digit": "16"
+      "trl_6_plus": false
     },
     {
       "or": "ORNM",
@@ -5782,7 +5747,7 @@
         }
       ],
       "justifikasi": "[1] Aktivitas Pemrograman Berbasis Kecerdasan Artifisial relevan karena objek/aktivitas pada KI \"KOMPOSISI FILM PINTAR BIODEGRADABEL BERBASIS POLIVINIL  ALKOHOL DAN PATI DENGAN NANOCLAY, MINYAK KAYU MANIS, DAN  ANTOSIANIN SEBAGAI INDIKATOR VISUAL PEMBUSUKAN IKAN SERTA  METODE PEMBUATANNYA\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Aktivitas Pemrograman Komputer Lainnya relevan karena objek/aktivitas pada KI \"KOMPOSISI FILM PINTAR BIODEGRADABEL BERBASIS POLIVINIL  ALKOHOL DAN PATI DENGAN NANOCLAY, MINYAK KAYU MANIS, DAN  ANTOSIANIN SEBAGAI INDIKATOR VISUAL PEMBUSUKAN IKAN SERTA  METODE PEMBUATANNYA\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Aktivitas Teknologi Informasi Dan Jasa Komputer Lainnya relevan karena objek/aktivitas pada KI \"KOMPOSISI FILM PINTAR BIODEGRADABEL BERBASIS POLIVINIL  ALKOHOL DAN PATI DENGAN NANOCLAY, MINYAK KAYU MANIS, DAN  ANTOSIANIN SEBAGAI INDIKATOR VISUAL PEMBUSUKAN IKAN SERTA  METODE PEMBUATANNYA\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
-      "kode_sektor_2_digit": "62"
+      "trl_6_plus": false
     },
     {
       "or": "ORNM",
@@ -5809,7 +5774,7 @@
         }
       ],
       "justifikasi": "KBLI dipilih berdasarkan objek/fungsi utama KI 'KOMPOSISI DAN METODE PEMBUATAN PELAPIS UNTUK BUAH DUKU BERBASIS POLIVINIL ALKOHOL/KARBOKSIMETIL KITOSAN DENGAN BAHAN AKTIF NANOCLAY DAN MINYAK ESENSIAL'. Prioritas pertama adalah KBLI yang paling langsung merepresentasikan produk/aktivitas KI; KBLI berikutnya merupakan aktivitas terkait yang masih relevan.",
-      "kode_sektor_2_digit": "22 / 20 / 20"
+      "trl_6_plus": false
     },
     {
       "or": "ORNM",
@@ -5836,7 +5801,7 @@
         }
       ],
       "justifikasi": "[1] Industri Pati Ubi Kayu relevan karena objek/aktivitas pada KI \"FORMULA DAN PROSES PEMBUATAN MATERIAL BIOKOMPATIBEL BERBAHAN POLIKAPROLAKTON, SELULOSA SABUT KELAPA, DAN EKSTRAK DAUN DADAP (Erythrina subumbrans)\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Industri Pati dan Produk Pati Lainnya relevan karena objek/aktivitas pada KI \"FORMULA DAN PROSES PEMBUATAN MATERIAL BIOKOMPATIBEL BERBAHAN POLIKAPROLAKTON, SELULOSA SABUT KELAPA, DAN EKSTRAK DAUN DADAP (Erythrina subumbrans)\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Industri Produk Makanan Lainnya relevan karena objek/aktivitas pada KI \"FORMULA DAN PROSES PEMBUATAN MATERIAL BIOKOMPATIBEL BERBAHAN POLIKAPROLAKTON, SELULOSA SABUT KELAPA, DAN EKSTRAK DAUN DADAP (Erythrina subumbrans)\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
-      "kode_sektor_2_digit": "10"
+      "trl_6_plus": false
     },
     {
       "or": "ORNM",
@@ -5863,7 +5828,7 @@
         }
       ],
       "justifikasi": "[1] Industri Pati Ubi Kayu relevan karena objek/aktivitas pada KI \"BIOPOLIMER POLI-HIDROKSI-BUTIRAT (PHB) DARI GULA PATI SINGKONG MENGGUNAKAN BAKTERI Bacillus megaterium B1465 DAN KARAKTERISTIKNYA\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Industri Pati dan Produk Pati Lainnya relevan karena objek/aktivitas pada KI \"BIOPOLIMER POLI-HIDROKSI-BUTIRAT (PHB) DARI GULA PATI SINGKONG MENGGUNAKAN BAKTERI Bacillus megaterium B1465 DAN KARAKTERISTIKNYA\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Industri Produk Makanan Lainnya relevan karena objek/aktivitas pada KI \"BIOPOLIMER POLI-HIDROKSI-BUTIRAT (PHB) DARI GULA PATI SINGKONG MENGGUNAKAN BAKTERI Bacillus megaterium B1465 DAN KARAKTERISTIKNYA\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
-      "kode_sektor_2_digit": "10"
+      "trl_6_plus": false
     },
     {
       "or": "ORNM",
@@ -5890,7 +5855,7 @@
         }
       ],
       "justifikasi": "[1] Industri Barang Lainnya dari Kayu; Industri Barang dari Gabus, Jerami, Rotan, Bambu, dan Sejenisnya YTDL relevan karena objek/aktivitas pada KI \"METODE IMPREGNASI BILAH BAMBU DAN PRODUK YANG DIHASILKAN\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Industri Barang Bangunan dari Kayu relevan karena objek/aktivitas pada KI \"METODE IMPREGNASI BILAH BAMBU DAN PRODUK YANG DIHASILKAN\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Industri Produk Hasil Pemurnian Mineral Nonlogam relevan karena objek/aktivitas pada KI \"METODE IMPREGNASI BILAH BAMBU DAN PRODUK YANG DIHASILKAN\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
-      "kode_sektor_2_digit": "16"
+      "trl_6_plus": false
     },
     {
       "or": "ORNM",
@@ -5917,7 +5882,7 @@
         }
       ],
       "justifikasi": "[1] Aktivitas Pemrograman Berbasis Kecerdasan Artifisial relevan karena objek/aktivitas pada KI \"KOMPOSISI ARANG DARI LIMBAH BIOMASSA SEBAGAI BAHAN PENGISI PADA KOMPOSIT SEMEN RAMAH LINGKUNGAN DAN METODE PEMBUATANNYA\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Aktivitas Pemrograman Komputer Lainnya relevan karena objek/aktivitas pada KI \"KOMPOSISI ARANG DARI LIMBAH BIOMASSA SEBAGAI BAHAN PENGISI PADA KOMPOSIT SEMEN RAMAH LINGKUNGAN DAN METODE PEMBUATANNYA\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Aktivitas Teknologi Informasi Dan Jasa Komputer Lainnya relevan karena objek/aktivitas pada KI \"KOMPOSISI ARANG DARI LIMBAH BIOMASSA SEBAGAI BAHAN PENGISI PADA KOMPOSIT SEMEN RAMAH LINGKUNGAN DAN METODE PEMBUATANNYA\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
-      "kode_sektor_2_digit": "62"
+      "trl_6_plus": false
     },
     {
       "or": "ORNM",
@@ -5944,7 +5909,7 @@
         }
       ],
       "justifikasi": "[1] Aktivitas Pemrograman Berbasis Kecerdasan Artifisial relevan karena objek/aktivitas pada KI \"PROSES PEMBUATAN FILM BIOPLASTIK DARI CAMPURAN BIOPOLIMER PATI AREN DAN KITOSAN SEBAGAI SEPARATOR ALTERNATIF PADA BATERAI\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Aktivitas Pemrograman Komputer Lainnya relevan karena objek/aktivitas pada KI \"PROSES PEMBUATAN FILM BIOPLASTIK DARI CAMPURAN BIOPOLIMER PATI AREN DAN KITOSAN SEBAGAI SEPARATOR ALTERNATIF PADA BATERAI\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Aktivitas Teknologi Informasi Dan Jasa Komputer Lainnya relevan karena objek/aktivitas pada KI \"PROSES PEMBUATAN FILM BIOPLASTIK DARI CAMPURAN BIOPOLIMER PATI AREN DAN KITOSAN SEBAGAI SEPARATOR ALTERNATIF PADA BATERAI\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
-      "kode_sektor_2_digit": "62"
+      "trl_6_plus": false
     },
     {
       "or": "ORNM",
@@ -5971,7 +5936,7 @@
         }
       ],
       "justifikasi": "[1] Aktivitas Pemrograman Berbasis Kecerdasan Artifisial relevan karena objek/aktivitas pada KI \"SISTEM INSTRUMENTASI BERBASIS REFLEKTANSI SPEKTRAL ULTRAVIOLET UNTUK KARAKTERISASI DAN PEMANTAUAN STATUS HIDRASI TANAMAN DALAM OPTIMASI DISTRIBUSI AIR\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Aktivitas Pemrograman Komputer Lainnya relevan karena objek/aktivitas pada KI \"SISTEM INSTRUMENTASI BERBASIS REFLEKTANSI SPEKTRAL ULTRAVIOLET UNTUK KARAKTERISASI DAN PEMANTAUAN STATUS HIDRASI TANAMAN DALAM OPTIMASI DISTRIBUSI AIR\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Aktivitas Teknologi Informasi Dan Jasa Komputer Lainnya relevan karena objek/aktivitas pada KI \"SISTEM INSTRUMENTASI BERBASIS REFLEKTANSI SPEKTRAL ULTRAVIOLET UNTUK KARAKTERISASI DAN PEMANTAUAN STATUS HIDRASI TANAMAN DALAM OPTIMASI DISTRIBUSI AIR\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
-      "kode_sektor_2_digit": "62"
+      "trl_6_plus": false
     },
     {
       "or": "ORNM",
@@ -5998,7 +5963,7 @@
         }
       ],
       "justifikasi": "[1] Industri Alat Ukur dan Alat Uji Elektronik relevan karena objek/aktivitas pada KI \"Material Sensor Merkuri Berbasis Nanopartikel Emas dengan Lapisan Polimer Steris dan Metode Pembuatannya\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Industri Alat Ukur, Alat Uji, dan Peralatan Navigasi dan Kontrol Lainnya relevan karena objek/aktivitas pada KI \"Material Sensor Merkuri Berbasis Nanopartikel Emas dengan Lapisan Polimer Steris dan Metode Pembuatannya\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Jasa Pengujian Teknis relevan karena objek/aktivitas pada KI \"Material Sensor Merkuri Berbasis Nanopartikel Emas dengan Lapisan Polimer Steris dan Metode Pembuatannya\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
-      "kode_sektor_2_digit": "26"
+      "trl_6_plus": false
     },
     {
       "or": "ORNM",
@@ -6025,7 +5990,7 @@
         }
       ],
       "justifikasi": "[1] Pengolahan Kopi relevan karena objek/aktivitas pada KI \"METODE MATRIKS UNTUK MENYORTIR KECACATAN BIJI KOPI\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Pertanian Kopi relevan karena objek/aktivitas pada KI \"METODE MATRIKS UNTUK MENYORTIR KECACATAN BIJI KOPI\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Industri Minuman Ringan relevan karena objek/aktivitas pada KI \"METODE MATRIKS UNTUK MENYORTIR KECACATAN BIJI KOPI\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
-      "kode_sektor_2_digit": "10"
+      "trl_6_plus": false
     },
     {
       "or": "ORNM",
@@ -6052,7 +6017,7 @@
         }
       ],
       "justifikasi": "[1] Industri Makanan Bayi dan Makanan Khusus relevan karena objek/aktivitas pada KI \"PROSES PEMBUATAN MATERIAL TERMOELEKTRIK ZnO MELALUI TEKNIK COLD SINTERING PROCESS DENGAN IRADIASI GAMMA DAN PRODUK YANG DIHASILKANNYA\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Perdagangan Besar Bahan Makanan dan Minuman Hasil Peternakan dan Perikanan Lainnya relevan karena objek/aktivitas pada KI \"PROSES PEMBUATAN MATERIAL TERMOELEKTRIK ZnO MELALUI TEKNIK COLD SINTERING PROCESS DENGAN IRADIASI GAMMA DAN PRODUK YANG DIHASILKANNYA\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Industri Mesin Penyiapan Dan Pembuatan Produk Kulit relevan karena objek/aktivitas pada KI \"PROSES PEMBUATAN MATERIAL TERMOELEKTRIK ZnO MELALUI TEKNIK COLD SINTERING PROCESS DENGAN IRADIASI GAMMA DAN PRODUK YANG DIHASILKANNYA\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
-      "kode_sektor_2_digit": "10"
+      "trl_6_plus": false
     },
     {
       "or": "ORNM",
@@ -6079,7 +6044,7 @@
         }
       ],
       "justifikasi": "[1] Industri Produk Mineral Nonlogam Lainnya YTDL relevan karena objek/aktivitas pada KI \"METODE PEMBUATAN SILIKON BERPORI DAN PRODUK YANG DIHASILKANNYA\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Industri Barang dari Kertas dan Papan Kertas Lainnya YTDL relevan karena objek/aktivitas pada KI \"METODE PEMBUATAN SILIKON BERPORI DAN PRODUK YANG DIHASILKANNYA\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Industri Serat Sabut Kelapa relevan karena objek/aktivitas pada KI \"METODE PEMBUATAN SILIKON BERPORI DAN PRODUK YANG DIHASILKANNYA\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
-      "kode_sektor_2_digit": "23"
+      "trl_6_plus": false
     },
     {
       "or": "ORNM",
@@ -6106,7 +6071,7 @@
         }
       ],
       "justifikasi": "[1] Industri Barang dari Semen relevan karena objek/aktivitas pada KI \"Alat dan Metode Uji Thermal Cycling untuk Phase Change Materials (PCM) dengan Sistem Pendingin Hibrida Berbasis Termoelektrik dan Sirkulasi Fluida\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Konstruksi Bangunan Pelabuhan Bukan Perikanan relevan karena objek/aktivitas pada KI \"Alat dan Metode Uji Thermal Cycling untuk Phase Change Materials (PCM) dengan Sistem Pendingin Hibrida Berbasis Termoelektrik dan Sirkulasi Fluida\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Pertanian Padi Hibrida relevan karena objek/aktivitas pada KI \"Alat dan Metode Uji Thermal Cycling untuk Phase Change Materials (PCM) dengan Sistem Pendingin Hibrida Berbasis Termoelektrik dan Sirkulasi Fluida\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
-      "kode_sektor_2_digit": "23"
+      "trl_6_plus": false
     },
     {
       "or": "ORNM",
@@ -6133,7 +6098,7 @@
         }
       ],
       "justifikasi": "[1] Aktivitas Pemrograman Berbasis Kecerdasan Artifisial relevan karena objek/aktivitas pada KI \"METODE SINTESIS NANOKOMPOSIT SENG OKSIDA DAN ANTOSIANIN  DARI EKSTRAK Illicium verum DAN Brassica oleracea var. Capitata f.  rubra SEBAGAI MATERIAL ANTIBAKTERI\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Aktivitas Pemrograman Komputer Lainnya relevan karena objek/aktivitas pada KI \"METODE SINTESIS NANOKOMPOSIT SENG OKSIDA DAN ANTOSIANIN  DARI EKSTRAK Illicium verum DAN Brassica oleracea var. Capitata f.  rubra SEBAGAI MATERIAL ANTIBAKTERI\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Aktivitas Teknologi Informasi Dan Jasa Komputer Lainnya relevan karena objek/aktivitas pada KI \"METODE SINTESIS NANOKOMPOSIT SENG OKSIDA DAN ANTOSIANIN  DARI EKSTRAK Illicium verum DAN Brassica oleracea var. Capitata f.  rubra SEBAGAI MATERIAL ANTIBAKTERI\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
-      "kode_sektor_2_digit": "62"
+      "trl_6_plus": false
     },
     {
       "or": "ORNM",
@@ -6160,7 +6125,7 @@
         }
       ],
       "justifikasi": "[1] Industri Barang Kimia Lainnya YTDL relevan karena objek/aktivitas pada KI \"Proses sintesis satu tahap nanopartikel perak ramah lingkungan berbasis asam askorbat dan sodium tartrat\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Industri Peralatan Kedokteran dan Kedokteran Gigi, serta Perlengkapan Lainnya relevan karena objek/aktivitas pada KI \"Proses sintesis satu tahap nanopartikel perak ramah lingkungan berbasis asam askorbat dan sodium tartrat\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Industri Produk Hasil Pemurnian Mineral Nonlogam relevan karena objek/aktivitas pada KI \"Proses sintesis satu tahap nanopartikel perak ramah lingkungan berbasis asam askorbat dan sodium tartrat\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
-      "kode_sektor_2_digit": "20"
+      "trl_6_plus": false
     },
     {
       "or": "ORNM",
@@ -6187,7 +6152,7 @@
         }
       ],
       "justifikasi": "KBLI dipilih berdasarkan objek/fungsi utama KI 'FORMULA HIDROGEL MENGANDUNG LIGNIN-KITOSAN DAN ASAM SALISILAT UNTUK PATCH ANTI JERAWAT DAN PROSES PEMBUATANNYA'. Prioritas pertama adalah KBLI yang paling langsung merepresentasikan produk/aktivitas KI; KBLI berikutnya merupakan aktivitas terkait yang masih relevan.",
-      "kode_sektor_2_digit": "20 / 32 / 21"
+      "trl_6_plus": false
     },
     {
       "or": "ORNM",
@@ -6214,7 +6179,7 @@
         }
       ],
       "justifikasi": "[1] Industri Alat Ukur dan Alat Uji Elektronik relevan karena objek/aktivitas pada KI \"METODE PRODUKSI SUPERKONDUKTOR Pr2CuO4 DENGAN PENAMBAHAN Ce MELALUI TEKNIK PLANETARY BALL MILLING DAN DUAL STEP VACUM ANNEALING\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Industri Mesin Keperluan Khusus Lainnya YTDL relevan karena objek/aktivitas pada KI \"METODE PRODUKSI SUPERKONDUKTOR Pr2CuO4 DENGAN PENAMBAHAN Ce MELALUI TEKNIK PLANETARY BALL MILLING DAN DUAL STEP VACUM ANNEALING\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Pengolahan dan Pengawetan Ikan dengan Metode Lainnya relevan karena objek/aktivitas pada KI \"METODE PRODUKSI SUPERKONDUKTOR Pr2CuO4 DENGAN PENAMBAHAN Ce MELALUI TEKNIK PLANETARY BALL MILLING DAN DUAL STEP VACUM ANNEALING\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
-      "kode_sektor_2_digit": "26"
+      "trl_6_plus": false
     },
     {
       "or": "ORNM",
@@ -6241,7 +6206,7 @@
         }
       ],
       "justifikasi": "KBLI dipilih berdasarkan objek/fungsi utama KI 'PROSES PEMBUATAN MINUMAN KESEHATAN BERBASIS JAHE GAJAH  (Zingiber officinale var. officinarum) MELALUI FERMENTASI SCOBY  DENGAN PENAMBAHAN SUMBER KARBON GULA DAN MADU UNTUK  MENINGKATKAN AKTIVITAS ANTIDIABETIK DAN ANTIBAKTERI'. Prioritas pertama adalah KBLI yang paling langsung merepresentasikan produk/aktivitas KI; KBLI berikutnya merupakan aktivitas terkait yang masih relevan.",
-      "kode_sektor_2_digit": "11 / 10 / 10"
+      "trl_6_plus": false
     },
     {
       "or": "ORNM",
@@ -6268,7 +6233,7 @@
         }
       ],
       "justifikasi": "[1] Industri Barang Lainnya dari Kayu; Industri Barang dari Gabus, Jerami, Rotan, Bambu, dan Sejenisnya YTDL relevan karena objek/aktivitas pada KI \"Proses pembuatan panel Sandwich komposit berbasis material inti polipropilena bentuk sarang lebah dan produk yang dihasilkannya\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Industri Barang Lainnya dari Plastik relevan karena objek/aktivitas pada KI \"Proses pembuatan panel Sandwich komposit berbasis material inti polipropilena bentuk sarang lebah dan produk yang dihasilkannya\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Industri Produk Mineral Nonlogam Lainnya YTDL relevan karena objek/aktivitas pada KI \"Proses pembuatan panel Sandwich komposit berbasis material inti polipropilena bentuk sarang lebah dan produk yang dihasilkannya\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
-      "kode_sektor_2_digit": "16"
+      "trl_6_plus": false
     },
     {
       "or": "ORNM",
@@ -6295,7 +6260,7 @@
         }
       ],
       "justifikasi": "[1] Industri Barang Lainnya dari Kayu; Industri Barang dari Gabus, Jerami, Rotan, Bambu, dan Sejenisnya YTDL relevan karena objek/aktivitas pada KI \"PROSES PEMBUATAN PAPAN KOMPOSIT BERARAH DARI BILAH TIPIS BAMBU TERIMPREGNASI DAN PRODUK YANG DIHASILKAN\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Industri Barang Lainnya dari Plastik relevan karena objek/aktivitas pada KI \"PROSES PEMBUATAN PAPAN KOMPOSIT BERARAH DARI BILAH TIPIS BAMBU TERIMPREGNASI DAN PRODUK YANG DIHASILKAN\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Industri Produk Mineral Nonlogam Lainnya YTDL relevan karena objek/aktivitas pada KI \"PROSES PEMBUATAN PAPAN KOMPOSIT BERARAH DARI BILAH TIPIS BAMBU TERIMPREGNASI DAN PRODUK YANG DIHASILKAN\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
-      "kode_sektor_2_digit": "16"
+      "trl_6_plus": false
     },
     {
       "or": "ORNM",
@@ -6322,7 +6287,7 @@
         }
       ],
       "justifikasi": "[1] Industri Alat Ukur dan Alat Uji Elektronik relevan karena objek/aktivitas pada KI \"ALAT UJI KARAKTERISTIK TINGKAT EROSI LONGSOR DAN DEPOSISI\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Jasa Pengujian Teknis relevan karena objek/aktivitas pada KI \"ALAT UJI KARAKTERISTIK TINGKAT EROSI LONGSOR DAN DEPOSISI\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Industri Alat Uji Dalam Proses Industri relevan karena objek/aktivitas pada KI \"ALAT UJI KARAKTERISTIK TINGKAT EROSI LONGSOR DAN DEPOSISI\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
-      "kode_sektor_2_digit": "26"
+      "trl_6_plus": true
     },
     {
       "or": "ORNM",
@@ -6349,7 +6314,7 @@
         }
       ],
       "justifikasi": "KBLI dipilih berdasarkan objek/fungsi utama KI 'FORMULASI DAN METODE PEMBUATAN PULTRUDED GLASS FIBER REINFORCED POLYMERS UNTUK STRUKTUR RUMAH TAHAN GEMPA'. Prioritas pertama adalah KBLI yang paling langsung merepresentasikan produk/aktivitas KI; KBLI berikutnya merupakan aktivitas terkait yang masih relevan.",
-      "kode_sektor_2_digit": "22 / 22 / 23"
+      "trl_6_plus": false
     },
     {
       "or": "ORNM",
@@ -6376,7 +6341,7 @@
         }
       ],
       "justifikasi": "[1] Industri Barang Lainnya dari Kayu; Industri Barang dari Gabus, Jerami, Rotan, Bambu, dan Sejenisnya YTDL relevan karena objek/aktivitas pada KI \"PANEL KOMPOSIT LAMINAT MENGGUNAKAN EPOKSI/SERAT KENAF DAN BAHAN PENGUAT GRAPHENE OXIDE DENGAN TEKNIK FABRIKASI VACUUM BAGGING\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Industri Barang Lainnya dari Plastik relevan karena objek/aktivitas pada KI \"PANEL KOMPOSIT LAMINAT MENGGUNAKAN EPOKSI/SERAT KENAF DAN BAHAN PENGUAT GRAPHENE OXIDE DENGAN TEKNIK FABRIKASI VACUUM BAGGING\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Industri Produk Mineral Nonlogam Lainnya YTDL relevan karena objek/aktivitas pada KI \"PANEL KOMPOSIT LAMINAT MENGGUNAKAN EPOKSI/SERAT KENAF DAN BAHAN PENGUAT GRAPHENE OXIDE DENGAN TEKNIK FABRIKASI VACUUM BAGGING\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
-      "kode_sektor_2_digit": "16"
+      "trl_6_plus": false
     },
     {
       "or": "ORNM",
@@ -6403,7 +6368,7 @@
         }
       ],
       "justifikasi": "[1] Industri Alat Ukur dan Alat Uji Elektronik relevan karena objek/aktivitas pada KI \"METODE PEMBUATAN LAPISAN TIPIS NANOPARTIKEL Ag pada SUBSTRAT SILIKON WAFER (Si), BESI (Fe), TEMBAGA (Cu) dan SILIKON RUBBER DENGAN TEKNIK PULSED LASER DEPOSITION (PLD) SEBAGAI SUBSTRAT SERS\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Industri Barang Kimia Lainnya YTDL relevan karena objek/aktivitas pada KI \"METODE PEMBUATAN LAPISAN TIPIS NANOPARTIKEL Ag pada SUBSTRAT SILIKON WAFER (Si), BESI (Fe), TEMBAGA (Cu) dan SILIKON RUBBER DENGAN TEKNIK PULSED LASER DEPOSITION (PLD) SEBAGAI SUBSTRAT SERS\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Industri Produk Mineral Nonlogam Lainnya YTDL relevan karena objek/aktivitas pada KI \"METODE PEMBUATAN LAPISAN TIPIS NANOPARTIKEL Ag pada SUBSTRAT SILIKON WAFER (Si), BESI (Fe), TEMBAGA (Cu) dan SILIKON RUBBER DENGAN TEKNIK PULSED LASER DEPOSITION (PLD) SEBAGAI SUBSTRAT SERS\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
-      "kode_sektor_2_digit": "26"
+      "trl_6_plus": false
     },
     {
       "or": "ORNM",
@@ -6425,7 +6390,7 @@
         }
       ],
       "justifikasi": "Invensi menghasilkan ekstrak kelopak rosella dengan aktivitas antioksidan dan penghambatan ACE sebagai bahan baku obat tradisional. Karena hasil akhirnya masih berupa ekstrak/bahan baku, bukan sediaan obat jadi, tidak digunakan 21012.",
-      "kode_sektor_2_digit": "20"
+      "trl_6_plus": false
     },
     {
       "or": "ORNM",
@@ -6447,7 +6412,7 @@
         }
       ],
       "justifikasi": "[1] METODE PEMBUATAN DAN KOMPOSISI LOTION MINYAK KAYU PUTIH (MELALEUCA CAJUPUTI) UNTUK MELEMBABKAN KULIT diproduksi sebagai produk kosmetik/perawatan kulit.\n [2] METODE PEMBUATAN DAN KOMPOSISI LOTION MINYAK KAYU PUTIH (MELALEUCA CAJUPUTI) UNTUK MELEMBABKAN KULIT didistribusikan melalui jalur perdagangan kosmetik/farmasi.",
-      "kode_sektor_2_digit": "20"
+      "trl_6_plus": false
     },
     {
       "or": "ORNM",
@@ -6474,7 +6439,7 @@
         }
       ],
       "justifikasi": "[1] Industri Peralatan, Perlengkapan Dan Bagian Kapal relevan karena objek/aktivitas pada KI \"PAPAN KOMPOSIT BERBAHAN POLIPROPILENA DAUR ULANG, KOKOPIT, DAN JERAMI PADI SEBAGAI BAHAN ALTERNATIF BANGUNAN PERKAPALAN\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Industri Kendaraan Air dan Bawah Air Berawak relevan karena objek/aktivitas pada KI \"PAPAN KOMPOSIT BERBAHAN POLIPROPILENA DAUR ULANG, KOKOPIT, DAN JERAMI PADI SEBAGAI BAHAN ALTERNATIF BANGUNAN PERKAPALAN\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Industri Kapal dan Perahu Untuk Tujuan Wisata atau Rekreasi dan Olahraga relevan karena objek/aktivitas pada KI \"PAPAN KOMPOSIT BERBAHAN POLIPROPILENA DAUR ULANG, KOKOPIT, DAN JERAMI PADI SEBAGAI BAHAN ALTERNATIF BANGUNAN PERKAPALAN\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
-      "kode_sektor_2_digit": "30"
+      "trl_6_plus": false
     },
     {
       "or": "ORNM",
@@ -6491,7 +6456,7 @@
         }
       ],
       "justifikasi": "[1] Losion anti nyamuk merupakan sediaan topikal konsumen yang paling dekat dengan industri kosmetik/perawatan tubuh\n [2] untuk klaim repellent dapat juga masuk regulasi pestisida/PKRT sesuai formulasi.",
-      "kode_sektor_2_digit": "20"
+      "trl_6_plus": false
     },
     {
       "or": "ORNM",
@@ -6503,12 +6468,12 @@
       "kbli": [
         {
           "rank": 1,
-          "kode": "22299                                            [2] 22209",
+          "kode": "22299222209",
           "judul": "Industri Barang Plastik Lainnya YTDL                                      [2] Industri Barang Lainnya dari Plastik"
         }
       ],
       "justifikasi": "[1] Paling relevan sebagai sektor pengguna/manufaktur langsung. Invensi menghasilkan biokomposit berbasis polikaprolakton (PCL), sodium alginat, dan selulosa melalui melt mixing. Material dapat dikembangkan menjadi berbagai produk plastik/bioplastik biodegradable.                                      [2] Relevan untuk industri yang menggunakan material biokomposit sebagai bahan baku produk plastik non-konvensional, terutama produk yang membutuhkan sifat biodegradable dan fleksibel.",
-      "kode_sektor_2_digit": "22"
+      "trl_6_plus": false
     },
     {
       "or": "ORNM",
@@ -6535,7 +6500,7 @@
         }
       ],
       "justifikasi": "[1] Industri Barang Lainnya dari Kayu; Industri Barang dari Gabus, Jerami, Rotan, Bambu, dan Sejenisnya YTDL relevan karena objek/aktivitas pada KI \"BIOKOMPOSIT POLIKAPROLAKTON DAN SODIUM ALGINAT DENGAN PENAMBAHAN SELULOSA DAN LIGNIN\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Industri Barang Lainnya dari Plastik relevan karena objek/aktivitas pada KI \"BIOKOMPOSIT POLIKAPROLAKTON DAN SODIUM ALGINAT DENGAN PENAMBAHAN SELULOSA DAN LIGNIN\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Industri Produk Mineral Nonlogam Lainnya YTDL relevan karena objek/aktivitas pada KI \"BIOKOMPOSIT POLIKAPROLAKTON DAN SODIUM ALGINAT DENGAN PENAMBAHAN SELULOSA DAN LIGNIN\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
-      "kode_sektor_2_digit": "16"
+      "trl_6_plus": false
     },
     {
       "or": "ORNM",
@@ -6547,12 +6512,12 @@
       "kbli": [
         {
           "rank": 1,
-          "kode": "22129                                                             [2] 22192                                                                [3] 20132",
+          "kode": "22129222192320132",
           "judul": "Industri Karet Setengah Jadi Lainnya                                           [2] Industri Barang dari Karet untuk Keperluan Industri                                            [3] Industri Karet Buatan"
         }
       ],
       "justifikasi": "[1] Invensi menghasilkan karet alam termodifikasi (hydrogenated natural rubber/HNR) yang merupakan material karet setengah jadi dengan sifat yang ditingkatkan (tahan panas, oksidasi, dan ozon). Kelompok ini mencakup pengolahan karet alam menjadi produk setengah jadi selain crumb rubber, sheet, maupun crepe rubber.                                              [2] Produk HNR berpotensi menggantikan karet sintetis EPDM sebagai bahan baku berbagai komponen industri seperti seal, gasket, belt, hose, engine mounting, dan komponen teknik lainnya. KBLI ini mencakup pembuatan berbagai barang karet untuk keperluan industri.                                                                                                                                      [3] Walaupun invensi tidak memproduksi karet sintetis, tujuan utamanya adalah menghasilkan material pengganti karet sintetis (EPDM). Oleh karena itu, industri yang memproduksi atau mengembangkan material elastomer sintetis merupakan calon pengguna potensial teknologi ini. KBLI 20132 mencakup pembuatan berbagai jenis karet buatan seperti SBR, neoprene, nitrile rubber, silicone rubber, dan isoprene rubber.",
-      "kode_sektor_2_digit": "22"
+      "trl_6_plus": false
     },
     {
       "or": "ORNM",
@@ -6579,7 +6544,7 @@
         }
       ],
       "justifikasi": "KBLI dipilih berdasarkan objek/fungsi utama KI 'PROSES PEMBUATAN BETON DENGAN PENGISI ARANG HIDRO DAN HIDROGEL DARI SERAT ALAM'. Prioritas pertama adalah KBLI yang paling langsung merepresentasikan produk/aktivitas KI; KBLI berikutnya merupakan aktivitas terkait yang masih relevan.",
-      "kode_sektor_2_digit": "23 / 23 / 22"
+      "trl_6_plus": false
     },
     {
       "or": "ORNM",
@@ -6606,7 +6571,7 @@
         }
       ],
       "justifikasi": "KBLI dipilih berdasarkan objek utama berupa serat nano karbon berbasis lignin biomassa; prioritas pada industri kimia/material karbon, diikuti material polimer/produk material terkait.",
-      "kode_sektor_2_digit": "20 / 20 / 22"
+      "trl_6_plus": false
     },
     {
       "or": "ORNM",
@@ -6628,7 +6593,7 @@
         }
       ],
       "justifikasi": "[1] METODE ISOLASI SELULOSA DARI SABUT KELAPA MENGGUNAKAN HIDROPEROKSI ASAM SITRAT diproduksi sebagai material film/bioplastik.\n [2] METODE ISOLASI SELULOSA DARI SABUT KELAPA MENGGUNAKAN HIDROPEROKSI ASAM SITRAT didistribusikan melalui jalur perdagangan besar bahan/material.",
-      "kode_sektor_2_digit": "22"
+      "trl_6_plus": false
     },
     {
       "or": "ORNM",
@@ -6650,7 +6615,7 @@
         }
       ],
       "justifikasi": "[1] FORMULASI LEMBARAN BIOKOMPOSIT BERBAHAN LOW DENSITY POLY-ETHYLENE, LIGNIN DAN LIGNOSULFONAT diproduksi sebagai produk/bahan kimia (katalis, polimer, atau turunannya).\n [2] FORMULASI LEMBARAN BIOKOMPOSIT BERBAHAN LOW DENSITY POLY-ETHYLENE, LIGNIN DAN LIGNOSULFONAT didistribusikan melalui jalur perdagangan besar bahan kimia.",
-      "kode_sektor_2_digit": "20"
+      "trl_6_plus": false
     },
     {
       "or": "ORNM",
@@ -6672,7 +6637,7 @@
         }
       ],
       "justifikasi": "Output berupa 2,3-dialdehida selulosa (DAC), suatu material kimia/biopolimer hasil modifikasi selulosa. 20299 menjadi kode utama dan 20131 relevan untuk rantai biopolimer.",
-      "kode_sektor_2_digit": "20 / 20"
+      "trl_6_plus": false
     },
     {
       "or": "ORNM",
@@ -6699,7 +6664,7 @@
         }
       ],
       "justifikasi": "KBLI dipilih berdasarkan objek/fungsi utama KI 'FORMULASI BIOKOMPOSIT BERBASIS PATI TERMOPLASTIK, TEPUNG BATANG JAGUNG DAN POLI ASAM LAKTAT UNTUK APLIKASI PRODUK CETAK'. Prioritas pertama adalah KBLI yang paling langsung merepresentasikan produk/aktivitas KI; KBLI berikutnya merupakan aktivitas terkait yang masih relevan.",
-      "kode_sektor_2_digit": "22 / 22 / 20"
+      "trl_6_plus": false
     },
     {
       "or": "ORNM",
@@ -6726,7 +6691,7 @@
         }
       ],
       "justifikasi": "[1] Industri Pati Ubi Kayu relevan karena objek/aktivitas pada KI \"Metode Sintesis Hidroksiapatit dari Limbah Cangkang Landak Laut (Arbacia tripneustes) untuk Aplikasi Scaffold Biomedis\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Industri Pati dan Produk Pati Lainnya relevan karena objek/aktivitas pada KI \"Metode Sintesis Hidroksiapatit dari Limbah Cangkang Landak Laut (Arbacia tripneustes) untuk Aplikasi Scaffold Biomedis\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Industri Produk Makanan Lainnya relevan karena objek/aktivitas pada KI \"Metode Sintesis Hidroksiapatit dari Limbah Cangkang Landak Laut (Arbacia tripneustes) untuk Aplikasi Scaffold Biomedis\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
-      "kode_sektor_2_digit": "10"
+      "trl_6_plus": false
     },
     {
       "or": "ORNM",
@@ -6753,7 +6718,7 @@
         }
       ],
       "justifikasi": "[1] Industri Barang Lainnya dari Kayu; Industri Barang dari Gabus, Jerami, Rotan, Bambu, dan Sejenisnya YTDL relevan karena objek/aktivitas pada KI \"KOMPOSIT TERMOPLASTIK POLIPROPILENA YANG DIPERKUAT SERAT KENAF\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Industri Barang Lainnya dari Plastik relevan karena objek/aktivitas pada KI \"KOMPOSIT TERMOPLASTIK POLIPROPILENA YANG DIPERKUAT SERAT KENAF\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Industri Produk Mineral Nonlogam Lainnya YTDL relevan karena objek/aktivitas pada KI \"KOMPOSIT TERMOPLASTIK POLIPROPILENA YANG DIPERKUAT SERAT KENAF\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
-      "kode_sektor_2_digit": "16"
+      "trl_6_plus": false
     },
     {
       "or": "ORNM",
@@ -6780,7 +6745,7 @@
         }
       ],
       "justifikasi": "[1] Industri Barang Lainnya dari Kayu; Industri Barang dari Gabus, Jerami, Rotan, Bambu, dan Sejenisnya YTDL relevan karena objek/aktivitas pada KI \"LAPISAN ANTI-REFLEKSI KOMPOSIT TIO₂–AL₂O₃ PADA SEL SURYA  SILIKON DAN PROSES PEMBUATANNYA\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Industri Barang Lainnya dari Plastik relevan karena objek/aktivitas pada KI \"LAPISAN ANTI-REFLEKSI KOMPOSIT TIO₂–AL₂O₃ PADA SEL SURYA  SILIKON DAN PROSES PEMBUATANNYA\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Industri Produk Mineral Nonlogam Lainnya YTDL relevan karena objek/aktivitas pada KI \"LAPISAN ANTI-REFLEKSI KOMPOSIT TIO₂–AL₂O₃ PADA SEL SURYA  SILIKON DAN PROSES PEMBUATANNYA\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
-      "kode_sektor_2_digit": "16"
+      "trl_6_plus": false
     },
     {
       "or": "ORNM",
@@ -6807,7 +6772,7 @@
         }
       ],
       "justifikasi": "Klasifikasi diperbaiki berdasarkan objek utama KI (Hidrogel pembenah tanah / pupuk lepas lambat); KBLI pertama diprioritaskan sebagai aktivitas/produk paling langsung.",
-      "kode_sektor_2_digit": "22 / 20 / 20"
+      "trl_6_plus": false
     },
     {
       "or": "ORNM",
@@ -6834,7 +6799,7 @@
         }
       ],
       "justifikasi": "[1] Aktivitas Pemrograman Berbasis Kecerdasan Artifisial relevan karena objek/aktivitas pada KI \"PROSES EKSTRAKSI RUMPUT LAUT HIJAU ULVA SP. SEBAGAI  ANTIOKSIDAN\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Aktivitas Pemrograman Komputer Lainnya relevan karena objek/aktivitas pada KI \"PROSES EKSTRAKSI RUMPUT LAUT HIJAU ULVA SP. SEBAGAI  ANTIOKSIDAN\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Aktivitas Teknologi Informasi Dan Jasa Komputer Lainnya relevan karena objek/aktivitas pada KI \"PROSES EKSTRAKSI RUMPUT LAUT HIJAU ULVA SP. SEBAGAI  ANTIOKSIDAN\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
-      "kode_sektor_2_digit": "62"
+      "trl_6_plus": false
     },
     {
       "or": "ORNM",
@@ -6861,7 +6826,7 @@
         }
       ],
       "justifikasi": "KBLI dipilih berdasarkan objek/fungsi utama KI 'MIKROSKOP MODIFIKASI DENGAN PENGGERAK TIGA DIMENSI UNTUK PENINGKATAN BIDANG PANDANG DAN KEDALAMAN FOKUS OBJEK BERUKURAN MIKRO MELALUI TEKNIK FOCUS STACKING DAN TILE STITCHING'. Prioritas pertama adalah KBLI yang paling langsung merepresentasikan produk/aktivitas KI; KBLI berikutnya merupakan aktivitas terkait yang masih relevan.",
-      "kode_sektor_2_digit": "26 / 26 / 62"
+      "trl_6_plus": false
     },
     {
       "or": "ORNM",
@@ -6888,7 +6853,7 @@
         }
       ],
       "justifikasi": "[1] Industri Barang Lainnya dari Kayu; Industri Barang dari Gabus, Jerami, Rotan, Bambu, dan Sejenisnya YTDL relevan karena objek/aktivitas pada KI \"Komposisi dan Metode Pembuatan Film Biokomposit Hibrida  WPI/Silika Dengan Penambahan Kitosan\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Industri Barang Lainnya dari Plastik relevan karena objek/aktivitas pada KI \"Komposisi dan Metode Pembuatan Film Biokomposit Hibrida  WPI/Silika Dengan Penambahan Kitosan\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Industri Produk Mineral Nonlogam Lainnya YTDL relevan karena objek/aktivitas pada KI \"Komposisi dan Metode Pembuatan Film Biokomposit Hibrida  WPI/Silika Dengan Penambahan Kitosan\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
-      "kode_sektor_2_digit": "16"
+      "trl_6_plus": false
     },
     {
       "or": "ORNM",
@@ -6915,7 +6880,7 @@
         }
       ],
       "justifikasi": "[1] Aktivitas Pemrograman Berbasis Kecerdasan Artifisial relevan karena objek/aktivitas pada KI \"PERANGKAT EVAPORATIF UNTUK EKSTRAKSI CAIRAN GETAH TALUS  BERNILAI TAMBAH\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Aktivitas Pemrograman Komputer Lainnya relevan karena objek/aktivitas pada KI \"PERANGKAT EVAPORATIF UNTUK EKSTRAKSI CAIRAN GETAH TALUS  BERNILAI TAMBAH\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Aktivitas Teknologi Informasi Dan Jasa Komputer Lainnya relevan karena objek/aktivitas pada KI \"PERANGKAT EVAPORATIF UNTUK EKSTRAKSI CAIRAN GETAH TALUS  BERNILAI TAMBAH\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
-      "kode_sektor_2_digit": "62"
+      "trl_6_plus": false
     },
     {
       "or": "ORNM",
@@ -6942,7 +6907,7 @@
         }
       ],
       "justifikasi": "[1] Pengolahan dan Pengawetan Ikan dengan Metode Lainnya relevan karena objek/aktivitas pada KI \"METODE SINTESA SENYAWA TURUNAN GRAFENA\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Pengolahan dan Pengawetan Biota Air Lainnya dengan Metode Lainnya relevan karena objek/aktivitas pada KI \"METODE SINTESA SENYAWA TURUNAN GRAFENA\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Industri Senyawa Nitrogen; Pupuk Nitrogen, Fosfat, dan Kalium relevan karena objek/aktivitas pada KI \"METODE SINTESA SENYAWA TURUNAN GRAFENA\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
-      "kode_sektor_2_digit": "10"
+      "trl_6_plus": false
     },
     {
       "or": "ORNM",
@@ -6969,7 +6934,7 @@
         }
       ],
       "justifikasi": "KBLI dipilih berdasarkan objek/fungsi utama KI 'METODE SINTESIS NANOPARTIKEL EMAS(AuNPs) MENGGUNAKAN TRIETHYLAMINE DENGAN PROSES BERTAHAP'. Prioritas pertama adalah KBLI yang paling langsung merepresentasikan produk/aktivitas KI; KBLI berikutnya merupakan aktivitas terkait yang masih relevan.",
-      "kode_sektor_2_digit": "20 / 20 / 26"
+      "trl_6_plus": false
     },
     {
       "or": "ORNM",
@@ -6996,7 +6961,7 @@
         }
       ],
       "justifikasi": "[1] Industri Barang dari Semen relevan karena objek/aktivitas pada KI \"Phase change material berbasis lilin lebah dan titanium dioksida untuk penyimpan energi termal\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Konstruksi Bangunan Pelabuhan Bukan Perikanan relevan karena objek/aktivitas pada KI \"Phase change material berbasis lilin lebah dan titanium dioksida untuk penyimpan energi termal\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Industri Barang Kimia Lainnya YTDL relevan karena objek/aktivitas pada KI \"Phase change material berbasis lilin lebah dan titanium dioksida untuk penyimpan energi termal\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
-      "kode_sektor_2_digit": "23"
+      "trl_6_plus": false
     },
     {
       "or": "ORNM",
@@ -7023,7 +6988,7 @@
         }
       ],
       "justifikasi": "[1] Industri Barang Lainnya dari Kayu; Industri Barang dari Gabus, Jerami, Rotan, Bambu, dan Sejenisnya YTDL relevan karena objek/aktivitas pada KI \"Metode Sintesis Komposit Karbon Aktif–Magnetit (Fe₃O₄) Berbasis Tandan Kosong Kelapa Sawit untuk Adsorpsi Zat Warna Congo Red\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Industri Barang Lainnya dari Plastik relevan karena objek/aktivitas pada KI \"Metode Sintesis Komposit Karbon Aktif–Magnetit (Fe₃O₄) Berbasis Tandan Kosong Kelapa Sawit untuk Adsorpsi Zat Warna Congo Red\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Industri Produk Mineral Nonlogam Lainnya YTDL relevan karena objek/aktivitas pada KI \"Metode Sintesis Komposit Karbon Aktif–Magnetit (Fe₃O₄) Berbasis Tandan Kosong Kelapa Sawit untuk Adsorpsi Zat Warna Congo Red\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
-      "kode_sektor_2_digit": "16"
+      "trl_6_plus": false
     },
     {
       "or": "ORNM",
@@ -7050,7 +7015,7 @@
         }
       ],
       "justifikasi": "KBLI dipilih berdasarkan objek/fungsi utama KI 'METODE ENKAPSULASI NANOKAPSUL SEDIAAN ANTIKANKER PAYUDARA DARI EKSTRAK TAPAK LIMAN DENGAN METAL-ORGANIC FRAMEWORKS'. Prioritas pertama adalah KBLI yang paling langsung merepresentasikan produk/aktivitas KI; KBLI berikutnya merupakan aktivitas terkait yang masih relevan.",
-      "kode_sektor_2_digit": "21 / 21 / 20"
+      "trl_6_plus": false
     },
     {
       "or": "ORNM",
@@ -7077,7 +7042,7 @@
         }
       ],
       "justifikasi": "[1] Aktivitas Pemrograman Berbasis Kecerdasan Artifisial relevan karena objek/aktivitas pada KI \"METODE ADSORPSI LOGAM TANAH JARANG MENGGUNAKAN  MIKROENKAPSUL NANOKOMPOSIT POLIMETIL METAKRILAT NANOTABUNG KARBON BERDINDING TUNGGAL DENGAN PERLAKUAN  PENGERINGAN BEKU,  METODE MIKROENKAPSULASI NANOKOMPOSIT POLIMETIL  METAKRILAT DAN NANOTABUNG KARBON BERDINDING TUNGGAL, METODE PEMBUATAN MIKROENKAPSUL NANOKOMPOSIT POLIMETIL  METAKRILAT/TABUNG NANO KARBON FASE NEMATIK (PMMA/LC CNT) SEBAGAI ADSORBEN SELEKTIF ION LOGAM TANAH JARANG\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[2] Aktivitas Pemrograman Komputer Lainnya relevan karena objek/aktivitas pada KI \"METODE ADSORPSI LOGAM TANAH JARANG MENGGUNAKAN  MIKROENKAPSUL NANOKOMPOSIT POLIMETIL METAKRILAT NANOTABUNG KARBON BERDINDING TUNGGAL DENGAN PERLAKUAN  PENGERINGAN BEKU,  METODE MIKROENKAPSULASI NANOKOMPOSIT POLIMETIL  METAKRILAT DAN NANOTABUNG KARBON BERDINDING TUNGGAL, METODE PEMBUATAN MIKROENKAPSUL NANOKOMPOSIT POLIMETIL  METAKRILAT/TABUNG NANO KARBON FASE NEMATIK (PMMA/LC CNT) SEBAGAI ADSORBEN SELEKTIF ION LOGAM TANAH JARANG\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.\n[3] Aktivitas Teknologi Informasi Dan Jasa Komputer Lainnya relevan karena objek/aktivitas pada KI \"METODE ADSORPSI LOGAM TANAH JARANG MENGGUNAKAN  MIKROENKAPSUL NANOKOMPOSIT POLIMETIL METAKRILAT NANOTABUNG KARBON BERDINDING TUNGGAL DENGAN PERLAKUAN  PENGERINGAN BEKU,  METODE MIKROENKAPSULASI NANOKOMPOSIT POLIMETIL  METAKRILAT DAN NANOTABUNG KARBON BERDINDING TUNGGAL, METODE PEMBUATAN MIKROENKAPSUL NANOKOMPOSIT POLIMETIL  METAKRILAT/TABUNG NANO KARBON FASE NEMATIK (PMMA/LC CNT) SEBAGAI ADSORBEN SELEKTIF ION LOGAM TANAH JARANG\" beririsan dengan ruang lingkup kegiatan KBLI tersebut.",
-      "kode_sektor_2_digit": "62"
+      "trl_6_plus": false
     },
     {
       "or": "ORPP",
@@ -7099,7 +7064,7 @@
         }
       ],
       "justifikasi": "[1] Sama dgn row 40\n[2] Sama dgn row 40\n[3] Sama dgn row 40",
-      "kode_sektor_2_digit": null
+      "trl_6_plus": true
     },
     {
       "or": "ORPP",
@@ -7121,7 +7086,7 @@
         }
       ],
       "justifikasi": "[1] Kit dijual ke industri farmasi sbg produk farmasi untuk skrining antivirus\n[2] Diproduksi sbg alat diagnosis medis/bioassay kit komersial",
-      "kode_sektor_2_digit": null
+      "trl_6_plus": true
     },
     {
       "or": "ORPP",
@@ -7143,7 +7108,7 @@
         }
       ],
       "justifikasi": "[1] Enzim industri diproduksi sbg bahan kimia bioproses multisektor\n [2] Mendukung riset produksi dan formulasi enzim industri berbasis fermentasi",
-      "kode_sektor_2_digit": "20 / 72"
+      "trl_6_plus": true
     },
     {
       "or": "ORPP",
@@ -7157,15 +7122,10 @@
           "rank": 1,
           "kode": "10710",
           "judul": null
-        },
-        {
-          "rank": 2,
-          "kode": "46329",
-          "judul": null
         }
       ],
       "justifikasi": "[1] FORMULASI KUKIS SORGUM DENGAN CAMPURAN EKSTRAK KULIT MANGGIS DAN PRODUK YANG DIHASILKANNYA diproduksi sebagai produk bakeri (kukis/kue kering/roti/biskuit).\n [2] FORMULASI KUKIS SORGUM DENGAN CAMPURAN EKSTRAK KULIT MANGGIS DAN PRODUK YANG DIHASILKANNYA didistribusikan melalui jalur perdagangan besar makanan/minuman.",
-      "kode_sektor_2_digit": "10 / 46"
+      "trl_6_plus": false
     },
     {
       "or": "ORPP",
@@ -7187,7 +7147,7 @@
         }
       ],
       "justifikasi": "[1] Diproduksi sbg industri pati ubi kayu (MOCAF/tepung modifikasi)\n[2] Proses modifikasi di industri produk gilingan aneka umbi\n[3] Didistribusikan sbg bahan baku tepung lokal melalui perdagangan besar",
-      "kode_sektor_2_digit": null
+      "trl_6_plus": true
     },
     {
       "or": "ORPP",
@@ -7209,7 +7169,7 @@
         }
       ],
       "justifikasi": "[1] Diproduksi sbg industri zat pengatur tumbuh/biostimulant bawang merah\n[2] Didistribusikan melalui perdagangan besar pupuk dan produk agrokimia\n[3] Diadopsi pertanian hortikultura sayuran buah (bawang merah)",
-      "kode_sektor_2_digit": null
+      "trl_6_plus": false
     },
     {
       "or": "ORPP",
@@ -7231,7 +7191,7 @@
         }
       ],
       "justifikasi": "[1] Edible coating diaplikasikan pada produk buah/sayuran untuk memperpanjang umur simpan.\n [2] Teknologi dapat diadopsi oleh industri pangan olahan yang menangani produk segar.",
-      "kode_sektor_2_digit": "10 / 10"
+      "trl_6_plus": false
     },
     {
       "or": "ORPP",
@@ -7253,7 +7213,7 @@
         }
       ],
       "justifikasi": "[1] Proses diadopsi industri persiapan serat tekstil rami ramah lingkungan\n[2] Enzim xilanase+pektinase sbg barang kimia lainnya untuk industri tekstil",
-      "kode_sektor_2_digit": null
+      "trl_6_plus": false
     },
     {
       "or": "ORPP",
@@ -7275,7 +7235,7 @@
         }
       ],
       "justifikasi": "Output berupa pelapis bioplastik berbasis pati untuk kemasan aktif pangan. 22202 merupakan industri barang plastik/bioplastik untuk pengemasan dan 20131 mewakili bahan biopolimer.",
-      "kode_sektor_2_digit": "22 / 20"
+      "trl_6_plus": false
     },
     {
       "or": "ORPP",
@@ -7297,7 +7257,7 @@
         }
       ],
       "justifikasi": "[1] Kaset ekspresi dijual sbg produk farmasi/reagensia rekayasa genetika\n[2] Protein kitinase diproduksi sbg barang kimia lainnya/biopestisida",
-      "kode_sektor_2_digit": null
+      "trl_6_plus": false
     },
     {
       "or": "ORPP",
@@ -7314,7 +7274,7 @@
         }
       ],
       "justifikasi": "[1] Sambal tabur kaya protein merupakan produk pangan olahan siap konsumsi.",
-      "kode_sektor_2_digit": "10"
+      "trl_6_plus": true
     },
     {
       "or": "ORPP",
@@ -7336,29 +7296,7 @@
         }
       ],
       "justifikasi": "[1] Benih varietas kedelai BRINARA diproduksi penangkar benih komersial\n[2] Benih didistribusikan melalui perdagangan besar padi dan palawija\n[3] Varietas mendorong industri pengolahan dan pengawetan kedelai",
-      "kode_sektor_2_digit": null
-    },
-    {
-      "or": "ORPP",
-      "nomor_ki": "Sedang proses",
-      "judul_ki": "Varietas unggul kedelai BRINARA",
-      "jenis_ki": "PVT (Varietas Tanaman)",
-      "trl": 7,
-      "sektor_utama": "Pertanian & Agroindustri",
-      "kbli": [
-        {
-          "rank": 1,
-          "kode": "01469",
-          "judul": "Budi Daya dan Pembibitan Unggas Lainnya"
-        },
-        {
-          "rank": 2,
-          "kode": "46752",
-          "judul": "Perdagangan Besar Pupuk dan Produk Agrokimia"
-        }
-      ],
-      "justifikasi": "Klasifikasi diperbaiki berdasarkan objek utama KI (Varietas unggul kedelai BRINARA); KBLI pertama diprioritaskan sebagai aktivitas/produk paling langsung.",
-      "kode_sektor_2_digit": "01 / 46"
+      "trl_6_plus": false
     },
     {
       "or": "ORPP",
@@ -7372,15 +7310,10 @@
           "rank": 1,
           "kode": "01469",
           "judul": "Budi Daya dan Pembibitan Unggas Lainnya"
-        },
-        {
-          "rank": 2,
-          "kode": "46752",
-          "judul": "Perdagangan Besar Pupuk dan Produk Agrokimia"
         }
       ],
       "justifikasi": "Klasifikasi diperbaiki berdasarkan objek utama KI (Varietas unggul kedelai BRINUSA); KBLI pertama diprioritaskan sebagai aktivitas/produk paling langsung.",
-      "kode_sektor_2_digit": "01 / 46"
+      "trl_6_plus": true
     }
   ]
 }
