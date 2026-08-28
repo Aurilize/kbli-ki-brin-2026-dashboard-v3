@@ -10,6 +10,10 @@ Dashboard data-driven untuk ORPP, ORHL, OREM, OREI, dan ORNM.
 - `scripts/generate_data.py`: generator dari workbook `Verifikasi Manual`.
 - `.github/workflows/generate-data.yml`: otomatis regenerate `data.json`.
 
+## Sumber TRL
+
+Nilai TRL pada dashboard diambil langsung dari kolom **`TKT Terverifikasi`** pada sheet `Verifikasi Manual`. Nilai tidak dihitung atau diinferensikan dari kolom lain. Workbook lama yang menggunakan header `TKT Terverifikasi [TRL Verified]` diperlakukan sebagai padanan kolom tersebut.
+
 ## Aturan bisnis
 Untuk ORPP dan ORHL, semua KBLI perdagangan besar dikeluarkan: kode `46xxx` atau judul mengandung `Perdagangan Besar`.
 
