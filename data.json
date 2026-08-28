@@ -1,38 +1,22 @@
 {
   "meta": {
     "dashboard": "KBLI 2025 – Potensi Komersialisasi KI BRIN 2026",
-    "schema_version": "1.0.0",
+    "schema_version": "1.1.0",
     "organizations": [
-      "ORPP",
-      "ORHL",
-      "OREM",
       "OREI",
-      "ORNM"
-    ],
-    "source_scope": [
-      "ORPP",
-      "ORHL",
       "OREM",
-      "OREI",
-      "ORNM"
+      "ORHL",
+      "ORNM",
+      "ORPP"
     ],
-    "exclusions": {
-      "OR": [
-        "ORHL",
-        "ORPP"
-      ],
-      "rule": "Exclude all wholesale-trade KBLI (46xxx / titles containing 'Perdagangan Besar')",
-      "removed_kbli_assignments": 19
-    },
-    "trl_source": "TKT Terverifikasi; duplicate Excel export headers use populated TKT Terverifikasi.1 as the second verified-TKT column; legacy ORHL/ORPP TKT Terverifikasi [TRL Verified] supported.",
     "trl_6_plus_definition": "TKT Terverifikasi >= 6",
-    "trl_6_plus_total": 54,
+    "trl_6_plus_total": 58,
     "trl_6_plus_by_or": {
-      "ORPP": 5,
-      "ORHL": 16,
-      "OREM": 13,
       "OREI": 15,
-      "ORNM": 5
+      "OREM": 13,
+      "ORHL": 18,
+      "ORNM": 5,
+      "ORPP": 7
     }
   },
   "records": [
@@ -3071,7 +3055,7 @@
       "nomor_ki": "IDP000066683",
       "judul_ki": "Komposisi Medium Pertumbuhan Bakteri Asam Laktat Untuk Probiotik Ternak Ruminansia",
       "jenis_ki": "Paten",
-      "trl": 9,
+      "trl": 7,
       "sektor_utama": "[1] Industri Kimia & Biokimia\n[2] Perdagangan Besar\n[3] Pertanian & Perkebunan",
       "justifikasi": "[1] Formulasi diproduksi sbg industri zat pengatur tumbuh/biopestisida\n[2] Didistribusikan sbg produk seed treatment ke perdagangan besar agrokimia\n[3] Diadopsi pertanian hortikultura sayuran buah (cabai merah)",
       "kbli": [
@@ -3164,7 +3148,7 @@
       "nomor_ki": "P00201601284",
       "judul_ki": "Pupuk Organik Hayati Cair Dan Proses Pembuatannya",
       "jenis_ki": "Paten",
-      "trl": "7-9",
+      "trl": 7,
       "sektor_utama": "[1] Industri Pangan & Minuman\n[2] Industri Minuman\n[3] Perdagangan Besar",
       "justifikasi": "[1] Diproduksi sbg industri infusi herbal/herb infusion\n[2] Diposisikan sbg industri minuman lainnya fungsional\n[3] Didistribusikan melalui perdagangan besar makanan dan minuman",
       "kbli": [
@@ -3179,7 +3163,7 @@
           "judul": "Industri Minuman Lainnya"
         }
       ],
-      "trl_6_plus": false
+      "trl_6_plus": true
     },
     {
       "or": "ORHL",
@@ -3416,7 +3400,7 @@
       "nomor_ki": "P00202411137",
       "judul_ki": "Produksi Dan Imobilisasi Enzim Selulase Dari Pseudozyma rugulosa Inacc Y335 Sebagai Produk Biokatalis Untuk Sintesis Bioetanol",
       "jenis_ki": "Paten",
-      "trl": "4-5",
+      "trl": 4,
       "sektor_utama": "[1] Industri Pangan & Minuman\n[2] Industri Pangan & Minuman\n[3] Perdagangan Besar",
       "justifikasi": "[1] Diproduksi massal sbg produk bakeri fungsional\n[2] Diposisikan sbg produk makanan lainnya fungsional antioksidan\n[3] Didistribusikan melalui perdagangan besar makanan dan minuman",
       "kbli": [
@@ -3593,6 +3577,28 @@
           "rank": 2,
           "kode": "01133",
           "judul": "Pertanian Sayuran Buah"
+        }
+      ],
+      "trl_6_plus": true
+    },
+    {
+      "or": "ORHL",
+      "nomor_ki": "P00202510394",
+      "judul_ki": "METODE OPTIMASI PROTOKOL REGENERASI KALUS SOMATIK EMBRYOGENIK TEBU (Saccharum officinarum L.) DENGAN KOMBINASI SUMBER KARBON DAN HORMON PERTUMBUHAN TANAMAN",
+      "jenis_ki": "Paten",
+      "trl": 6,
+      "sektor_utama": "[1] Pertanian & Perkebunan\n[2] Pertanian & Perkebunan",
+      "justifikasi": "[1] Sama dgn row 3 – protokol perbanyakan bibit tebu\n[2] Sama dgn row 3 – teknologi pembiakan tanaman",
+      "kbli": [
+        {
+          "rank": 1,
+          "kode": "01140",
+          "judul": "Pertanian Tebu"
+        },
+        {
+          "rank": 2,
+          "kode": "01309",
+          "judul": "Pembiakan Tanaman Lainnya"
         }
       ],
       "trl_6_plus": true
@@ -7450,7 +7456,7 @@
       "nomor_ki": "00589/PPVT/S/2002(Tanaman Semusim)",
       "judul_ki": "Kacang Hijau Varietas Muri",
       "jenis_ki": "PVT (Varietas Tanaman)",
-      "trl": 9,
+      "trl": 8,
       "sektor_utama": "[1] Pertanian & Perkebunan\n[2] Perdagangan Besar\n[3] Industri Pangan & Minuman",
       "justifikasi": "[1] Sama dgn row 40\n[2] Sama dgn row 40\n[3] Sama dgn row 40",
       "kbli": [
@@ -7472,7 +7478,7 @@
       "nomor_ki": "IDP000079767",
       "judul_ki": "Metode pengemasan bahan makanan heterogen dalam satu wadah",
       "jenis_ki": "Paten",
-      "trl": "7-9",
+      "trl": 9,
       "sektor_utama": "[1] Industri Farmasi & Biotek\n[2] Industri Farmasi & Biotek",
       "justifikasi": "[1] Kit dijual ke industri farmasi sbg produk farmasi untuk skrining antivirus\n[2] Diproduksi sbg alat diagnosis medis/bioassay kit komersial",
       "kbli": [
@@ -7487,7 +7493,7 @@
           "judul": "Industri Alat Diagnosis Medis, Perban, Kasa, dan Penunjang Kesehatan Lainnya"
         }
       ],
-      "trl_6_plus": false
+      "trl_6_plus": true
     },
     {
       "or": "ORPP",
@@ -7702,7 +7708,7 @@
       "nomor_ki": "S00202510408",
       "judul_ki": "Produk Hidrolisat Sorgum Merah Sebagai Pangan Fungsional",
       "jenis_ki": "Paten",
-      "trl": 4,
+      "trl": 3,
       "sektor_utama": "[1] Pertanian & Perkebunan\n[2] Perdagangan Besar\n[3] Industri Pangan & Minuman",
       "justifikasi": "[1] Benih varietas kedelai BRINARA diproduksi penangkar benih komersial\n[2] Benih didistribusikan melalui perdagangan besar padi dan palawija\n[3] Varietas mendorong industri pengolahan dan pengawetan kedelai",
       "kbli": [
@@ -7737,6 +7743,23 @@
           "rank": 2,
           "kode": "20299",
           "judul": "Industri Barang Kimia Lainnya YTDL"
+        }
+      ],
+      "trl_6_plus": true
+    },
+    {
+      "or": "ORPP",
+      "nomor_ki": "Sedang proses",
+      "judul_ki": "Varietas unggul kedelai BRINUSA",
+      "jenis_ki": "PVT (Varietas Tanaman)",
+      "trl": 7,
+      "sektor_utama": "[1] Industri Farmasi & Biotek",
+      "justifikasi": "[1] Kaset ekspresi dijual sbg produk farmasi/reagensia riset rekayasa genetika",
+      "kbli": [
+        {
+          "rank": 1,
+          "kode": "21012",
+          "judul": "Industri Produk Farmasi untuk Manusia"
         }
       ],
       "trl_6_plus": true

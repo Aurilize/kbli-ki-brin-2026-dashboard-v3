@@ -56,20 +56,22 @@ def parse_tkt(v):
 
 def read_xlsx(path):
     sheets=pd.ExcelFile(path).sheet_names
-    if "Verifikasi Manual" not in sheets:
-        raise ValueError(f"{path.name}: sheet 'Verifikasi Manual' not found")
-    df=pd.read_excel(path,sheet_name="Verifikasi Manual",dtype=object)
+    # ORPP/ORHL latest workbook stores the same dashboard fields in Copy-of-Sort ORHL.
+    if "Verifikasi Manual" in sheets:
+        sheet="Verifikasi Manual"
+    elif "Copy-of-Sort ORHL" in sheets and ("ORPP" in path.stem.upper() or "ORHL" in path.stem.upper()):
+        sheet="Copy-of-Sort ORHL"
+    else:
+        raise ValueError(f"{path.name}: expected 'Verifikasi Manual' sheet")
+    df=pd.read_excel(path,sheet_name=sheet,dtype=object)
     df.columns=[str(c).strip() for c in df.columns]
     default=next((x for x in ALLOWED if x in path.stem.upper()),None)
-
-    # All dashboard fields are read from Verifikasi Manual only.
-    # Column names vary slightly between exports, so support the known aliases.
     aliases={
         "judul_ki":["Judul atau nama KI"],
         "nomor_ki":["Nomor kekayaan intelektual (KI)"],
         "jenis_ki":["Jenis kekayaan intelektual (KI)"],
         "tkt":["TKT Terverifikasi","TKT Terverifikasi.1","TKT Terverifikasi [TRL Verified]"],
-        "nomor_kbli":["Nomor KBLI 2025","Nomor KBLI 2025\\n(Potensi Komersialisasi)"],
+        "nomor_kbli":["Nomor KBLI 2025","Nomor KBLI 2025 (Potensi Komersialisasi)","Nomor KBLI 2025\n(Potensi Komersialisasi)"],
         "judul_kbli":["Judul KBLI 2025 (Resmi BPS)"],
         "justifikasi":["Justifikasi","Justifikasi / Kondisi Komersialisasi"],
         "sektor":["Sektor Utama","Sektor Industri"],
@@ -80,7 +82,6 @@ def read_xlsx(path):
             if n in df.columns:return n
         if required: raise ValueError(f"{path.name}: missing one of {names}")
         return None
-
     c={k:pick(v, k not in {"tkt","or"}) for k,v in aliases.items()}
     tkt_cols=[x for x in aliases["tkt"] if x in df.columns]
     out=[]
@@ -89,27 +90,15 @@ def read_xlsx(path):
         if not title and not ki: continue
         orv=(clean(r[c["or"]]) if c["or"] else None) or default
         if orv not in ALLOWED: raise ValueError(f"{path.name}: invalid/missing OR={orv!r}")
-
-        # Some exports duplicate the verified-TKT column. Use the first populated
-        # verified value; never use self-assessment.
         tkt=None
         for tc in tkt_cols:
             v=parse_tkt(r[tc])
-            if v is not None:
-                tkt=v; break
-
+            if v is not None: tkt=v; break
         cs,ts=codes(r[c["nomor_kbli"]]),numbered(r[c["judul_kbli"]])
         kb=[{"rank":j+1,"kode":code,"judul":ts[j] if j<len(ts) else None} for j,code in enumerate(cs)]
-        out.append({
-            "or":orv,
-            "nomor_ki":ki,
-            "judul_ki":title,
-            "jenis_ki":clean(r[c["jenis_ki"]]),
-            "trl":tkt,
-            "sektor_utama":clean(r[c["sektor"]]),
-            "justifikasi":clean(r[c["justifikasi"]]),
-            "kbli":filter_kbli(orv,kb)
-        })
+        out.append({"or":orv,"nomor_ki":ki,"judul_ki":title,"jenis_ki":clean(r[c["jenis_ki"]]),
+                    "trl":tkt,"sektor_utama":clean(r[c["sektor"]]),"justifikasi":clean(r[c["justifikasi"]]),
+                    "kbli":filter_kbli(orv,kb)})
     return out
 
 def main():
