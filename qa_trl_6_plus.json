@@ -1,0 +1,12 @@
+{
+  "total_records": 293,
+  "tkt_6_plus_total": 55,
+  "tkt_6_plus_by_or": {
+    "ORPP": 5,
+    "ORHL": 16,
+    "OREM": 12,
+    "OREI": 17,
+    "ORNM": 5
+  },
+  "definition": "TKT Terverifikasi >= 6"
+}

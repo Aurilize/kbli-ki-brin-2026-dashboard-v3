@@ -33,6 +33,16 @@ def filter_kbli(orv,items):
     for i,x in enumerate(items,1):x["rank"]=i
     return items
 
+def parse_tkt(v):
+    if pd.isna(v): return None
+    import datetime
+    if isinstance(v,(pd.Timestamp,datetime.datetime,datetime.date)): return v.day
+    s=str(v).strip()
+    if not s: return None
+    if re.fullmatch(r"\d+",s):
+        n=int(s); return n if 1<=n<=9 else None
+    return s if re.fullmatch(r"\d+\s*-\s*\d+",s) else None
+
 def read_xlsx(path):
     df=pd.read_excel(path,sheet_name="Verifikasi Manual",dtype=object)
     df.columns=[str(c).strip() for c in df.columns]
@@ -40,10 +50,8 @@ def read_xlsx(path):
          "Nomor KBLI 2025","Judul KBLI 2025 (Resmi BPS)","Justifikasi","Sektor Utama"]
     miss=[x for x in req if x not in df.columns]
     if miss:raise ValueError(f"{path.name}: missing {miss}")
-    # TRL must come directly from the verified TKT field; never infer it from another field.
-    tkt_col = "TKT Terverifikasi" if "TKT Terverifikasi" in df.columns else "TKT Terverifikasi [TRL Verified]"
-    if tkt_col not in df.columns:
-        raise ValueError(f"{path.name}: missing verified TKT column ('TKT Terverifikasi')")
+    tkt_cols=[c for c in ["TKT Terverifikasi","TKT Terverifikasi.1","TKT Terverifikasi [TRL Verified]"] if c in df.columns]
+    if not tkt_cols: raise ValueError(f"{path.name}: missing verified TKT column")
     default=next((x for x in ALLOWED if x in path.stem.upper()),None)
     out=[]
     for _,r in df.iterrows():
@@ -51,11 +59,13 @@ def read_xlsx(path):
         if not title and not ki:continue
         orv=(clean(r["OR"]) if "OR" in df.columns else None) or default
         if orv not in ALLOWED:raise ValueError(f"{path.name}: invalid/missing OR={orv!r}")
-        try:trl=int(float(r[tkt_col])) if clean(r[tkt_col]) else None
-        except:trl=None
+        tkt=None
+        for c in tkt_cols:
+            v=parse_tkt(r[c])
+            if v is not None:tkt=v
         cs,ts=codes(r["Nomor KBLI 2025"]),numbered(r["Judul KBLI 2025 (Resmi BPS)"])
         kb=[{"rank":i+1,"kode":c,"judul":ts[i] if i<len(ts) else None} for i,c in enumerate(cs)]
-        out.append({"or":orv,"nomor_ki":ki,"judul_ki":title,"jenis_ki":clean(r["Jenis kekayaan intelektual (KI)"]),"trl":trl,"sektor_utama":clean(r["Sektor Utama"]),"justifikasi":clean(r["Justifikasi"]),"kbli":filter_kbli(orv,kb)})
+        out.append({"or":orv,"nomor_ki":ki,"judul_ki":title,"jenis_ki":clean(r["Jenis kekayaan intelektual (KI)"]),"trl":tkt,"sektor_utama":clean(r["Sektor Utama"]),"justifikasi":clean(r["Justifikasi"]),"kbli":filter_kbli(orv,kb)})
     return out
 
 def main():
@@ -66,9 +76,19 @@ def main():
         dedup[(x.get("or"),x.get("nomor_ki") or (x.get("judul_ki") or "").casefold())]=x
     rows=list(dedup.values())
     for x in rows:x["kbli"]=filter_kbli(x.get("or"),x.get("kbli") or [])
+    for x in rows:
+        x["trl_6_plus"] = isinstance(x.get("trl"), int) and x.get("trl") >= 6
     rows.sort(key=lambda x:(x.get("or") or "",x.get("nomor_ki") or "",x.get("judul_ki") or ""))
     if any(x.get("or") not in ALLOWED or not x.get("judul_ki") for x in rows):raise ValueError("Validation failed")
-    OUT.write_text(json.dumps({"meta":{"dashboard":"KBLI 2025 – Potensi Komersialisasi KI BRIN 2026","schema_version":"1.0.0","organizations":sorted(ALLOWED)},"records":rows},ensure_ascii=False,indent=2),encoding="utf-8")
-    print(f"Generated {len(rows)} records")
+    meta={
+        "dashboard":"KBLI 2025 – Potensi Komersialisasi KI BRIN 2026",
+        "schema_version":"1.1.0",
+        "organizations":sorted(ALLOWED),
+        "trl_6_plus_definition":"TKT Terverifikasi >= 6",
+        "trl_6_plus_total":sum(1 for x in rows if x.get("trl_6_plus")),
+        "trl_6_plus_by_or":{o:sum(1 for x in rows if x.get("or")==o and x.get("trl_6_plus")) for o in sorted(ALLOWED)}
+    }
+    OUT.write_text(json.dumps({"meta":meta,"records":rows},ensure_ascii=False,indent=2),encoding="utf-8")
+    print(f"Generated {len(rows)} records; TKT >= 6: {meta['trl_6_plus_total']}")
 
 if __name__=="__main__":main()

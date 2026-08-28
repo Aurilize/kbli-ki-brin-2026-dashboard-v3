@@ -22,3 +22,7 @@ Taruh workbook baru di `data/input/`, push ke `main`, dan GitHub Actions akan re
 
 ## GitHub Pages
 Settings → Pages → Build and deployment → Deploy from a branch → `main` / `/ (root)` → Save.
+
+
+### Catatan TKT
+Beberapa export Excel memiliki duplikasi header `TKT Terverifikasi`, sehingga pandas dapat membaca kolom kedua sebagai `TKT Terverifikasi.1`. Generator memilih nilai terverifikasi yang terisi. Jika angka TKT tersimpan dengan format tanggal Excel, hari tanggal dikonversi kembali menjadi angka TKT (mis. 2026-05-06 → 6).

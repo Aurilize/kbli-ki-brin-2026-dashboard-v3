@@ -35,7 +35,7 @@ table{border-collapse:collapse;width:100%;min-width:900px}th,td{text-align:left;
 <div class="grid">
 <div class="card kpi"><div class="label">TOTAL KI</div><div class="num" id="k-total">0</div></div>
 <div class="card kpi"><div class="label">KI DENGAN TRL</div><div class="num" id="k-trl">0</div></div>
-<div class="card kpi"><div class="label">KI TRL 6–9</div><div class="num" id="k-ready">0</div></div>
+<div class="card kpi"><div class="label">KI TKT ≥ 6</div><div class="num" id="k-ready">0</div></div>
 <div class="card kpi"><div class="label">OR TERPILIH</div><div class="num" id="k-or">Semua</div></div>
 </div>
 
@@ -44,6 +44,8 @@ table{border-collapse:collapse;width:100%;min-width:900px}th,td{text-align:left;
 <section class="card"><h3>Sektor Utama</h3><div id="sector-bars"></div></section>
 </div>
 
+<section class="card wide"><h3>TKT Terverifikasi ≥ 6 per OR</h3><div id="ready-bars"></div>
+<p class="muted" style="margin:10px 0 0">Jumlah KI dengan TKT Terverifikasi minimal 6. Klik filter OR untuk melihat distribusi per organisasi riset.</p></section>
 <section class="card wide"><h3>Top KBLI 2025</h3><div id="kbli-bars"></div></section>
 
 <section class="card">
@@ -64,10 +66,12 @@ function render(){
  const rows=DATA.filter(r=>(!or||r.or===or)&&(!trl||String(r.trl)===trl)&&(!q||[r.judul_ki,r.nomor_ki,r.sektor_utama,...(r.kbli||[]).flatMap(k=>[k.kode,k.judul])].join(" ").toLowerCase().includes(q)));
  $("k-total").textContent=fmt(rows.length);
  $("k-trl").textContent=fmt(rows.filter(r=>r.trl!==null).length);
- $("k-ready").textContent=fmt(rows.filter(r=>Number(r.trl)>=6).length);
+ $("k-ready").textContent=fmt(rows.filter(r=>r.trl_6_plus===true).length);
  $("k-or").textContent=or||"Semua";
- bars("trl-bars",countBy(rows,r=>r.trl===null?"Belum ada":`TRL ${r.trl}`),10);
+ bars("trl-bars",countBy(rows,r=>r.trl===null?"Belum ada":`TKT ${r.trl}`),10);
  bars("sector-bars",countBy(rows,r=>r.sektor_utama),10);
+ const readyByOr=Object.entries(rows.reduce((m,r)=>{if(r.trl_6_plus)m[r.or]=(m[r.or]||0)+1;return m},{})).sort((a,b)=>b[1]-a[1]);
+ bars("ready-bars",readyByOr,5);
  const kb={}; rows.forEach(r=>(r.kbli||[]).forEach(k=>{const key=`${k.kode} — ${k.judul||""}`;kb[key]=(kb[key]||0)+1}));
  bars("kbli-bars",Object.entries(kb).sort((a,b)=>b[1]-a[1]),15);
  $("count").textContent=`${fmt(rows.length)} KI`;
