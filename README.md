@@ -24,3 +24,7 @@ For ORPP/ORHL, KBLI 46xxx / Perdagangan Besar is excluded.
 - Summary table uses TKT ranges 1–3, 4–6, 7–9.
 - TRL explanation uses readiness colors from low readiness (1) to highest readiness (9).
 - Detail KI pagination supports 10/20/50 rows per page.
+
+
+### Summary table scroll fix
+Removed sticky positioning from the TKT-per-OR summary header to prevent rows from rendering behind/above the header when the page is scrolled to this section.

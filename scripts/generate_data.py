@@ -16,8 +16,8 @@ INPUT = ROOT / "data" / "input"
 OUT = ROOT / "data.json"
 
 MASTER_CANDIDATES = [
-    INPUT / "KBLI_2025_Dashboard_Master_5OR_QA_Corrected.xlsx",
-    INPUT / "KBLI_2025_Dashboard_Master_5OR_FINAL_sector-clean.xlsx",
+    INPUT / "KBLI_2025_Dashboard_Master_5OR_QA_Corrected_RESTORED302.xlsx",
+    INPUT / "KBLI_2025_Dashboard_Master_5OR_QA_Corrected_RESTORED302.xlsx",
     INPUT / "KBLI_2025_Dashboard_Master_5OR_REVIEW_REANALYZED_FINAL.xlsx",
     INPUT / "master.xlsx",
 ]
