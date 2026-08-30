@@ -70,6 +70,7 @@ main{width:calc(100% - 220px);max-width:1560px;margin:auto;padding:18px 22px 28p
 <div class="tag tagb">DISTRIBUSI TRL PER KBLI (2 DIGIT)</div>
 <div id="trlkbli2Chart" class="summarychart" style="margin-top:10px"></div>
 <div class="chartlegend" id="trlkbli2Legend"></div>
+<div class="pagination"><span id="trlkbli2PageInfo"></span><span>Tampil <select id="trlkbli2PageSize"><option>5</option><option selected>8</option><option>10</option><option>20</option></select> <button id="trlkbli2Prev">‹</button> <button id="trlkbli2Next">›</button></span></div>
 <div class="summarynote">Panjang batang menunjukkan jumlah KI per kelompok KBLI. Hover segmen untuk detail TKT.</div>
 </section>
 
@@ -100,7 +101,7 @@ main{width:calc(100% - 220px);max-width:1560px;margin:auto;padding:18px 22px 28p
 </main></div>
 
 <script>
-let DATA=null,ALL=[],page=1,pageSize=10,kbli2Page=1,kbli2PageSize=8;
+let DATA=null,ALL=[],page=1,pageSize=10,kbli2Page=1,kbli2PageSize=8,trlkbli2Page=1,trlkbli2PageSize=8;
 const OR_COLORS=["#6b4be7","#16a86a","#f49a17","#2f80ed","#d84c9e"];
 const PIE=["#ef4545","#f49a17","#16a86a","#16a4b0","#2f80ed","#6b4be7"];
 const TRL_COLORS=["#ef4545","#f2665a","#f49a17","#f5b942","#e8d84a","#8bc34a","#16a86a","#2f80ed","#6b4be7"];
@@ -123,8 +124,11 @@ function setup(){
  $("kbli2PageSize").onchange=()=>{kbli2PageSize=+$("kbli2PageSize").value;kbli2Page=1;renderKBLI2(filtered())};
  $("kbli2Prev").onclick=()=>{if(kbli2Page>1){kbli2Page--;renderKBLI2(filtered())}};
  $("kbli2Next").onclick=()=>{const n=Math.max(1,Math.ceil(groupByKbli2(filtered()).length/kbli2PageSize));if(kbli2Page<n){kbli2Page++;renderKBLI2(filtered())}};
+ $("trlkbli2PageSize").onchange=()=>{trlkbli2PageSize=+$("trlkbli2PageSize").value;trlkbli2Page=1;renderTRLKBLI2(filtered())};
+ $("trlkbli2Prev").onclick=()=>{if(trlkbli2Page>1){trlkbli2Page--;renderTRLKBLI2(filtered())}};
+ $("trlkbli2Next").onclick=()=>{const n=Math.max(1,Math.ceil(groupByKbli2(filtered()).length/trlkbli2PageSize));if(trlkbli2Page<n){trlkbli2Page++;renderTRLKBLI2(filtered())}};
 }
-function reset(){page=1;kbli2Page=1;render();}
+function reset(){page=1;kbli2Page=1;trlkbli2Page=1;render();}
 function render(){
  const a=filtered(),n=a.length,n6=a.filter(r=>Number.isInteger(r.trl)&&r.trl>=6).length,n79=a.filter(r=>Number.isInteger(r.trl)&&r.trl>=7).length,n45=a.filter(r=>Number.isInteger(r.trl)&&r.trl>=4&&r.trl<=5).length,n13=a.filter(r=>Number.isInteger(r.trl)&&r.trl<=3).length;
  [["kTotal",n],["k6",n6],["k79",n79],["k45",n45],["k13",n13]].forEach(([i,v])=>$(i).textContent=v.toLocaleString("id-ID"));
@@ -172,12 +176,17 @@ function renderKBLI2(a){
 }
 function renderTRLKBLI2(a){
  const groups=groupByKbli2(a);
- let s=groups.map(g=>{
+ const pages=Math.max(1,Math.ceil(groups.length/trlkbli2PageSize));
+ if(trlkbli2Page>pages)trlkbli2Page=pages;
+ const st=(trlkbli2Page-1)*trlkbli2PageSize,en=Math.min(st+trlkbli2PageSize,groups.length),slice=groups.slice(st,en);
+ let s=slice.map(g=>{
    const segs=TRL_LEVELS.map((t,i)=>g.trl[t]?`<div class="seg" style="width:${g.count?100*g.trl[t]/g.count:0}%;background:${TRL_COLORS[i]}" data-tip="${g.label} (KBLI ${g.code}) · TKT ${t}: ${g.trl[t]} KI (${pct(g.trl[t],g.count)})">${g.trl[t]}</div>`:"").join("");
    return `<div class="kbli2bar"><div class="orname" title="${g.label} (KBLI ${g.code})">${g.label} <b>(${g.code})</b></div><div class="stack">${segs}</div><div class="ortotal">${g.count} KI</div></div>`;
  }).join("");
  $("trlkbli2Chart").innerHTML=s||`<div class="summarynote">Tidak ada data sesuai filter.</div>`;
  $("trlkbli2Legend").innerHTML=TRL_LEVELS.map((t,i)=>`<span><i class="legenddot" style="background:${TRL_COLORS[i]}"></i>TKT ${t}</span>`).join("");
+ $("trlkbli2PageInfo").textContent=groups.length?`Menampilkan ${st+1}–${en} dari ${groups.length} kelompok KBLI · Halaman ${trlkbli2Page}/${pages}`:"0 kelompok";
+ $("trlkbli2Prev").disabled=trlkbli2Page<=1;$("trlkbli2Next").disabled=trlkbli2Page>=pages;
  const tip=document.getElementById("summaryTooltip")||(()=>{const t=document.createElement("div");t.id="summaryTooltip";t.className="tooltip";document.body.appendChild(t);return t;})();
  document.querySelectorAll("#trlkbli2Chart .seg").forEach(el=>{
    el.addEventListener("mousemove",e=>{tip.textContent=el.dataset.tip;tip.style.left=(e.clientX+10)+"px";tip.style.top=(e.clientY+10)+"px";tip.classList.add("tip-on")});
