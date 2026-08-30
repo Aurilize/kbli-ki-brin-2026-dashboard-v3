@@ -63,7 +63,7 @@ main{width:calc(100% - 220px);max-width:1560px;margin:auto;padding:18px 22px 28p
 <div class="tag tagg">POTENSI SEKTOR PENGGUNA (KBLI)</div>
 <div id="kbli2Chart"></div>
 <div class="pagination"><span id="kbli2PageInfo"></span><span>Tampil <select id="kbli2PageSize"><option>5</option><option selected>8</option><option>10</option><option>20</option><option>25</option><option>50</option><option>100</option></select> <button id="kbli2Prev">‹</button> <button id="kbli2Next">›</button></span></div>
-<div class="note" style="margin-top:6px">Label diambil dari Sektor Utama terbanyak pada tiap kelompok KBLI 2 digit. Grafik mengikuti filter aktif.</div>
+<div class="note" style="margin-top:6px">Nama kelompok mengikuti nomenklatur resmi Golongan Pokok KBLI 2025 (BPS). Grafik mengikuti filter aktif.</div>
 </section>
 
 <section class="card panel summary" style="margin-bottom:12px">
@@ -110,6 +110,7 @@ const $=id=>document.getElementById(id);
 const pct=(n,d)=>d?((n/d)*100).toFixed(2)+"%":"0%";
 const kbli2=code=>(code||"").slice(0,2);
 const primaryKbli=r=>(r.kbli||[])[0];
+const GOLONGAN_POKOK={"01":"Pertanian Tanaman, Peternakan, Perburuan, dan Kegiatan Jasa Terkait","08":"Pertambangan dan Penggalian Lainnya","10":"Industri Makanan","11":"Industri Minuman","13":"Industri Tekstil","16":"Industri Kayu, Barang dari Kayu dan Gabus (Tidak Termasuk Furnitur); Industri Barang Anyaman dari Bambu, Rotan, dan Sejenisnya","19":"Industri Produk dari Batu Bara dan Pengilangan Minyak Bumi","20":"Industri Bahan Kimia dan Barang dari Bahan Kimia","21":"Industri Sediaan Farmasi, Obat Kimia, dan Obat Tradisional","22":"Industri Barang dari Karet dan Plastik","23":"Industri Produk Mineral Nonlogam","25":"Industri Produk Logam Pabrikasi Bukan Mesin dan Peralatannya","26":"Industri Produk Komputer, Elektronik, dan Optik","27":"Industri Peralatan Listrik","28":"Industri Mesin dan Perlengkapan YTDL","29":"Industri Kendaraan Bermotor, Trailer, dan Semitrailer","30":"Industri Alat Angkutan Lainnya","32":"Industri Produk Lainnya","35":"Penyediaan Listrik, Gas, Uap/Air Panas, dan Udara Dingin","37":"Pengelolaan Air Limbah","38":"Pengumpulan, Pengolahan dan Pembuangan Limbah atau Sampah; serta Aktivitas Pemulihan","39":"Aktivitas Remediasi dan Pengelolaan Limbah atau Sampah Lainnya","42":"Konstruksi Bangunan Sipil","43":"Konstruksi Khusus","61":"Telekomunikasi","62":"Aktivitas Pemrograman, Konsultansi Komputer, dan Aktivitas Terkait","63":"Aktivitas Jasa Infrastruktur Komputasi, Pengolahan Data, Hosting, dan Informasi Lainnya","71":"Aktivitas Arsitektural dan Enjinering; Pengujian dan Analisis Teknis","85":"Pendidikan"};
 
 function filtered(){
  const o=$("orFilter").value,t=$("trlFilter").value,q=$("search").value.trim().toLowerCase();
@@ -153,14 +154,12 @@ function groupByKbli2(a){
  const m={};
  a.forEach(r=>{
    const k=primaryKbli(r);const d2=k&&k.kode?kbli2(k.kode):null;if(!d2)return;
-   if(!m[d2])m[d2]={count:0,sectors:{},trl:{}};
+   if(!m[d2])m[d2]={count:0,trl:{}};
    m[d2].count++;
-   const sek=r.sektor_utama||"Sektor tidak diketahui";
-   m[d2].sectors[sek]=(m[d2].sectors[sek]||0)+1;
    if(Number.isInteger(r.trl))m[d2].trl[r.trl]=(m[d2].trl[r.trl]||0)+1;
  });
  return Object.entries(m).map(([code,v])=>{
-   const label=Object.entries(v.sectors).sort((x,y)=>y[1]-x[1])[0][0];
+   const label=GOLONGAN_POKOK[code]||"Golongan Pokok "+code;
    return {code,label,count:v.count,trl:v.trl};
  }).sort((x,y)=>x.code.localeCompare(y.code,undefined,{numeric:true}));
 }
