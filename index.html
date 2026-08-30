@@ -19,10 +19,11 @@ main{width:calc(100% - 220px);max-width:1560px;margin:auto;padding:18px 22px 28p
 .summary{margin-bottom:12px}.summarychart{display:flex;flex-direction:column;gap:12px}.orbar{display:grid;grid-template-columns:70px 1fr 65px;gap:10px;align-items:center}.orname{font-size:12px;font-weight:900}.stack{height:30px;border-radius:8px;overflow:hidden;display:flex;background:#edf1f6;box-shadow:inset 0 0 0 1px #e5e9f0}.seg{height:100%;display:flex;align-items:center;justify-content:center;min-width:0;font-size:10px;font-weight:900;color:#fff;transition:filter .15s,transform .15s;cursor:pointer}.seg:first-child{border-radius:8px 0 0 8px}.seg:last-child{border-radius:0 8px 8px 0}.seg:hover{filter:brightness(1.06);transform:translateY(-1px)}.seg.lowseg{background:#ef4545}.seg.midseg{background:#f49a17}.seg.highseg{background:#16a86a}.ortotal{text-align:right;font-size:11px;font-weight:900;color:#47546d}.chartlegend{display:flex;gap:18px;flex-wrap:wrap;font-size:11px;color:#59677f;margin-top:8px;padding-left:80px}.legenddot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px;vertical-align:-1px}.summarynote{font-size:10px;color:#6b7892;margin-top:4px}
 .trls{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.trl{border:1px solid var(--line);border-left:5px solid var(--c);border-radius:9px;padding:9px 10px;background:linear-gradient(90deg,var(--bg2),#fff)}.trl b{font-size:11px}.trl span{display:block;font-size:10px;color:var(--muted);margin-top:2px}.tlow{--c:#ef4545;--bg2:#fff2f2}.tmid{--c:#f49a17;--bg2:#fff8eb}.thigh{--c:#16a86a;--bg2:#effaf4}.tmax{--c:#6b4be7;--bg2:#f4f0ff}
 .detail{margin-top:12px}.tablewrap{overflow:auto}.detail table{width:100%;border-collapse:collapse;min-width:980px}.detail th,.detail td{padding:9px 8px;border-bottom:1px solid #edf0f5;text-align:left;font-size:11px;vertical-align:top}.detail th{background:#f7f8fc;position:sticky;top:0;z-index:2}.tkt{display:inline-block;padding:4px 7px;border-radius:6px;font-weight:900}.t6{background:#dff5e8;color:#0f7f4b}.t45{background:#fff0d7;color:#ad6900}.t13{background:#ffe0e0;color:#c23737}.pagination{display:flex;justify-content:space-between;align-items:center;margin-top:9px;font-size:11px;color:var(--muted)}.pagination button,.pagination select{background:#fff;border:1px solid #d3dae6;border-radius:7px;padding:6px 9px}.pagination button:disabled{opacity:.4}
-.trltable{width:100%;border-collapse:collapse;min-width:920px}.trltable th,.trltable td{padding:8px 6px;border-bottom:1px solid #edf0f5;text-align:center;font-size:11px}.trltable th{background:#f7f8fc;position:sticky;top:0;z-index:2;font-weight:900;color:#46536d}.trltable td:first-child,.trltable th:first-child{text-align:left;position:sticky;left:0;background:#fff}.trltable th:first-child{background:#f7f8fc;z-index:3}.trltable tbody tr:hover{background:#f7f9fd}.trltable td:last-child,.trltable th:last-child{font-weight:900}
+.kbli2bar{display:grid;grid-template-columns:230px 1fr 62px;gap:10px;align-items:center}.kbli2bar .orname{font-size:11px;font-weight:800;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tooltip{position:fixed;display:none;background:#17213a;color:#fff;font-size:11px;font-weight:800;padding:6px 9px;border-radius:7px;pointer-events:none;z-index:99;box-shadow:0 4px 14px #0003;max-width:260px}.tooltip.tip-on{display:block}
 .note{font-size:10px;color:var(--muted)}.error{margin-top:10px;color:#b42318;background:#fff1f1;border:1px solid #f2c2c2;padding:10px;border-radius:8px}
-@media(max-width:1100px){.kpis{grid-template-columns:repeat(3,1fr)}.grid2{grid-template-columns:1fr}.filters{grid-template-columns:1fr 1fr}.piewrap{grid-template-columns:1fr}.trls{grid-template-columns:1fr 1fr}}
-@media(max-width:720px){.layout{display:block}.sidebar{position:static;width:100%;height:auto}.nav{display:flex;overflow:auto}.nav a{white-space:nowrap}.sidebar .sidehint{display:none}main{width:100%;padding:14px}.header{display:block}.date{margin-top:9px}.filters{grid-template-columns:1fr}.kpis{grid-template-columns:1fr 1fr}.trls{grid-template-columns:1fr}.bars{gap:7px}.bar{width:38px}}
+@media(max-width:1100px){.kpis{grid-template-columns:repeat(3,1fr)}.grid2{grid-template-columns:1fr}.filters{grid-template-columns:1fr 1fr}.piewrap{grid-template-columns:1fr}.trls{grid-template-columns:1fr 1fr}.kbli2bar{grid-template-columns:150px 1fr 55px}}
+@media(max-width:720px){.layout{display:block}.sidebar{position:static;width:100%;height:auto}.nav{display:flex;overflow:auto}.nav a{white-space:nowrap}.sidebar .sidehint{display:none}main{width:100%;padding:14px}.header{display:block}.date{margin-top:9px}.filters{grid-template-columns:1fr}.kpis{grid-template-columns:1fr 1fr}.trls{grid-template-columns:1fr}.bars{gap:7px}.bar{width:38px}.kbli2bar{grid-template-columns:100px 1fr 45px}}
 </style>
 </head>
 <body>
@@ -61,13 +62,15 @@ main{width:calc(100% - 220px);max-width:1560px;margin:auto;padding:18px 22px 28p
 <section id="kbli2" class="card panel" style="margin-bottom:12px">
 <div class="tag tagg">DISTRIBUSI KI PER KBLI (2 DIGIT)</div>
 <div id="kbli2Chart"></div>
-<div class="note">2 digit diambil dari kode KBLI utama (peringkat pertama) tiap KI. Grafik mengikuti filter aktif.</div>
+<div class="pagination"><span id="kbli2PageInfo"></span><span>Tampil <select id="kbli2PageSize"><option>5</option><option selected>8</option><option>10</option><option>20</option></select> <button id="kbli2Prev">‹</button> <button id="kbli2Next">›</button></span></div>
+<div class="note" style="margin-top:6px">Label diambil dari Sektor Utama terbanyak pada tiap kelompok KBLI 2 digit. Grafik mengikuti filter aktif.</div>
 </section>
 
-<section class="card panel" style="margin-bottom:12px">
+<section class="card panel summary" style="margin-bottom:12px">
 <div class="tag tagb">DISTRIBUSI TRL PER KBLI (2 DIGIT)</div>
-<div class="tablewrap"><table class="trltable"><thead><tr id="trlkbli2Head"></tr></thead><tbody id="trlkbli2Rows"></tbody></table></div>
-<div class="note" style="margin-top:6px">Diurutkan berdasarkan jumlah KI terbanyak. Kolom N/A = KI tanpa TKT Terverifikasi.</div>
+<div id="trlkbli2Chart" class="summarychart" style="margin-top:10px"></div>
+<div class="chartlegend" id="trlkbli2Legend"></div>
+<div class="summarynote">Panjang batang menunjukkan jumlah KI per kelompok KBLI. Hover segmen untuk detail TKT.</div>
 </section>
 
 <section id="summary" class="card panel summary">
@@ -97,7 +100,7 @@ main{width:calc(100% - 220px);max-width:1560px;margin:auto;padding:18px 22px 28p
 </main></div>
 
 <script>
-let DATA=null,ALL=[],page=1,pageSize=10;
+let DATA=null,ALL=[],page=1,pageSize=10,kbli2Page=1,kbli2PageSize=8;
 const OR_COLORS=["#6b4be7","#16a86a","#f49a17","#2f80ed","#d84c9e"];
 const PIE=["#ef4545","#f49a17","#16a86a","#16a4b0","#2f80ed","#6b4be7"];
 const TRL_COLORS=["#ef4545","#f2665a","#f49a17","#f5b942","#e8d84a","#8bc34a","#16a86a","#2f80ed","#6b4be7"];
@@ -117,8 +120,11 @@ function setup(){
  $("orFilter").onchange=reset; $("trlFilter").onchange=reset; $("search").oninput=reset;
  $("pageSize").onchange=()=>{pageSize=+$("pageSize").value;page=1;renderDetail(filtered())};
  $("prev").onclick=()=>{if(page>1){page--;renderDetail(filtered())}};$("next").onclick=()=>{const n=Math.ceil(filtered().length/pageSize);if(page<n){page++;renderDetail(filtered())}};
+ $("kbli2PageSize").onchange=()=>{kbli2PageSize=+$("kbli2PageSize").value;kbli2Page=1;renderKBLI2(filtered())};
+ $("kbli2Prev").onclick=()=>{if(kbli2Page>1){kbli2Page--;renderKBLI2(filtered())}};
+ $("kbli2Next").onclick=()=>{const n=Math.max(1,Math.ceil(groupByKbli2(filtered()).length/kbli2PageSize));if(kbli2Page<n){kbli2Page++;renderKBLI2(filtered())}};
 }
-function reset(){page=1;render();}
+function reset(){page=1;kbli2Page=1;render();}
 function render(){
  const a=filtered(),n=a.length,n6=a.filter(r=>Number.isInteger(r.trl)&&r.trl>=6).length,n79=a.filter(r=>Number.isInteger(r.trl)&&r.trl>=7).length,n45=a.filter(r=>Number.isInteger(r.trl)&&r.trl>=4&&r.trl<=5).length,n13=a.filter(r=>Number.isInteger(r.trl)&&r.trl<=3).length;
  [["kTotal",n],["k6",n6],["k79",n79],["k45",n45],["k13",n13]].forEach(([i,v])=>$(i).textContent=v.toLocaleString("id-ID"));
@@ -139,27 +145,44 @@ function renderKBLI(a){
  const vals=Object.entries(m).sort((x,y)=>y[1]-x[1]).slice(0,10),mx=Math.max(1,...vals.map(v=>v[1]));
  $("kbliChart").innerHTML=vals.map(([k,v])=>`<div class="kblirow"><span class="kblilabel" title="${k}">${k}</span><div class="track"><div class="fill" style="width:${v/mx*100}%"></div></div><b class="kbliv">${v} (${pct(v,a.length)})</b></div>`).join("")||`<div class="empty">Tidak ada data KBLI sesuai filter.</div>`;
 }
-function renderKBLI2(a){
+function groupByKbli2(a){
  const m={};
- a.forEach(r=>{const k=primaryKbli(r);const d2=k&&k.kode?kbli2(k.kode):null;if(d2)m[d2]=(m[d2]||0)+1});
- const vals=Object.entries(m).sort((x,y)=>y[1]-x[1]),mx=Math.max(1,...vals.map(v=>v[1]));
- $("kbli2Chart").innerHTML=vals.map(([k,v])=>`<div class="kblirow"><span class="kblilabel" title="KBLI ${k}xxx">KBLI ${k}</span><div class="track"><div class="fill" style="width:${v/mx*100}%"></div></div><b class="kbliv">${v} (${pct(v,a.length)})</b></div>`).join("")||`<div class="empty">Tidak ada data KBLI sesuai filter.</div>`;
-}
-function renderTRLKBLI2(a){
- const groups={};
  a.forEach(r=>{
    const k=primaryKbli(r);const d2=k&&k.kode?kbli2(k.kode):null;if(!d2)return;
-   if(!groups[d2])groups[d2]={total:0,trl:{}};
-   groups[d2].total++;
-   if(Number.isInteger(r.trl))groups[d2].trl[r.trl]=(groups[d2].trl[r.trl]||0)+1;
-   else groups[d2].na=(groups[d2].na||0)+1;
+   if(!m[d2])m[d2]={count:0,sectors:{},trl:{}};
+   m[d2].count++;
+   const sek=r.sektor_utama||"Sektor tidak diketahui";
+   m[d2].sectors[sek]=(m[d2].sectors[sek]||0)+1;
+   if(Number.isInteger(r.trl))m[d2].trl[r.trl]=(m[d2].trl[r.trl]||0)+1;
  });
- const rows=Object.entries(groups).sort((x,y)=>y[1].total-x[1].total);
- $("trlkbli2Head").innerHTML=`<th>KBLI</th>`+TRL_LEVELS.map(t=>`<th>TKT ${t}</th>`).join("")+`<th>N/A</th><th>Total</th>`;
- $("trlkbli2Rows").innerHTML=rows.map(([k,g])=>{
-   const cells=TRL_LEVELS.map(t=>`<td>${g.trl[t]||0}</td>`).join("");
-   return `<tr><td><b>KBLI ${k}</b></td>${cells}<td>${g.na||0}</td><td>${g.total}</td></tr>`;
- }).join("")||`<tr><td colspan="${TRL_LEVELS.length+3}" class="empty">Tidak ada data.</td></tr>`;
+ return Object.entries(m).map(([code,v])=>{
+   const label=Object.entries(v.sectors).sort((x,y)=>y[1]-x[1])[0][0];
+   return {code,label,count:v.count,trl:v.trl};
+ }).sort((x,y)=>y.count-x.count);
+}
+function renderKBLI2(a){
+ const vals=groupByKbli2(a),total=a.length;
+ const pages=Math.max(1,Math.ceil(vals.length/kbli2PageSize));
+ if(kbli2Page>pages)kbli2Page=pages;
+ const st=(kbli2Page-1)*kbli2PageSize,en=Math.min(st+kbli2PageSize,vals.length),slice=vals.slice(st,en);
+ const mx=Math.max(1,...vals.map(v=>v.count));
+ $("kbli2Chart").innerHTML=slice.map(v=>`<div class="kblirow"><span class="kblilabel" title="${v.label} (KBLI ${v.code})">${v.label} <b>(KBLI ${v.code})</b></span><div class="track"><div class="fill" style="width:${v.count/mx*100}%"></div></div><b class="kbliv">${v.count} (${pct(v.count,total)})</b></div>`).join("")||`<div class="empty">Tidak ada data KBLI sesuai filter.</div>`;
+ $("kbli2PageInfo").textContent=vals.length?`Menampilkan ${st+1}–${en} dari ${vals.length} kelompok KBLI · Halaman ${kbli2Page}/${pages}`:"0 kelompok";
+ $("kbli2Prev").disabled=kbli2Page<=1;$("kbli2Next").disabled=kbli2Page>=pages;
+}
+function renderTRLKBLI2(a){
+ const groups=groupByKbli2(a);
+ let s=groups.map(g=>{
+   const segs=TRL_LEVELS.map((t,i)=>g.trl[t]?`<div class="seg" style="width:${g.count?100*g.trl[t]/g.count:0}%;background:${TRL_COLORS[i]}" data-tip="${g.label} (KBLI ${g.code}) · TKT ${t}: ${g.trl[t]} KI (${pct(g.trl[t],g.count)})">${g.trl[t]}</div>`:"").join("");
+   return `<div class="kbli2bar"><div class="orname" title="${g.label} (KBLI ${g.code})">${g.label} <b>(${g.code})</b></div><div class="stack">${segs}</div><div class="ortotal">${g.count} KI</div></div>`;
+ }).join("");
+ $("trlkbli2Chart").innerHTML=s||`<div class="summarynote">Tidak ada data sesuai filter.</div>`;
+ $("trlkbli2Legend").innerHTML=TRL_LEVELS.map((t,i)=>`<span><i class="legenddot" style="background:${TRL_COLORS[i]}"></i>TKT ${t}</span>`).join("");
+ const tip=document.getElementById("summaryTooltip")||(()=>{const t=document.createElement("div");t.id="summaryTooltip";t.className="tooltip";document.body.appendChild(t);return t;})();
+ document.querySelectorAll("#trlkbli2Chart .seg").forEach(el=>{
+   el.addEventListener("mousemove",e=>{tip.textContent=el.dataset.tip;tip.style.left=(e.clientX+10)+"px";tip.style.top=(e.clientY+10)+"px";tip.classList.add("tip-on")});
+   el.addEventListener("mouseleave",()=>tip.classList.remove("tip-on"));
+ });
 }
 function chip(n,total,cls){return `<span class="chip ${cls}">${n}<br><small>${pct(n,total)}</small></span>`}
 function renderSummary(a){
