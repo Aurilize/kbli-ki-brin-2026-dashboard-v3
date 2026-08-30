@@ -1,0 +1,19 @@
+{
+  "dashboard_embedded_records": 295,
+  "old_data_json_records": 247,
+  "old_data_json_or_counts": {
+    "OREI": 53,
+    "OREM": 59,
+    "ORNM": 135
+  },
+  "embedded_or_counts": {
+    "OREI": 53,
+    "OREM": 59,
+    "ORHL": 34,
+    "ORNM": 135,
+    "ORPP": 14
+  },
+  "records_missing_from_old_data_json": 46,
+  "null_kbli_titles_filled": 60,
+  "null_kbli_title_entries_remaining": 0
+}

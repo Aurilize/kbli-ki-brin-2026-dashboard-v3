@@ -24,3 +24,7 @@ For ORPP/ORHL, KBLI 46xxx / Perdagangan Besar is excluded.
 - Summary table uses TKT ranges 1–3, 4–6, 7–9.
 - TRL explanation uses readiness colors from low readiness (1) to highest readiness (9).
 - Detail KI pagination supports 10/20/50 rows per page.
+
+
+## Data synchronization fix
+The dashboard now loads `data.json` at runtime instead of embedding a separate copy in `index.html`. This prevents KBLI title mismatches between the visible dashboard and the standalone JSON. Missing KBLI titles in the current 295-record dashboard dataset were backfilled from `kbli_2025_combined (1).json`.
