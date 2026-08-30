@@ -19,6 +19,7 @@ main{width:calc(100% - 220px);max-width:1560px;margin:auto;padding:18px 22px 28p
 .summary{margin-bottom:12px}.summarychart{display:flex;flex-direction:column;gap:12px}.orbar{display:grid;grid-template-columns:70px 1fr 65px;gap:10px;align-items:center}.orname{font-size:12px;font-weight:900}.stack{height:30px;border-radius:8px;overflow:hidden;display:flex;background:#edf1f6;box-shadow:inset 0 0 0 1px #e5e9f0}.seg{height:100%;display:flex;align-items:center;justify-content:center;min-width:0;font-size:10px;font-weight:900;color:#fff;transition:filter .15s,transform .15s;cursor:pointer}.seg:first-child{border-radius:8px 0 0 8px}.seg:last-child{border-radius:0 8px 8px 0}.seg:hover{filter:brightness(1.06);transform:translateY(-1px)}.seg.lowseg{background:#ef4545}.seg.midseg{background:#f49a17}.seg.highseg{background:#16a86a}.ortotal{text-align:right;font-size:11px;font-weight:900;color:#47546d}.chartlegend{display:flex;gap:18px;flex-wrap:wrap;font-size:11px;color:#59677f;margin-top:8px;padding-left:80px}.legenddot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px;vertical-align:-1px}.summarynote{font-size:10px;color:#6b7892;margin-top:4px}
 .trls{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.trl{border:1px solid var(--line);border-left:5px solid var(--c);border-radius:9px;padding:9px 10px;background:linear-gradient(90deg,var(--bg2),#fff)}.trl b{font-size:11px}.trl span{display:block;font-size:10px;color:var(--muted);margin-top:2px}.tlow{--c:#ef4545;--bg2:#fff2f2}.tmid{--c:#f49a17;--bg2:#fff8eb}.thigh{--c:#16a86a;--bg2:#effaf4}.tmax{--c:#6b4be7;--bg2:#f4f0ff}
 .detail{margin-top:12px}.tablewrap{overflow:auto}.detail table{width:100%;border-collapse:collapse;min-width:980px}.detail th,.detail td{padding:9px 8px;border-bottom:1px solid #edf0f5;text-align:left;font-size:11px;vertical-align:top}.detail th{background:#f7f8fc;position:sticky;top:0;z-index:2}.tkt{display:inline-block;padding:4px 7px;border-radius:6px;font-weight:900}.t6{background:#dff5e8;color:#0f7f4b}.t45{background:#fff0d7;color:#ad6900}.t13{background:#ffe0e0;color:#c23737}.pagination{display:flex;justify-content:space-between;align-items:center;margin-top:9px;font-size:11px;color:var(--muted)}.pagination button,.pagination select{background:#fff;border:1px solid #d3dae6;border-radius:7px;padding:6px 9px}.pagination button:disabled{opacity:.4}
+.trltable{width:100%;border-collapse:collapse;min-width:920px}.trltable th,.trltable td{padding:8px 6px;border-bottom:1px solid #edf0f5;text-align:center;font-size:11px}.trltable th{background:#f7f8fc;position:sticky;top:0;z-index:2;font-weight:900;color:#46536d}.trltable td:first-child,.trltable th:first-child{text-align:left;position:sticky;left:0;background:#fff}.trltable th:first-child{background:#f7f8fc;z-index:3}.trltable tbody tr:hover{background:#f7f9fd}.trltable td:last-child,.trltable th:last-child{font-weight:900}
 .note{font-size:10px;color:var(--muted)}.error{margin-top:10px;color:#b42318;background:#fff1f1;border:1px solid #f2c2c2;padding:10px;border-radius:8px}
 @media(max-width:1100px){.kpis{grid-template-columns:repeat(3,1fr)}.grid2{grid-template-columns:1fr}.filters{grid-template-columns:1fr 1fr}.piewrap{grid-template-columns:1fr}.trls{grid-template-columns:1fr 1fr}}
 @media(max-width:720px){.layout{display:block}.sidebar{position:static;width:100%;height:auto}.nav{display:flex;overflow:auto}.nav a{white-space:nowrap}.sidebar .sidehint{display:none}main{width:100%;padding:14px}.header{display:block}.date{margin-top:9px}.filters{grid-template-columns:1fr}.kpis{grid-template-columns:1fr 1fr}.trls{grid-template-columns:1fr}.bars{gap:7px}.bar{width:38px}}
@@ -28,7 +29,7 @@ main{width:calc(100% - 220px);max-width:1560px;margin:auto;padding:18px 22px 28p
 <div class="layout">
 <aside class="sidebar">
 <div class="logo"><img src="assets/BRIN_logo_cropped.png" alt="BRIN"></div>
-<nav class="nav"><a class="active" href="#top">Ringkasan</a><a href="#tkt">Distribusi TKT</a><a href="#kbli">KBLI 2025</a><a href="#summary">Per OR</a><a href="#detail">Detail KI</a></nav>
+<nav class="nav"><a class="active" href="#top">Ringkasan</a><a href="#tkt">Distribusi TKT</a><a href="#kbli">KBLI 2025</a><a href="#kbli2">KBLI 2 Digit</a><a href="#summary">Per OR</a><a href="#detail">Detail KI</a></nav>
 <div class="sidehint"><b>TKT / TRL</b><br>TRL pada dashboard menggunakan nilai <b>TKT Terverifikasi</b>.</div>
 </aside>
 <main id="top">
@@ -57,14 +58,22 @@ main{width:calc(100% - 220px);max-width:1560px;margin:auto;padding:18px 22px 28p
 <section id="kbli" class="card panel"><div class="tag tagg">STATISTIK KBLI 2025</div><div id="kbliChart"></div></section>
 </div>
 
+<section id="kbli2" class="card panel" style="margin-bottom:12px">
+<div class="tag tagg">DISTRIBUSI KI PER KBLI (2 DIGIT)</div>
+<div id="kbli2Chart"></div>
+<div class="note">2 digit diambil dari kode KBLI utama (peringkat pertama) tiap KI. Grafik mengikuti filter aktif.</div>
+</section>
+
+<section class="card panel" style="margin-bottom:12px">
+<div class="tag tagb">DISTRIBUSI TRL PER KBLI (2 DIGIT)</div>
+<div class="tablewrap"><table class="trltable"><thead><tr id="trlkbli2Head"></tr></thead><tbody id="trlkbli2Rows"></tbody></table></div>
+<div class="note" style="margin-top:6px">Diurutkan berdasarkan jumlah KI terbanyak. Kolom N/A = KI tanpa TKT Terverifikasi.</div>
+</section>
+
 <section id="summary" class="card panel summary">
 <h3 style="margin:0 0 10px">RINGKASAN KI BERDASARKAN TKT PER OR</h3>
 <div id="summaryChart" class="summarychart"></div>
-<div class="chartlegend">
-<span><i class="legenddot" style="background:#ef4545"></i>TKT 1–3</span>
-<span><i class="legenddot" style="background:#f49a17"></i>TKT 4–6</span>
-<span><i class="legenddot" style="background:#16a86a"></i>TKT 7–9</span>
-</div>
+<div class="chartlegend" id="summaryLegend"></div>
 <div class="summarynote">Panjang batang menunjukkan jumlah KI. Hover segmen untuk melihat jumlah dan persentase.</div>
 </section>
 
@@ -91,8 +100,12 @@ main{width:calc(100% - 220px);max-width:1560px;margin:auto;padding:18px 22px 28p
 let DATA=null,ALL=[],page=1,pageSize=10;
 const OR_COLORS=["#6b4be7","#16a86a","#f49a17","#2f80ed","#d84c9e"];
 const PIE=["#ef4545","#f49a17","#16a86a","#16a4b0","#2f80ed","#6b4be7"];
+const TRL_COLORS=["#ef4545","#f2665a","#f49a17","#f5b942","#e8d84a","#8bc34a","#16a86a","#2f80ed","#6b4be7"];
+const TRL_LEVELS=[1,2,3,4,5,6,7,8,9];
 const $=id=>document.getElementById(id);
 const pct=(n,d)=>d?((n/d)*100).toFixed(2)+"%":"0%";
+const kbli2=code=>(code||"").slice(0,2);
+const primaryKbli=r=>(r.kbli||[])[0];
 
 function filtered(){
  const o=$("orFilter").value,t=$("trlFilter").value,q=$("search").value.trim().toLowerCase();
@@ -110,7 +123,7 @@ function render(){
  const a=filtered(),n=a.length,n6=a.filter(r=>Number.isInteger(r.trl)&&r.trl>=6).length,n79=a.filter(r=>Number.isInteger(r.trl)&&r.trl>=7).length,n45=a.filter(r=>Number.isInteger(r.trl)&&r.trl>=4&&r.trl<=5).length,n13=a.filter(r=>Number.isInteger(r.trl)&&r.trl<=3).length;
  [["kTotal",n],["k6",n6],["k79",n79],["k45",n45],["k13",n13]].forEach(([i,v])=>$(i).textContent=v.toLocaleString("id-ID"));
  [["p6",n6],["p79",n79],["p45",n45],["p13",n13]].forEach(([i,v])=>$(i).textContent=pct(v,n));
- renderPie(a);renderOR(a);renderKBLI(a);renderSummary(a);renderDetail(a);
+ renderPie(a);renderOR(a);renderKBLI(a);renderKBLI2(a);renderTRLKBLI2(a);renderSummary(a);renderDetail(a);
 }
 function renderPie(a){
  const n=a.length,vals=[[1,3,"1–3"],[4,5,"4–5"],[6,6,"6"],[7,7,"7"],[8,8,"8"],[9,9,"9"]].map(([lo,hi,l])=>[l,a.filter(r=>Number.isInteger(r.trl)&&r.trl>=lo&&r.trl<=hi).length]);
@@ -126,31 +139,48 @@ function renderKBLI(a){
  const vals=Object.entries(m).sort((x,y)=>y[1]-x[1]).slice(0,10),mx=Math.max(1,...vals.map(v=>v[1]));
  $("kbliChart").innerHTML=vals.map(([k,v])=>`<div class="kblirow"><span class="kblilabel" title="${k}">${k}</span><div class="track"><div class="fill" style="width:${v/mx*100}%"></div></div><b class="kbliv">${v} (${pct(v,a.length)})</b></div>`).join("")||`<div class="empty">Tidak ada data KBLI sesuai filter.</div>`;
 }
+function renderKBLI2(a){
+ const m={};
+ a.forEach(r=>{const k=primaryKbli(r);const d2=k&&k.kode?kbli2(k.kode):null;if(d2)m[d2]=(m[d2]||0)+1});
+ const vals=Object.entries(m).sort((x,y)=>y[1]-x[1]),mx=Math.max(1,...vals.map(v=>v[1]));
+ $("kbli2Chart").innerHTML=vals.map(([k,v])=>`<div class="kblirow"><span class="kblilabel" title="KBLI ${k}xxx">KBLI ${k}</span><div class="track"><div class="fill" style="width:${v/mx*100}%"></div></div><b class="kbliv">${v} (${pct(v,a.length)})</b></div>`).join("")||`<div class="empty">Tidak ada data KBLI sesuai filter.</div>`;
+}
+function renderTRLKBLI2(a){
+ const groups={};
+ a.forEach(r=>{
+   const k=primaryKbli(r);const d2=k&&k.kode?kbli2(k.kode):null;if(!d2)return;
+   if(!groups[d2])groups[d2]={total:0,trl:{}};
+   groups[d2].total++;
+   if(Number.isInteger(r.trl))groups[d2].trl[r.trl]=(groups[d2].trl[r.trl]||0)+1;
+   else groups[d2].na=(groups[d2].na||0)+1;
+ });
+ const rows=Object.entries(groups).sort((x,y)=>y[1].total-x[1].total);
+ $("trlkbli2Head").innerHTML=`<th>KBLI</th>`+TRL_LEVELS.map(t=>`<th>TKT ${t}</th>`).join("")+`<th>N/A</th><th>Total</th>`;
+ $("trlkbli2Rows").innerHTML=rows.map(([k,g])=>{
+   const cells=TRL_LEVELS.map(t=>`<td>${g.trl[t]||0}</td>`).join("");
+   return `<tr><td><b>KBLI ${k}</b></td>${cells}<td>${g.na||0}</td><td>${g.total}</td></tr>`;
+ }).join("")||`<tr><td colspan="${TRL_LEVELS.length+3}" class="empty">Tidak ada data.</td></tr>`;
+}
 function chip(n,total,cls){return `<span class="chip ${cls}">${n}<br><small>${pct(n,total)}</small></span>`}
 function renderSummary(a){
  const os=[...new Set(ALL.map(r=>r.or).filter(Boolean))].sort();
  const rows=os.map(o=>{
    const x=a.filter(r=>r.or===o),n=x.length;
-   const l=x.filter(r=>Number.isInteger(r.trl)&&r.trl>=1&&r.trl<=3).length;
-   const m=x.filter(r=>Number.isInteger(r.trl)&&r.trl>=4&&r.trl<=6).length;
-   const hi=x.filter(r=>Number.isInteger(r.trl)&&r.trl>=7&&r.trl<=9).length;
-   return {o,n,l,m,hi};
+   const counts=TRL_LEVELS.map(t=>x.filter(r=>r.trl===t).length);
+   return {o,n,counts};
  });
  let s=rows.map(r=>{
-   const wl=r.n?100*r.l/r.n:0, wm=r.n?100*r.m/r.n:0, wh=r.n?100*r.hi/r.n:0;
-   return `<div class="orbar"><div class="orname">${r.o}</div><div class="stack">
-   ${r.l?`<div class="seg lowseg" style="width:${wl}%" data-tip="${r.o} · TKT 1–3: ${r.l} KI (${pct(r.l,r.n)})">${r.l}</div>`:""}
-   ${r.m?`<div class="seg midseg" style="width:${wm}%" data-tip="${r.o} · TKT 4–6: ${r.m} KI (${pct(r.m,r.n)})">${r.m}</div>`:""}
-   ${r.hi?`<div class="seg highseg" style="width:${wh}%" data-tip="${r.o} · TKT 7–9: ${r.hi} KI (${pct(r.hi,r.n)})">${r.hi}</div>`:""}
-   </div><div class="ortotal">${r.n} KI</div></div>`;
+   const segs=TRL_LEVELS.map((t,i)=>r.counts[i]?`<div class="seg" style="width:${r.n?100*r.counts[i]/r.n:0}%;background:${TRL_COLORS[i]}" data-tip="${r.o} · TKT ${t}: ${r.counts[i]} KI (${pct(r.counts[i],r.n)})">${r.counts[i]}</div>`:"").join("");
+   return `<div class="orbar"><div class="orname">${r.o}</div><div class="stack">${segs}</div><div class="ortotal">${r.n} KI</div></div>`;
  }).join("");
- const n=a.length,l=a.filter(r=>Number.isInteger(r.trl)&&r.trl>=1&&r.trl<=3).length,m=a.filter(r=>Number.isInteger(r.trl)&&r.trl>=4&&r.trl<=6).length,hi=a.filter(r=>Number.isInteger(r.trl)&&r.trl>=7&&r.trl<=9).length;
- if(n) s+=`<div class="orbar" style="padding-top:10px;border-top:1px solid #e8ecf2"><div class="orname">TOTAL</div><div class="stack">
- ${l?`<div class="seg lowseg" style="width:${l/n*100}%" data-tip="TOTAL · TKT 1–3: ${l} KI (${pct(l,n)})">${l}</div>`:""}
- ${m?`<div class="seg midseg" style="width:${m/n*100}%" data-tip="TOTAL · TKT 4–6: ${m} KI (${pct(m,n)})">${m}</div>`:""}
- ${hi?`<div class="seg highseg" style="width:${hi/n*100}%" data-tip="TOTAL · TKT 7–9: ${hi} KI (${pct(hi,n)})">${hi}</div>`:""}
- </div><div class="ortotal">${n} KI</div></div>`;
+ const n=a.length;
+ const totalCounts=TRL_LEVELS.map(t=>a.filter(r=>r.trl===t).length);
+ if(n){
+   const segs=TRL_LEVELS.map((t,i)=>totalCounts[i]?`<div class="seg" style="width:${totalCounts[i]/n*100}%;background:${TRL_COLORS[i]}" data-tip="TOTAL · TKT ${t}: ${totalCounts[i]} KI (${pct(totalCounts[i],n)})">${totalCounts[i]}</div>`:"").join("");
+   s+=`<div class="orbar" style="padding-top:10px;border-top:1px solid #e8ecf2"><div class="orname">TOTAL</div><div class="stack">${segs}</div><div class="ortotal">${n} KI</div></div>`;
+ }
  $("summaryChart").innerHTML=s||`<div class="summarynote">Tidak ada data sesuai filter.</div>`;
+ $("summaryLegend").innerHTML=TRL_LEVELS.map((t,i)=>`<span><i class="legenddot" style="background:${TRL_COLORS[i]}"></i>TKT ${t}</span>`).join("");
  const tip=document.getElementById("summaryTooltip")||(()=>{const t=document.createElement("div");t.id="summaryTooltip";t.className="tooltip";document.body.appendChild(t);return t;})();
  document.querySelectorAll("#summaryChart .seg").forEach(el=>{
    el.addEventListener("mousemove",e=>{tip.textContent=el.dataset.tip;tip.style.left=(e.clientX+10)+"px";tip.style.top=(e.clientY+10)+"px";tip.classList.add("tip-on")});
