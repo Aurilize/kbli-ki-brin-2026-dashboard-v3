@@ -135,7 +135,8 @@ async function init(){
  try{
    const res=await fetch("data.json?ts="+Date.now(),{cache:"no-store"});
    if(!res.ok) throw new Error("data.json gagal dimuat ("+res.status+")");
-   DATA=await res.json();ALL=DATA.records||[];
+   DATA=await res.json();ALL=Array.isArray(DATA.records)?DATA.records:[];
+   if(!ALL.length) throw new Error("data.json tidak berisi record.");
    setup();$("date").textContent=new Date().toLocaleDateString("id-ID",{year:"numeric",month:"long",day:"numeric"});render();
  }catch(e){$("error").style.display="block";$("error").textContent="Gagal memuat data dashboard: "+e.message}
 }

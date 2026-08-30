@@ -111,12 +111,9 @@ def main():
             "justifikasi": clean(r["Justifikasi"]),
         })
 
-    # Deduplicate on OR + KI number/title, retaining the last row (latest adjustment).
-    dedup = {}
-    for row in rows:
-        key = (row["or"], row["nomor_ki"] or row["judul_ki"].casefold())
-        dedup[key] = row
-    rows = list(dedup.values())
+    # Do not deduplicate here. The master workbook is the authoritative row-level source.
+    # Some KI legitimately share a placeholder number (e.g. "Sedang proses"),
+    # and some records may carry the same registration number with distinct titles.
 
     for row in rows:
         row["trl_6_plus"] = isinstance(row["trl"], int) and row["trl"] >= 6
