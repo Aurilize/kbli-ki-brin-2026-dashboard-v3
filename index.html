@@ -60,7 +60,7 @@ main{width:calc(100% - 220px);max-width:1560px;margin:auto;padding:18px 22px 28p
 </div>
 
 <section id="kbli2" class="card panel" style="margin-bottom:12px">
-<div class="tag tagg">DISTRIBUSI KI PER KBLI (2 DIGIT)</div>
+<div class="tag tagg">POTENSI SEKTOR PENGGUNA (KBLI)</div>
 <div id="kbli2Chart"></div>
 <div class="pagination"><span id="kbli2PageInfo"></span><span>Tampil <select id="kbli2PageSize"><option>5</option><option selected>8</option><option>10</option><option>20</option></select> <button id="kbli2Prev">‹</button> <button id="kbli2Next">›</button></span></div>
 <div class="note" style="margin-top:6px">Label diambil dari Sektor Utama terbanyak pada tiap kelompok KBLI 2 digit. Grafik mengikuti filter aktif.</div>
@@ -162,7 +162,7 @@ function groupByKbli2(a){
  return Object.entries(m).map(([code,v])=>{
    const label=Object.entries(v.sectors).sort((x,y)=>y[1]-x[1])[0][0];
    return {code,label,count:v.count,trl:v.trl};
- }).sort((x,y)=>y.count-x.count);
+ }).sort((x,y)=>x.code.localeCompare(y.code,undefined,{numeric:true}));
 }
 function renderKBLI2(a){
  const vals=groupByKbli2(a),total=a.length;
