@@ -207,7 +207,7 @@ function renderKBLI2(a){
  if(kbli2Page>pages)kbli2Page=pages;
  const st=(kbli2Page-1)*kbli2PageSize,en=Math.min(st+kbli2PageSize,vals.length),slice=vals.slice(st,en);
  const mx=Math.max(1,...vals.map(v=>v.count));
- $("kbli2Chart").innerHTML=slice.map(v=>`<div class="kblirow"><span class="kblilabel" title="${v.label} (KBLI ${v.code})">${v.label} <b>(KBLI ${v.code})</b></span><div class="track"><div class="fill" style="width:${v.count/mx*100}%"></div></div><b class="kbliv">${v.count} (${pct(v.count,total)})</b></div>`).join("")||`<div class="empty">Tidak ada data KBLI sesuai filter.</div>`;
+ $("kbli2Chart").innerHTML=slice.map(v=>`<div class="kblirow"><span class="kblilabel" title="${v.label} (KBLI ${v.code})">${v.label} <b>(${v.code}) ${v.label} </b></span><div class="track"><div class="fill" style="width:${v.count/mx*100}%"></div></div><b class="kbliv">${v.count} (${pct(v.count,total)})</b></div>`).join("")||`<div class="empty">Tidak ada data KBLI sesuai filter.</div>`;
  $("kbli2PageInfo").textContent=vals.length?`Menampilkan ${st+1}–${en} dari ${vals.length} kelompok KBLI · Halaman ${kbli2Page}/${pages}`:"0 kelompok";
  $("kbli2Prev").disabled=kbli2Page<=1;$("kbli2Next").disabled=kbli2Page>=pages;
 }
