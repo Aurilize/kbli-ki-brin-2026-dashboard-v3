@@ -142,8 +142,7 @@ function renderPie(a){
  const n=a.length;
  const vals=Array.from({length:9},(_,i)=>{const t=i+1;return [t,a.filter(r=>r.trl===t).length]});
  const mx=Math.max(1,...vals.map(v=>v[1]));
- const colors=vals.map(([t])=>t<=3?"#ef4545":t<=5?"#f49a17":t===6?"#16a86a":t<=8?"#16a4b0":"#6b4be7");
- $("donut").innerHTML=vals.map(([t,count],i)=>{
+ $("donut").innerHTML=vals.map(([t,count])=>{
    const cls=t<=3?"tkt-low":t<=5?"tkt-mid":t===6?"tkt-six":t<=8?"tkt-high":"tkt-max";
    return `<div class="tkt-row"><div class="tkt-row-label">TKT ${t}</div><div class="tkt-row-track"><div class="tkt-row-fill ${cls}" style="width:${count/mx*100}%" data-tip="TKT ${t}: ${count} KI (${pct(count,n)})">${count||""}</div></div><div class="tkt-row-value">${count} KI · ${pct(count,n)}</div></div>`;
  }).join("");
