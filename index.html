@@ -167,7 +167,7 @@ function renderOR(a){
  vals.forEach((v,i)=>{const p=v[1]/denom*100;parts.push(`${colors[i]} ${cur}% ${cur+p}%`);cur+=p});
  $("orPie").style.background=`conic-gradient(${parts.join(",")})`;
  $("orPie").title=`Total KI TKT ≥ 6: ${denom}`;
- $("orChart").innerHTML=vals.map((v,i)=>`<div class="legendrow"><span class="sw" style="background:${colors[i]}"></span><span>${v[0]}</span><b>${v[1]}</b><small>${pct(v[1],denom)}</small></div>`).join("")+`<div class="totalbar"><span>TOTAL TKT ≥ 6</span><span>${denom} · 100%</span></div>`;
+ $("orChart").innerHTML=vals.map((v,i)=>`<div class="legendrow"><span class="sw" style="background:${colors[i]}"></span><span>${v[0]}</span><b>${v[1]}</b><small>${pct(v[1],denom)}</small></div>`).join("")+`<div class="totalbar"></div>`;
  const tip=document.getElementById("summaryTooltip")||(()=>{const t=document.createElement("div");t.id="summaryTooltip";t.className="tooltip";document.body.appendChild(t);return t;})();
  const pie=$("orPie");
  pie.onmousemove=e=>{const rect=pie.getBoundingClientRect(),x=e.clientX-(rect.left+rect.width/2),y=e.clientY-(rect.top+rect.height/2);let deg=(Math.atan2(y,x)*180/Math.PI+450)%360;const target=deg/360*denom;let acc=0,chosen=null;for(let i=0;i<vals.length;i++){acc+=vals[i][1];if(target<=acc){chosen=vals[i];break}}if(chosen){tip.textContent=`${chosen[0]} — TKT ≥ 6: ${chosen[1]} KI (${pct(chosen[1],denom)})`;tip.style.left=(e.clientX+10)+"px";tip.style.top=(e.clientY+10)+"px";tip.classList.add("tip-on")}};
