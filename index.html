@@ -14,6 +14,7 @@ main{width:calc(100% - 220px);max-width:1560px;margin:auto;padding:18px 22px 28p
 .panel{padding:15px}.tag{display:inline-block;color:#fff;border-radius:9px 9px 9px 0;padding:7px 11px;font-size:12px;font-weight:900;margin-bottom:10px}.tagp{background:linear-gradient(90deg,#7a54e7,#6445ce)}.tagb{background:linear-gradient(90deg,#2f82ef,#4860d7)}.tagg{background:linear-gradient(90deg,#17a86a,#22b97a)}
 .grid2{display:grid;grid-template-columns:1.18fr .82fr;gap:12px;margin-bottom:12px}
 .piewrap{display:grid;grid-template-columns:minmax(260px,1fr) minmax(240px,1fr);gap:14px;align-items:center}.donut{width:285px;height:285px;border-radius:50%;margin:auto;box-shadow:0 8px 20px #18305417}.legendrow{display:grid;grid-template-columns:12px 1fr 45px 62px;gap:8px;padding:8px 4px;border-bottom:1px solid #eef1f5;align-items:center;font-size:12px}.sw{width:10px;height:10px;border-radius:50%}.legendrow b{text-align:right}.legendrow small{text-align:right;color:var(--muted)}.totalbar{margin-top:8px;background:linear-gradient(90deg,#6f4ae7,#5636d0);color:white;border-radius:8px;padding:8px 10px;display:flex;justify-content:space-between;font-weight:900;font-size:12px}
+.tkt-bar-chart{display:flex;flex-direction:column;gap:8px;padding:4px 2px}.tkt-row{display:grid;grid-template-columns:58px 1fr 86px;gap:10px;align-items:center}.tkt-row-label{font-size:12px;font-weight:900;text-align:right}.tkt-row-track{height:25px;background:#edf1f6;border-radius:7px;overflow:hidden}.tkt-row-fill{height:100%;border-radius:7px;display:flex;align-items:center;justify-content:flex-end;padding-right:8px;color:white;font-size:11px;font-weight:900;min-width:0;cursor:pointer;transition:filter .15s,transform .15s}.tkt-row-fill:hover{filter:brightness(1.08);transform:translateY(-1px)}.tkt-row-value{font-size:11px;font-weight:800;color:#4b5871}.tkt-row-fill.tkt-low{background:#ef4545}.tkt-row-fill.tkt-mid{background:#f49a17}.tkt-row-fill.tkt-six{background:#16a86a}.tkt-row-fill.tkt-high{background:#16a4b0}.tkt-row-fill.tkt-max{background:#6b4be7}.or-pie-layout{display:grid;grid-template-columns:minmax(220px, .85fr) minmax(260px,1.15fr);gap:18px;align-items:center;min-height:285px}.or-pie{width:245px;height:245px;border-radius:50%;margin:auto;box-shadow:0 8px 20px #18305417;border:1px solid #ffffff}.or-pie-legend{display:flex;flex-direction:column;gap:0}.or-pie-legend .legendrow{grid-template-columns:12px 1fr 45px 62px}.or-pie-empty{display:flex;align-items:center;justify-content:center;height:245px;color:var(--muted);font-size:12px}@media(max-width:720px){.tkt-row{grid-template-columns:48px 1fr 60px;gap:6px}.or-pie-layout{grid-template-columns:1fr}.or-pie{width:220px;height:220px}}
 .chart{min-height:314px}.bars{height:265px;display:flex;align-items:flex-end;gap:16px;padding:5px 5px 0}.baritem{height:100%;flex:1;display:flex;flex-direction:column;justify-content:flex-end;align-items:center}.barvalue{font-size:12px;font-weight:900;margin-bottom:4px}.bar{width:56px;border-radius:8px 8px 0 0;transition:transform .15s,filter .15s;cursor:pointer}.bar:hover{transform:translateY(-3px);filter:brightness(1.06)}.barlabel{font-size:11px;font-weight:900;margin-top:6px}.barpct{font-size:10px;color:var(--muted)}
 .kblirow{display:grid;grid-template-columns:1.35fr 2fr 58px;gap:8px;align-items:center;margin:10px 0;font-size:11px}.kblilabel{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.track{height:12px;background:#edf1f6;border-radius:99px;overflow:hidden}.fill{height:100%;border-radius:99px;background:linear-gradient(90deg,#18a868,#53c28c)}.kbliv{text-align:right;font-weight:900}
 .summary{margin-bottom:12px}.summarychart{display:flex;flex-direction:column;gap:12px}.orbar{display:grid;grid-template-columns:70px 1fr 65px;gap:10px;align-items:center}.orname{font-size:12px;font-weight:900}.stack{height:30px;border-radius:8px;overflow:hidden;display:flex;background:#edf1f6;box-shadow:inset 0 0 0 1px #e5e9f0}.seg{height:100%;display:flex;align-items:center;justify-content:center;min-width:0;font-size:10px;font-weight:900;color:#fff;transition:filter .15s,transform .15s;cursor:pointer}.seg:first-child{border-radius:8px 0 0 8px}.seg:last-child{border-radius:0 8px 8px 0}.seg:hover{filter:brightness(1.06);transform:translateY(-1px)}.seg.lowseg{background:#ef4545}.seg.midseg{background:#f49a17}.seg.highseg{background:#16a86a}.ortotal{text-align:right;font-size:11px;font-weight:900;color:#47546d}.chartlegend{display:flex;gap:18px;flex-wrap:wrap;font-size:11px;color:#59677f;margin-top:8px;padding-left:80px}.legenddot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px;vertical-align:-1px}.summarynote{font-size:10px;color:#6b7892;margin-top:4px}
@@ -51,11 +52,12 @@ main{width:calc(100% - 220px);max-width:1560px;margin:auto;padding:18px 22px 28p
 
 <section id="tkt" class="card panel" style="margin-bottom:12px">
 <div class="tag tagp">DISTRIBUSI KI BERDASARKAN TKT TERVERIFIKASI</div>
-<div class="piewrap"><div class="donut" id="donut"></div><div class="legend" id="legend"></div></div>
+<div class="tkt-bar-chart" id="donut"></div>
+<div class="note">Jumlah KI pada setiap TKT 1–9. Hover batang untuk melihat jumlah dan persentase.</div>
 </section>
 
 <div class="grid2">
-<section class="card panel chart"><div class="tag tagb">TKT ≥ 6 PER OR</div><div class="bars" id="orChart"></div><div class="note">Hover batang untuk melihat detail. Grafik mengikuti filter aktif.</div></section>
+<section class="card panel chart"><div class="tag tagb">TKT ≥ 6 PER OR</div><div class="or-pie-layout"><div id="orPie" class="or-pie"></div><div id="orChart" class="or-pie-legend"></div></div><div class="note">Pie chart menunjukkan proporsi KI dengan TKT ≥ 6 pada setiap OR. Grafik mengikuti filter aktif; hover irisan untuk detail.</div></section>
 <section id="kbli" class="card panel"><div class="tag tagg">STATISTIK KBLI 2025</div><div id="kbliChart"></div></section>
 </div>
 
@@ -137,13 +139,39 @@ function render(){
  renderPie(a);renderOR(a);renderKBLI(a);renderKBLI2(a);renderTRLKBLI2(a);renderSummary(a);renderDetail(a);
 }
 function renderPie(a){
- const n=a.length,vals=[[1,3,"1–3"],[4,5,"4–5"],[6,6,"6"],[7,7,"7"],[8,8,"8"],[9,9,"9"]].map(([lo,hi,l])=>[l,a.filter(r=>Number.isInteger(r.trl)&&r.trl>=lo&&r.trl<=hi).length]);
- let cur=0,parts=[];vals.forEach((v,i)=>{const p=n?v[1]/n*100:0;parts.push(`${PIE[i]} ${cur}% ${cur+p}%`);cur+=p});$("donut").style.background=`conic-gradient(${parts.join(",")})`;
- $("legend").innerHTML=vals.map((v,i)=>`<div class="legendrow"><span class="sw" style="background:${PIE[i]}"></span><span>TKT ${v[0]}</span><b>${v[1]}</b><small>${pct(v[1],n)}</small></div>`).join("")+`<div class="totalbar"><span>TOTAL</span><span>${n} · 100%</span></div>`;
+ const n=a.length;
+ const vals=Array.from({length:9},(_,i)=>{const t=i+1;return [t,a.filter(r=>r.trl===t).length]});
+ const mx=Math.max(1,...vals.map(v=>v[1]));
+ const colors=vals.map(([t])=>t<=3?"#ef4545":t<=5?"#f49a17":t===6?"#16a86a":t<=8?"#16a4b0":"#6b4be7");
+ $("donut").innerHTML=vals.map(([t,count],i)=>{
+   const cls=t<=3?"tkt-low":t<=5?"tkt-mid":t===6?"tkt-six":t<=8?"tkt-high":"tkt-max";
+   return `<div class="tkt-row"><div class="tkt-row-label">TKT ${t}</div><div class="tkt-row-track"><div class="tkt-row-fill ${cls}" style="width:${count/mx*100}%" data-tip="TKT ${t}: ${count} KI (${pct(count,n)})">${count||""}</div></div><div class="tkt-row-value">${count} KI · ${pct(count,n)}</div></div>`;
+ }).join("");
+ const tip=document.getElementById("summaryTooltip")||(()=>{const t=document.createElement("div");t.id="summaryTooltip";t.className="tooltip";document.body.appendChild(t);return t;})();
+ document.querySelectorAll("#donut .tkt-row-fill").forEach(el=>{
+   el.addEventListener("mousemove",e=>{tip.textContent=el.dataset.tip;tip.style.left=(e.clientX+10)+"px";tip.style.top=(e.clientY+10)+"px";tip.classList.add("tip-on")});
+   el.addEventListener("mouseleave",()=>tip.classList.remove("tip-on"));
+ });
 }
 function renderOR(a){
- const os=[...new Set(ALL.map(r=>r.or).filter(Boolean))].sort();const denom=a.filter(r=>Number.isInteger(r.trl)&&r.trl>=6).length;const vals=os.map(o=>[o,a.filter(r=>r.or===o&&Number.isInteger(r.trl)&&r.trl>=6).length]);const mx=Math.max(1,...vals.map(v=>v[1]));
- $("orChart").innerHTML=vals.map((v,i)=>`<div class="baritem"><div class="barvalue">${v[1]}</div><div class="bar" data-tip="${v[0]} — TKT ≥6: ${v[1]} KI" style="height:${Math.max(8,v[1]/mx*195)}px;background:${OR_COLORS[i%OR_COLORS.length]}"></div><div class="barlabel">${v[0]}</div><div class="barpct">${pct(v[1],denom)}</div></div>`).join("");
+ const os=[...new Set(ALL.map(r=>r.or).filter(Boolean))].sort();
+ const vals=os.map(o=>[o,a.filter(r=>r.or===o&&Number.isInteger(r.trl)&&r.trl>=6).length]).filter(v=>v[1]>0);
+ const denom=vals.reduce((sum,v)=>sum+v[1],0);
+ const colors=vals.map((v,i)=>OR_COLORS[i%OR_COLORS.length]);
+ if(!denom){
+   $("orPie").style.background="#edf1f6";
+   $("orChart").innerHTML='<div class="or-pie-empty">Tidak ada KI dengan TKT ≥ 6 sesuai filter.</div>';
+   return;
+ }
+ let cur=0;const parts=[];
+ vals.forEach((v,i)=>{const p=v[1]/denom*100;parts.push(`${colors[i]} ${cur}% ${cur+p}%`);cur+=p});
+ $("orPie").style.background=`conic-gradient(${parts.join(",")})`;
+ $("orPie").title=`Total KI TKT ≥ 6: ${denom}`;
+ $("orChart").innerHTML=vals.map((v,i)=>`<div class="legendrow"><span class="sw" style="background:${colors[i]}"></span><span>${v[0]}</span><b>${v[1]}</b><small>${pct(v[1],denom)}</small></div>`).join("")+`<div class="totalbar"><span>TOTAL TKT ≥ 6</span><span>${denom} · 100%</span></div>`;
+ const tip=document.getElementById("summaryTooltip")||(()=>{const t=document.createElement("div");t.id="summaryTooltip";t.className="tooltip";document.body.appendChild(t);return t;})();
+ const pie=$("orPie");
+ pie.onmousemove=e=>{const rect=pie.getBoundingClientRect(),x=e.clientX-(rect.left+rect.width/2),y=e.clientY-(rect.top+rect.height/2);let deg=(Math.atan2(y,x)*180/Math.PI+450)%360;const target=deg/360*denom;let acc=0,chosen=null;for(let i=0;i<vals.length;i++){acc+=vals[i][1];if(target<=acc){chosen=vals[i];break}}if(chosen){tip.textContent=`${chosen[0]} — TKT ≥ 6: ${chosen[1]} KI (${pct(chosen[1],denom)})`;tip.style.left=(e.clientX+10)+"px";tip.style.top=(e.clientY+10)+"px";tip.classList.add("tip-on")}};
+ pie.onmouseleave=()=>tip.classList.remove("tip-on");
 }
 function renderKBLI(a){
  const m={};a.forEach(r=>{const k=(r.kbli||[])[0];if(k){const key=`${k.kode} — ${k.judul||"Judul KBLI belum tersedia"}`;m[key]=(m[key]||0)+1}});
