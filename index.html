@@ -218,7 +218,7 @@ function renderTRLKBLI2(a){
  const st=(trlkbli2Page-1)*trlkbli2PageSize,en=Math.min(st+trlkbli2PageSize,groups.length),slice=groups.slice(st,en);
  let s=slice.map(g=>{
    const segs=TRL_LEVELS.map((t,i)=>g.trl[t]?`<div class="seg" style="width:${g.count?100*g.trl[t]/g.count:0}%;background:${TRL_COLORS[i]}" data-tip="${g.label} (KBLI ${g.code}) · TKT ${t}: ${g.trl[t]} KI (${pct(g.trl[t],g.count)})">${g.trl[t]}</div>`:"").join("");
-   return `<div class="kbli2bar"><div class="orname" title="${g.label} (KBLI ${g.code})">${g.label} <b>(${g.code})</b></div><div class="stack">${segs}</div><div class="ortotal">${g.count} KI</div></div>`;
+   return `<div class="kbli2bar"><div class="orname" title="${g.label} (KBLI ${g.code})"> <b>(${g.code})</b> ${g.label}</div><div class="stack">${segs}</div><div class="ortotal">${g.count} KI</div></div>`;
  }).join("");
  $("trlkbli2Chart").innerHTML=s||`<div class="summarynote">Tidak ada data sesuai filter.</div>`;
  $("trlkbli2Legend").innerHTML=TRL_LEVELS.map((t,i)=>`<span><i class="legenddot" style="background:${TRL_COLORS[i]}"></i>TKT ${t}</span>`).join("");
