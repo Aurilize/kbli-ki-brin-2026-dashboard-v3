@@ -25,6 +25,15 @@ main{width:calc(100% - 220px);max-width:1560px;margin:auto;padding:18px 22px 28p
 .note{font-size:10px;color:var(--muted)}.error{margin-top:10px;color:#b42318;background:#fff1f1;border:1px solid #f2c2c2;padding:10px;border-radius:8px}
 @media(max-width:1100px){.kpis{grid-template-columns:repeat(3,1fr)}.grid2{grid-template-columns:1fr}.filters{grid-template-columns:1fr 1fr}.piewrap{grid-template-columns:1fr}.trls{grid-template-columns:1fr 1fr}.kbli2bar{grid-template-columns:150px 1fr 55px}}
 @media(max-width:720px){.layout{display:block}.sidebar{position:static;width:100%;height:auto}.nav{display:flex;overflow:auto}.nav a{white-space:nowrap}.sidebar .sidehint{display:none}main{width:100%;padding:14px}.header{display:block}.date{margin-top:9px}.filters{grid-template-columns:1fr}.kpis{grid-template-columns:1fr 1fr}.trls{grid-template-columns:1fr}.bars{gap:7px}.bar{width:38px}.kbli2bar{grid-template-columns:100px 1fr 45px}}
+/* Vertical TKT chart */
+#donut.tkt-bar-chart{display:grid;grid-template-columns:repeat(9,minmax(0,1fr));align-items:end;gap:clamp(5px,1.3vw,16px);padding:12px 8px 6px;min-height:270px}
+.tkt-v-col{min-width:0;display:grid;grid-template-rows:210px auto auto;gap:6px;text-align:center}
+.tkt-v-plot{height:210px;position:relative;border-bottom:1px solid #d9e0eb;background:repeating-linear-gradient(to top,transparent 0,transparent calc(25% - 1px),#e8edf4 calc(25% - 1px),#e8edf4 25%)}
+.tkt-v-fill{position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:min(58px,68%);height:var(--bar-height);min-height:0;border-radius:7px 7px 0 0;cursor:pointer;transition:filter .15s,transform .15s}
+.tkt-v-fill:hover{filter:brightness(1.08);transform:translateX(-50%) translateY(-2px)}
+.tkt-v-value{position:absolute;bottom:calc(var(--bar-height) + 5px);left:0;width:100%;font-size:11px;font-weight:900;color:var(--ink)}
+.tkt-v-label{font-size:12px;font-weight:900;white-space:nowrap}.tkt-v-pct{font-size:10px;color:var(--muted)}
+@media(max-width:720px){#donut.tkt-bar-chart{gap:3px;padding-inline:0;min-height:205px}.tkt-v-col{grid-template-rows:150px auto auto;gap:4px}.tkt-v-plot{height:150px}.tkt-v-value{font-size:9px}.tkt-v-label{font-size:10px}.tkt-v-pct{font-size:8px}}
 </style>
 </head>
 <body>
@@ -144,10 +153,11 @@ function renderPie(a){
  const mx=Math.max(1,...vals.map(v=>v[1]));
  $("donut").innerHTML=vals.map(([t,count])=>{
    const cls=t<=3?"tkt-low":t<=5?"tkt-mid":t===6?"tkt-six":t<=8?"tkt-high":"tkt-max";
-   return `<div class="tkt-row"><div class="tkt-row-label">TKT ${t}</div><div class="tkt-row-track"><div class="tkt-row-fill ${cls}" style="width:${count/mx*100}%" data-tip="TKT ${t}: ${count} KI (${pct(count,n)})">${count||""}</div></div><div class="tkt-row-value">${count} KI · ${pct(count,n)}</div></div>`;
+   const h=count/mx*100, tip=`TKT ${t}: ${count} KI (${pct(count,n)})`;
+   return `<div class="tkt-v-col"><div class="tkt-v-plot" style="--bar-height:${h}%"><div class="tkt-v-value">${count}</div><div class="tkt-v-fill ${cls}" data-tip="${tip}" aria-label="${tip}" role="img"></div></div><div class="tkt-v-label">TKT ${t}</div><div class="tkt-v-pct">${pct(count,n)}</div></div>`;
  }).join("");
  const tip=document.getElementById("summaryTooltip")||(()=>{const t=document.createElement("div");t.id="summaryTooltip";t.className="tooltip";document.body.appendChild(t);return t;})();
- document.querySelectorAll("#donut .tkt-row-fill").forEach(el=>{
+ document.querySelectorAll("#donut .tkt-v-fill").forEach(el=>{
    el.addEventListener("mousemove",e=>{tip.textContent=el.dataset.tip;tip.style.left=(e.clientX+10)+"px";tip.style.top=(e.clientY+10)+"px";tip.classList.add("tip-on")});
    el.addEventListener("mouseleave",()=>tip.classList.remove("tip-on"));
  });
